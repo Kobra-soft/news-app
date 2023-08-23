@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* New code BELOW */
+
+/* Add these styles to your CSS (e.g., App.css) */
+.sun-icon {
+  fill: yellow; /* Change the fill color to yellow */
+}
+
+.moon-icon {
+  fill: white; /* Change the fill color to white */
+}
+

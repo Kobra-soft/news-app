@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Lorem Ipsum Article 1",
+    "date": "2023-08-01",
+    "content": "This is the content of article 1.",
+    "image": "https://via.placeholder.com/300",
+    "author": "John Doe"
+  },
+  {
+    "id": 2,
+    "title": "Lorem Ipsum Article 2",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 3,
+    "title": "Lorem Ipsum Article 3",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 4,
+    "title": "Lorem Ipsum Article 4",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 5,
+    "title": "Lorem Ipsum Article 5",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 6,
+    "title": "Lorem Ipsum Article 6",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 7,
+    "title": "Lorem Ipsum Article 7",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 8,
+    "title": "Lorem Ipsum Article 8",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  }
+]
