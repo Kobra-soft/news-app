@@ -62,5 +62,37 @@
     "content": "This is the content of article 2.",
     "image": "https://via.placeholder.com/300",
     "author": "Jane Smith"
+  },
+  {
+    "id": 9,
+    "title": "Lorem Ipsum Article 9",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 10,
+    "title": "Lorem Ipsum Article 10",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 11,
+    "title": "Lorem Ipsum Article 11",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
+  },
+  {
+    "id": 12,
+    "title": "Lorem Ipsum Article 12",
+    "date": "2023-08-02",
+    "content": "This is the content of article 2.",
+    "image": "https://via.placeholder.com/300",
+    "author": "Jane Smith"
   }
 ]
