@@ -16,6 +16,7 @@ function App() {
   return (
     <Router>
       <div
+        className={`App ${isDarkMode ? "dark-bg" : "light-bg"}`}
         style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
         <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />

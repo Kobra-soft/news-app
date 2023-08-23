@@ -7,7 +7,7 @@ import MoonIcon from "../icons/moon.svg";
 import SunIcon from "../icons/sun.svg";
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
-  const bgColor = isDarkMode ? "bg-gray-800" : "bg-blue-500";
+  const bgColor = isDarkMode ? "bg-black" : "bg-gray-100";
   const textColor = isDarkMode ? "text-white" : "text-black";
 
   return (
