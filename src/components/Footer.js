@@ -8,8 +8,10 @@ function Footer({ isDarkMode }) {
       }`}
     >
       <div className="container mx-auto">
-        <p className="text-center text-xl font-semibold p-2">News Hub</p>
-        <p className="text-center text-base font-thin p-2 border-t w-full">
+        <p className="text-center text-xl font-semibold p-2 font-poppins">
+          News Hub
+        </p>
+        <p className="text-center text-base font-thin p-2 border-t w-full font-poppins">
           &copy; {new Date().getFullYear()} - All rights reserved
         </p>
       </div>
