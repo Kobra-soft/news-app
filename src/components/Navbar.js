@@ -36,7 +36,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             )}
           </label>
           <h1
-            className={`mx-5 text-2xl font-semibold font-custom ${textColor}`}
+            className={`mx-5 text-2xl font-semibold font-poppins ${textColor}`}
           >
             News Hub
           </h1>
@@ -44,7 +44,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
         {/* <h1 className={`text-2xl font-semibold ${textColor}`}>News Hub</h1> */}
 
-        <div className="p-1 flex items-center gap-0">
+        <div className="mx-2 flex items-center gap-0">
           <div className="flex flex-1 items-center">
             <label className="switch" onClick={toggleDarkMode}>
               {isDarkMode ? (

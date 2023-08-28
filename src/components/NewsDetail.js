@@ -41,7 +41,8 @@ function NewsDetail() {
             {article.content}
           </pre>
         </div>
-        <p className="mt-4 font-poppins font-bold">Author: {article.author}</p>
+        <p className="mt-4 font-poppins font-bold">By {article.author}</p>
+        <p className="mt-4 font-poppins font-light">By {article.date}</p>
       </div>
     </div>
   );

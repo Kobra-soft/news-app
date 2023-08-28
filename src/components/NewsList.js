@@ -23,11 +23,14 @@ function NewsList() {
                 alt={article.title}
                 className="w-full h-auto max-w-full object-cover mb-2"
               />
-              <h2 className="text-xl font-poppins font-bold">
+              <h2 className="text-xl font-inter font-black p-3">
                 {article.title}
               </h2>
               <p className="text-gray-600 font-poppins font-light">
                 {article.date}
+              </p>
+              <p className="text-gray-600 font-poppins font-normal">
+                {article.author}
               </p>
               {/* Render other article details here */}
             </div>

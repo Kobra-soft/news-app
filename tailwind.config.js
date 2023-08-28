@@ -10,6 +10,7 @@ module.exports = {
         montserrat: ["Montserrat", "sans"],
         quicksand: ["Quicksand", "sans"],
         poppins: ["Poppins", "sans"],
+        inter: ["Inter", "sans"],
       },
     },
   },
