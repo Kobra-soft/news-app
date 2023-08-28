@@ -16,28 +16,24 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
   return (
     <nav className={`p-3 ${bgColor}`}>
-      <div className="mx-3 align-middle flex justify-between items-center">
+      <div className="mx-1 align-middle flex justify-between items-center">
         <div className="flex flex-1 items-center">
-          <label className="switch" onClick={toggleDarkMode}>
+          <label className="switch" /* onClick={toggleDarkMode} */>
             {isDarkMode ? (
               <img
                 src={MenuIcon2}
                 alt="Menu2"
                 className="h-6 w-6 rounded-full p-0"
-                /* style={{ fill: "red" }} */
               />
             ) : (
               <img
                 src={MenuIcon}
                 alt="Menu"
                 className="h-6 w-6 text-gray-500 rounded-full p-0"
-                /* style={{ fill: "red" }} */
               />
             )}
           </label>
-          <h1
-            className={`mx-5 text-2xl font-semibold font-poppins ${textColor}`}
-          >
+          <h1 className={`mx-5 text-xl font-semibold font-inter ${textColor}`}>
             News Hub
           </h1>
         </div>
@@ -52,14 +48,12 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   src={SunIcon}
                   alt="Sun"
                   className="h-5 w-5 rounded-full p-0"
-                  /* style={{ fill: "red" }} */
                 />
               ) : (
                 <img
                   src={MoonIcon}
                   alt="Moon"
                   className="h-5 w-5 text-gray-500 rounded-full p-0"
-                  /* style={{ fill: "red" }} */
                 />
               )}
             </label>
@@ -69,20 +63,18 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
         <div className="p-1 flex items-center gap-0">
           <div className="flex flex-1 items-center">
-            <label className="switch" onClick={toggleDarkMode}>
+            <label className="switch" /* onClick={toggleDarkMode} */>
               {isDarkMode ? (
                 <img
                   src={SettingsIcon2}
                   alt="Settings2"
                   className="h-5 w-5 rounded-full p-0"
-                  /* style={{ fill: "red" }} */
                 />
               ) : (
                 <img
                   src={SettingsIcon}
                   alt="Settings"
                   className="h-5 w-5 text-gray-500 rounded-full p-0"
-                  /* style={{ fill: "red" }} */
                 />
               )}
             </label>
