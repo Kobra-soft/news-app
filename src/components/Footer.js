@@ -3,6 +3,10 @@ import facebookIconLight from "../icons/logo-facebook-light.svg";
 import facebookIconDark from "../icons/logo-facebook-dark.svg";
 import twitterIconLight from "../icons/logo-twitter-light.svg";
 import twitterIconDark from "../icons/logo-twitter-dark.svg";
+
+import youtubeIconLight from "../icons/logo-youtube-light.svg";
+import youtubeIconDark from "../icons/logo-youtube-dark.svg";
+
 import shareIconLight from "../icons/share-social-light.svg";
 import shareIconDark from "../icons/share-social-dark.svg";
 
@@ -10,6 +14,7 @@ function Footer({ isDarkMode }) {
   // Determine which set of icons to use based on the theme
   const facebookIcon = isDarkMode ? facebookIconDark : facebookIconLight;
   const twitterIcon = isDarkMode ? twitterIconDark : twitterIconLight;
+  const youtubeIcon = isDarkMode ? youtubeIconDark : youtubeIconLight;
   const shareIcon = isDarkMode ? shareIconDark : shareIconLight;
 
   return (
@@ -20,7 +25,7 @@ function Footer({ isDarkMode }) {
     >
       <div className="container mx-auto">
         <p className="text-center text-lg font-semibold p-2 font-poppins">
-          FOLLOW US
+          Follow Us
         </p>
 
         {/* Social Media Icons */}
@@ -42,6 +47,33 @@ function Footer({ isDarkMode }) {
               className="text-xl text-blue-400 mr-4"
             >
               <img src={twitterIcon} alt="Twitter" width={24} />
+            </a>
+
+            <a
+              href="https://youtube.com/your-twitter-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl text-blue-400 mr-4"
+            >
+              <img src={youtubeIcon} alt="Youtube" width={24} />
+            </a>
+
+            <a
+              href="https://youtube.com/your-twitter-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl text-blue-400 mr-4"
+            >
+              <img src={youtubeIcon} alt="Youtube" width={24} />
+            </a>
+
+            <a
+              href="https://youtube.com/your-twitter-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl text-blue-400 mr-4"
+            >
+              <img src={youtubeIcon} alt="Youtube" width={24} />
             </a>
 
             {/* Other social media icons can be added similarly */}
