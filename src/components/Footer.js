@@ -1,11 +1,16 @@
 import React from "react";
+
 import facebookIconLight from "../icons/logo-facebook-light.svg";
 import facebookIconDark from "../icons/logo-facebook-dark.svg";
+
 import twitterIconLight from "../icons/logo-twitter-light.svg";
 import twitterIconDark from "../icons/logo-twitter-dark.svg";
 
 import youtubeIconLight from "../icons/logo-youtube-light.svg";
 import youtubeIconDark from "../icons/logo-youtube-dark.svg";
+
+import githubIconLight from "../icons/logo-github-light.svg";
+import githubIconDark from "../icons/logo-github-dark.svg";
 
 import shareIconLight from "../icons/share-social-light.svg";
 import shareIconDark from "../icons/share-social-dark.svg";
@@ -15,6 +20,7 @@ function Footer({ isDarkMode }) {
   const facebookIcon = isDarkMode ? facebookIconDark : facebookIconLight;
   const twitterIcon = isDarkMode ? twitterIconDark : twitterIconLight;
   const youtubeIcon = isDarkMode ? youtubeIconDark : youtubeIconLight;
+  const githubIcon = isDarkMode ? githubIconDark : githubIconLight;
   const shareIcon = isDarkMode ? shareIconDark : shareIconLight;
 
   return (
@@ -59,12 +65,12 @@ function Footer({ isDarkMode }) {
             </a>
 
             <a
-              href="https://youtube.com/your-twitter-page"
+              href="https://github.com/Kobra-soft"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl text-blue-400 mr-4"
             >
-              <img src={youtubeIcon} alt="Youtube" width={24} />
+              <img src={githubIcon} alt="Github" width={24} />
             </a>
 
             <a
