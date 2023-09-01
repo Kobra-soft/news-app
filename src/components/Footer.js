@@ -12,6 +12,9 @@ import youtubeIconDark from "../icons/logo-youtube-dark.svg";
 import githubIconLight from "../icons/logo-github-light.svg";
 import githubIconDark from "../icons/logo-github-dark.svg";
 
+import linkedinIconLight from "../icons/logo-linkedin-light.svg";
+import linkedinIconDark from "../icons/logo-linkedin-dark.svg";
+
 import shareIconLight from "../icons/share-social-light.svg";
 import shareIconDark from "../icons/share-social-dark.svg";
 
@@ -21,6 +24,7 @@ function Footer({ isDarkMode }) {
   const twitterIcon = isDarkMode ? twitterIconDark : twitterIconLight;
   const youtubeIcon = isDarkMode ? youtubeIconDark : youtubeIconLight;
   const githubIcon = isDarkMode ? githubIconDark : githubIconLight;
+  const linkedinIcon = isDarkMode ? linkedinIconDark : linkedinIconLight;
   const shareIcon = isDarkMode ? shareIconDark : shareIconLight;
 
   return (
@@ -79,7 +83,7 @@ function Footer({ isDarkMode }) {
               rel="noopener noreferrer"
               className="text-xl text-blue-400 mr-4"
             >
-              <img src={youtubeIcon} alt="Youtube" width={24} />
+              <img src={linkedinIcon} alt="Linkedin" width={24} />
             </a>
 
             {/* Other social media icons can be added similarly */}

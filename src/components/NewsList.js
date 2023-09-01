@@ -17,7 +17,7 @@ function NewsList() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
         {articles.map((article) => (
           <Link to={`/article/${article.id}`} key={article.id}>
-            <div className="relative  shadow-md hover:shadow-lg border-b">
+            <div className="relative shadow-md hover:shadow-lg border-b">
               <img
                 src={article.image}
                 alt={article.title}
@@ -35,6 +35,21 @@ function NewsList() {
                   </p> */}
                   <p className="text-xs font-poppins font-normal text-teal-400 px-3">
                     {article.author} | {article.date}
+                  </p>
+                </div>
+                <div className="bg-white/90 absolute left-2 top-2 w-auto px-0 py-0.5">
+                  <p className="text-xs font-poppins font-normal text-black px-3">
+                    {article.label}
+                  </p>
+                </div>
+                {/*                 <div className="bg-white/90 absolute left-2 top-9 w-auto px-0 py-0.5">
+                  <p className="text-xs font-poppins font-normal text-black px-3">
+                    {article.genre}
+                  </p>
+                </div> */}
+                <div className="bg-black/90 absolute right-2 top-[229px] w-auto px-0 py-0.5">
+                  <p className="text-xs font-poppins font-normal text-white px-3">
+                    {article.genre}
                   </p>
                 </div>
               </div>
