@@ -34,7 +34,7 @@ function Footer({ isDarkMode }) {
       }`}
     >
       <div className="container mx-auto">
-        <p className="text-center text-xl font-semibold p-2 font-poppins text-[#ff4057]">
+        <p className="text-center text-xl font-semibold p-2 font-poppins text-[#dcdcdc]">
           Follow Us
         </p>
 
@@ -98,11 +98,11 @@ function Footer({ isDarkMode }) {
           </div>
         </div>
 
-        <p className="text-center text-3xl mt-8 p-4 w-full font-poppins font-extrabold text-[#dcdcdc]">
+        <p className="text-center text-3xl mt-8 p-4 w-full font-poppins font-extrabold text-[#ff4057]">
           News Hub
         </p>
 
-        <p className="text-center text-base py-4 border-t w-full font-poppins font-light text-[#b5b5b5]">
+        <p className="text-center text-base py-4 border-t w-full font-poppins font-light text-[#dcdcdc]">
           &copy; {new Date().getFullYear()} - All rights reserved
         </p>
       </div>

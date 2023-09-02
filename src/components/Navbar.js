@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "../App.css"; // Import your CSS file
+import "../App.css";
 
 // Import your SVG icons here
 import MoonIcon from "../icons/moon.svg";
@@ -9,6 +9,7 @@ import MenuIcon from "../icons/menu.svg";
 import MenuIcon2 from "../icons/menu2.svg";
 import SettingsIcon from "../icons/settings.svg";
 import SettingsIcon2 from "../icons/settings2.svg";
+import LogoImage from "../logos_png/news-hub-logo-red-dark.png"; // Import your logo image
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
   const bgColor = isDarkMode ? "bg-[#282634]" : "bg-gray-100";
@@ -16,8 +17,8 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
   return (
     <nav className={`p-4 ${bgColor}`}>
-      <div className="mx-0 align-middle flex justify-between items-center">
-        <div className="flex flex-1 items-center">
+      <div className="flex justify-between items-center">
+        <div className="flex items-center">
           <label className="switch">
             {isDarkMode ? (
               <img
@@ -33,15 +34,14 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               />
             )}
           </label>
-          {
-            <h1
-              className={`mx-5 text-lg font-semibold font-poppins ${textColor}`}
-            >
-              News Hub
-            </h1>
-          }
+
+          {/*  Left Logo!!! / inside the div */}
+          {/* <h1 className={`mx-5 text-lg font-semibold font-poppins ${textColor}`}>News Hub</h1> */}
+          {/* <img src={LogoImage} alt="Logo" className="h-12 w-48 flex mx-5" /> */}
         </div>
 
+        {/*  Middle Logo!!! / outside the div */}
+        <img src={LogoImage} alt="Logo" className="h-12 w-48 flex mx-5" />
         {/* <h1 className={`text-2xl font-semibold ${textColor}`}>News Hub</h1> */}
 
         <div className="mx-1 flex items-center gap-0">
@@ -64,7 +64,6 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           </div>
           {/* <span className={`ml-0 ${textColor}`}>{isDarkMode ? "" : ""}</span> */}
         </div>
-
         {/*         <div className="p-1 flex items-center gap-0">
           <div className="flex flex-1 items-center">
             <label className="switch">
