@@ -39,60 +39,59 @@ function Footer({ isDarkMode }) {
         </p>
 
         {/* Social Media Icons */}
-        <div className="text-center p-4">
-          <div className="flex justify-center">
+        <div className="text-center py-4 bg-red-400">
+          <div className="flex justify-center gap-1">
             <a
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl text-blue-500 mr-4"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
             >
-              <img src={facebookIcon} alt="Facebook" width={32} />
+              <img src={facebookIcon} alt="Facebook" className="" />
             </a>
 
             <a
               href="https://twitter.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl text-blue-400 mr-4"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
             >
-              <img src={twitterIcon} alt="Twitter" width={32} />
+              <img src={twitterIcon} alt="Twitter" className="" />
             </a>
 
             <a
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl text-blue-400 mr-4"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
             >
-              <img src={youtubeIcon} alt="Youtube" width={32} />
+              <img src={youtubeIcon} alt="Youtube" className="" />
             </a>
 
             <a
               href="https://github.com/Kobra-soft"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl text-blue-400 mr-4"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
             >
-              <img src={githubIcon} alt="Github" width={32} />
+              <img src={githubIcon} alt="Github" className="" />
             </a>
 
             <a
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl text-blue-400 mr-4"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
             >
-              <img src={linkedinIcon} alt="Linkedin" width={32} />
+              <img src={linkedinIcon} alt="Linkedin" />
             </a>
 
             {/* Other social media icons can be added similarly */}
 
-            <div className="text-center p-0">
+            <div className="text-center bg-[#B5B5B5] p-2 rounded-sm w-[200rem]">
               <img
                 src={shareIcon}
                 alt="Share"
-                width={32}
                 className={isDarkMode ? "dark-icon" : "light-icon"}
               />
             </div>
