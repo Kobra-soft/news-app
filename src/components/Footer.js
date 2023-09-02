@@ -30,11 +30,11 @@ function Footer({ isDarkMode }) {
   return (
     <footer
       className={`p-20 mt-auto ${
-        isDarkMode ? "bg-black text-white" : "bg-gray-100 text-black"
+        isDarkMode ? "bg-[#282634] text-white" : "bg-gray-100 text-black"
       }`}
     >
       <div className="container mx-auto">
-        <p className="text-center text-lg font-semibold p-2 font-poppins">
+        <p className="text-center text-xl font-semibold p-2 font-poppins text-[#ff4057]">
           Follow Us
         </p>
 
@@ -47,7 +47,7 @@ function Footer({ isDarkMode }) {
               rel="noopener noreferrer"
               className="text-xl text-blue-500 mr-4"
             >
-              <img src={facebookIcon} alt="Facebook" width={24} />
+              <img src={facebookIcon} alt="Facebook" width={32} />
             </a>
 
             <a
@@ -56,7 +56,7 @@ function Footer({ isDarkMode }) {
               rel="noopener noreferrer"
               className="text-xl text-blue-400 mr-4"
             >
-              <img src={twitterIcon} alt="Twitter" width={24} />
+              <img src={twitterIcon} alt="Twitter" width={32} />
             </a>
 
             <a
@@ -65,7 +65,7 @@ function Footer({ isDarkMode }) {
               rel="noopener noreferrer"
               className="text-xl text-blue-400 mr-4"
             >
-              <img src={youtubeIcon} alt="Youtube" width={24} />
+              <img src={youtubeIcon} alt="Youtube" width={32} />
             </a>
 
             <a
@@ -74,7 +74,7 @@ function Footer({ isDarkMode }) {
               rel="noopener noreferrer"
               className="text-xl text-blue-400 mr-4"
             >
-              <img src={githubIcon} alt="Github" width={24} />
+              <img src={githubIcon} alt="Github" width={32} />
             </a>
 
             <a
@@ -83,7 +83,7 @@ function Footer({ isDarkMode }) {
               rel="noopener noreferrer"
               className="text-xl text-blue-400 mr-4"
             >
-              <img src={linkedinIcon} alt="Linkedin" width={24} />
+              <img src={linkedinIcon} alt="Linkedin" width={32} />
             </a>
 
             {/* Other social media icons can be added similarly */}
@@ -92,14 +92,18 @@ function Footer({ isDarkMode }) {
               <img
                 src={shareIcon}
                 alt="Share"
-                width={24}
+                width={32}
                 className={isDarkMode ? "dark-icon" : "light-icon"}
               />
             </div>
           </div>
         </div>
 
-        <p className="text-center text-base font-thin p-2 border-t w-full font-poppins">
+        <p className="text-center text-3xl mt-8 p-4 w-full font-poppins font-extrabold text-[#dcdcdc]">
+          News Hub
+        </p>
+
+        <p className="text-center text-base p-4 border-t w-full font-poppins font-light text-[#b5b5b5]">
           &copy; {new Date().getFullYear()} - All rights reserved
         </p>
       </div>

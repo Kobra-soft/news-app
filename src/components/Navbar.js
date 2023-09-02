@@ -11,14 +11,14 @@ import SettingsIcon from "../icons/settings.svg";
 import SettingsIcon2 from "../icons/settings2.svg";
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
-  const bgColor = isDarkMode ? "bg-black" : "bg-gray-100";
+  const bgColor = isDarkMode ? "bg-[#282634]" : "bg-gray-100";
   const textColor = isDarkMode ? "text-white" : "text-black";
 
   return (
-    <nav className={`p-3 ${bgColor}`}>
-      <div className="mx-1 align-middle flex justify-between items-center">
+    <nav className={`p-4 ${bgColor}`}>
+      <div className="mx-0 align-middle flex justify-between items-center">
         <div className="flex flex-1 items-center">
-          <label className="switch" /* onClick={toggleDarkMode} */>
+          <label className="switch">
             {isDarkMode ? (
               <img
                 src={MenuIcon2}
@@ -33,14 +33,18 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               />
             )}
           </label>
-          <h1 className={`mx-5 text-xl font-semibold font-inter ${textColor}`}>
-            News Hub
-          </h1>
+          {
+            <h1
+              className={`mx-5 text-lg font-semibold font-poppins ${textColor}`}
+            >
+              News Hub
+            </h1>
+          }
         </div>
 
         {/* <h1 className={`text-2xl font-semibold ${textColor}`}>News Hub</h1> */}
 
-        <div className="mx-2 flex items-center gap-0">
+        <div className="mx-1 flex items-center gap-0">
           <div className="flex flex-1 items-center">
             <label className="switch" onClick={toggleDarkMode}>
               {isDarkMode ? (
@@ -61,9 +65,9 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           {/* <span className={`ml-0 ${textColor}`}>{isDarkMode ? "" : ""}</span> */}
         </div>
 
-        <div className="p-1 flex items-center gap-0">
+        {/*         <div className="p-1 flex items-center gap-0">
           <div className="flex flex-1 items-center">
-            <label className="switch" /* onClick={toggleDarkMode} */>
+            <label className="switch">
               {isDarkMode ? (
                 <img
                   src={SettingsIcon2}
@@ -79,7 +83,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               )}
             </label>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

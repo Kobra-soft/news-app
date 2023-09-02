@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function NewsList() {
+function NewsList({ isDarkMode, toggleDarkMode }) {
   const [articles, setArticles] = React.useState([]);
+  const borderColor = isDarkMode
+    ? "border-white border-b-2"
+    : "border-white border-b-2";
 
   React.useEffect(() => {
     // Fetch data from your JSON file or an API using axios
@@ -14,44 +17,32 @@ function NewsList() {
 
   return (
     <div className="container mx-auto py-2 px-0">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1">
         {articles.map((article) => (
           <Link to={`/article/${article.id}`} key={article.id}>
-            <div className="relative shadow-md hover:shadow-lg border-b">
+            <div
+              className={`relative shadow-md hover:shadow-lg ${borderColor}`}
+            >
               <img
                 src={article.image}
                 alt={article.title}
                 className="w-full h-64 max-w-full object-cover mb-0"
               />
-              <div className="absolute inset-0 flex flex-col items-center">
-                <div className="bg-black bg-opacity-0 p-[0px] rounded text-center top-[112px] absolute inset-0 flex items-center justify-center">
-                  <h2 className="w-full text-base font-poppins font-semibold bg-transparent/70 text-white px-3 py-1.5 text-left">
-                    {article.title}
-                  </h2>
-                </div>
-                <div className="bg-transparent/90 absolute bottom-1.5 left-0 w-auto px-0 py-0.5 rounded-e-full">
-                  {/* <p className="text-xs font-inter font-normal mb-1">
-                    Date: {article.date}
-                  </p> */}
-                  <p className="text-xs font-poppins font-normal text-teal-400 px-3">
-                    {article.author} | {article.date}
-                  </p>
-                </div>
-                <div className="bg-white/90 absolute left-2 top-2 w-auto px-0 py-0.5">
-                  <p className="text-xs font-poppins font-normal text-black px-3">
-                    {article.label}
-                  </p>
-                </div>
-                {/*                 <div className="bg-white/90 absolute left-2 top-9 w-auto px-0 py-0.5">
-                  <p className="text-xs font-poppins font-normal text-black px-3">
-                    {article.genre}
-                  </p>
-                </div> */}
-                <div className="bg-black/90 absolute right-2 top-[229px] w-auto px-0 py-0.5">
-                  <p className="text-xs font-poppins font-normal text-white px-3">
-                    {article.genre}
-                  </p>
-                </div>
+              <h2 className="text-base font-poppins font-semibold text-left px-3 py-1.5">
+                {article.title}
+              </h2>
+              <p className="text-xs font-poppins font-normal text-teal-400 px-3">
+                {article.author} | {article.date}
+              </p>
+              <div className="bg-white/70 px-3 py-0.5 rounded-e-full absolute bottom-1.5 left-0 w-auto">
+                <p className="text-xs font-poppins font-normal text-black">
+                  {article.label}
+                </p>
+              </div>
+              <div className="bg-black/90 px-3 py-0.5 rounded-e-full absolute right-2 top-2 w-auto">
+                <p className="text-xs font-poppins font-normal text-white">
+                  {article.genre}
+                </p>
               </div>
             </div>
           </Link>
