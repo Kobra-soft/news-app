@@ -39,62 +39,62 @@ function Footer({ isDarkMode }) {
         </p>
 
         {/* Social Media Icons */}
-        <div className="text-center py-4 bg-red-400">
-          <div className="flex justify-center gap-1">
+        <div className="text-center p-4">
+          <div className="flex justify-center">
             <a
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
+              className="text-xl text-blue-500 mr-4  p-2 rounded-sm w-12 md:w-14"
             >
-              <img src={facebookIcon} alt="Facebook" className="" />
+              <img src={facebookIcon} alt="Facebook" />
             </a>
 
             <a
               href="https://twitter.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
+              className="text-xl text-blue-400 mr-4  p-2 rounded-sm w-12 md:w-14"
             >
-              <img src={twitterIcon} alt="Twitter" className="" />
+              <img src={twitterIcon} alt="Twitter" />
             </a>
 
             <a
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
+              className="text-xl text-blue-400 mr-4  p-2 rounded-sm w-12 md:w-14"
             >
-              <img src={youtubeIcon} alt="Youtube" className="" />
+              <img src={youtubeIcon} alt="Youtube" />
             </a>
 
             <a
               href="https://github.com/Kobra-soft"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
+              className="text-xl text-blue-400 mr-4  p-2 rounded-sm w-12 md:w-14"
             >
-              <img src={githubIcon} alt="Github" className="" />
+              <img src={githubIcon} alt="Github" />
             </a>
 
             <a
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
+              className="text-xl text-blue-400 mr-4  p-2 rounded-sm w-12 md:w-14"
             >
               <img src={linkedinIcon} alt="Linkedin" />
             </a>
 
             {/* Other social media icons can be added similarly */}
 
-            <div className="text-center bg-[#B5B5B5] p-2 rounded-sm w-[250rem]">
+            {/*             <div className="text-center rounded-sm w-[10rem]">
               <img
                 src={shareIcon}
                 alt="Share"
                 className={isDarkMode ? "dark-icon" : "light-icon"}
               />
-            </div>
+            </div> */}
           </div>
         </div>
 

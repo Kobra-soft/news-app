@@ -12,7 +12,7 @@ import SettingsIcon2 from "../icons/settings2.svg";
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
   const bgColor = isDarkMode ? "bg-[#282634]" : "bg-gray-100";
-  const textColor = isDarkMode ? "text-white" : "text-black";
+  const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
 
   return (
     <nav className={`p-4 ${bgColor}`}>
