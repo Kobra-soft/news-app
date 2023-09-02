@@ -103,7 +103,7 @@ function Footer({ isDarkMode }) {
           News Hub
         </p>
 
-        <p className="text-center text-base p-4 border-t w-full font-poppins font-light text-[#b5b5b5]">
+        <p className="text-center text-base py-4 border-t w-full font-poppins font-light text-[#b5b5b5]">
           &copy; {new Date().getFullYear()} - All rights reserved
         </p>
       </div>
