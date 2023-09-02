@@ -45,7 +45,7 @@ function Footer({ isDarkMode }) {
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
             >
               <img src={facebookIcon} alt="Facebook" className="" />
             </a>
@@ -54,7 +54,7 @@ function Footer({ isDarkMode }) {
               href="https://twitter.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
             >
               <img src={twitterIcon} alt="Twitter" className="" />
             </a>
@@ -63,7 +63,7 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
             >
               <img src={youtubeIcon} alt="Youtube" className="" />
             </a>
@@ -72,7 +72,7 @@ function Footer({ isDarkMode }) {
               href="https://github.com/Kobra-soft"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
             >
               <img src={githubIcon} alt="Github" className="" />
             </a>
@@ -81,14 +81,14 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[200rem]"
+              className="text-xl bg-[#B5B5B5] p-2 rounded-sm w-[250rem]"
             >
               <img src={linkedinIcon} alt="Linkedin" />
             </a>
 
             {/* Other social media icons can be added similarly */}
 
-            <div className="text-center bg-[#B5B5B5] p-2 rounded-sm w-[200rem]">
+            <div className="text-center bg-[#B5B5B5] p-2 rounded-sm w-[250rem]">
               <img
                 src={shareIcon}
                 alt="Share"
