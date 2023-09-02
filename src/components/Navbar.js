@@ -9,80 +9,61 @@ import MenuIcon from "../icons/menu.svg";
 import MenuIcon2 from "../icons/menu2.svg";
 import SettingsIcon from "../icons/settings.svg";
 import SettingsIcon2 from "../icons/settings2.svg";
-import LogoImage from "../logos_png/news-hub-logo-red-dark.png"; // Import your logo image
+import SettingsIconB from "../icons/settings-filled.svg";
+import SettingsIconB2 from "../icons/settings-outline.svg";
+
+// Import your LOGO png's here
+import LogoImage1 from "../logos_png/news-hub-logo-red-dark.png";
+import LogoImage2 from "../logos_png/news-hub-logo-black-white.png";
+import LogoImage3 from "../logos_png/news-hub-logo-white-black.png";
+
+import DarkLogo from "../logos_png/news-hub-logo-red-dark.png"; // Import dark mode logo
+import LightLogo from "../logos_png/news-hub-logo-black-white.png"; // Import light mode logo
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
   const bgColor = isDarkMode ? "bg-[#282634]" : "bg-gray-100";
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
 
+  // Define the logo path based on dark or light mode
+  const logoPath = isDarkMode ? DarkLogo : LightLogo;
+
   return (
     <nav className={`p-4 ${bgColor}`}>
       <div className="flex justify-between items-center">
-        <div className="flex items-center">
-          <label className="switch">
-            {isDarkMode ? (
-              <img
-                src={MenuIcon2}
-                alt="Menu2"
-                className="h-6 w-6 rounded-full p-0"
-              />
-            ) : (
-              <img
-                src={MenuIcon}
-                alt="Menu"
-                className="h-6 w-6 text-gray-500 rounded-full p-0"
-              />
-            )}
-          </label>
-
-          {/*  Left Logo!!! / inside the div */}
-          {/* <h1 className={`mx-5 text-lg font-semibold font-poppins ${textColor}`}>News Hub</h1> */}
-          {/* <img src={LogoImage} alt="Logo" className="h-12 w-48 flex mx-5" /> */}
-        </div>
-
-        {/*  Middle Logo!!! / outside the div */}
-        <img src={LogoImage} alt="Logo" className="h-12 w-48 flex mx-5" />
-        {/* <h1 className={`text-2xl font-semibold ${textColor}`}>News Hub</h1> */}
-
-        <div className="mx-1 flex items-center gap-0">
+        <div className="flex items-center"></div>
+        <img src={logoPath} alt="Logo" className="h-12 ml-20" />
+        <div className="">
           <div className="flex flex-1 items-center">
-            <label className="switch" onClick={toggleDarkMode}>
+            <label className="switch mx-3" onClick={toggleDarkMode}>
               {isDarkMode ? (
-                <img
-                  src={SunIcon}
-                  alt="Sun"
-                  className="h-5 w-5 rounded-full p-0"
-                />
+                <img src={SunIcon} alt="Sun" className="h-6 w-6 rounded-full" />
               ) : (
                 <img
                   src={MoonIcon}
                   alt="Moon"
-                  className="h-5 w-5 text-gray-500 rounded-full p-0"
+                  className="h-6 w-6 rounded-full"
                 />
               )}
             </label>
+            {
+              <label className="switch mx-0">
+                {isDarkMode ? (
+                  <img
+                    src={MenuIcon2}
+                    alt="Menu2"
+                    className="h-8 w-8 rounded-full"
+                  />
+                ) : (
+                  <img
+                    src={MenuIcon}
+                    alt="Menu"
+                    className="h-8 w-8 rounded-full"
+                  />
+                )}
+              </label>
+            }
           </div>
-          {/* <span className={`ml-0 ${textColor}`}>{isDarkMode ? "" : ""}</span> */}
         </div>
-        {/*         <div className="p-1 flex items-center gap-0">
-          <div className="flex flex-1 items-center">
-            <label className="switch">
-              {isDarkMode ? (
-                <img
-                  src={SettingsIcon2}
-                  alt="Settings2"
-                  className="h-5 w-5 rounded-full p-0"
-                />
-              ) : (
-                <img
-                  src={SettingsIcon}
-                  alt="Settings"
-                  className="h-5 w-5 text-gray-500 rounded-full p-0"
-                />
-              )}
-            </label>
-          </div>
-        </div> */}
       </div>
     </nav>
   );
