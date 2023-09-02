@@ -45,7 +45,7 @@ function Footer({ isDarkMode }) {
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-2 rounded-sm w-12 md:w-[50px]"
+              className="text-xl p-2 rounded-sm w-14 md:w-[50px]"
             >
               <img src={facebookIcon} alt="Facebook" />
             </a>
@@ -54,7 +54,7 @@ function Footer({ isDarkMode }) {
               href="https://twitter.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-2 rounded-sm w-12 md:w-[50px]"
+              className="text-xl p-2 rounded-sm w-14 md:w-[50px]"
             >
               <img src={twitterIcon} alt="Twitter" />
             </a>
@@ -63,7 +63,7 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-2 rounded-sm w-12 md:w-[50px]"
+              className="text-xl p-2 rounded-sm w-14 md:w-[50px]"
             >
               <img src={youtubeIcon} alt="Youtube" />
             </a>
@@ -72,7 +72,7 @@ function Footer({ isDarkMode }) {
               href="https://github.com/Kobra-soft"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-2 rounded-sm w-12 md:w-[50px]"
+              className="text-xl p-2 rounded-sm w-14 md:w-[50px]"
             >
               <img src={githubIcon} alt="Github" />
             </a>
@@ -81,7 +81,7 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-2 rounded-sm w-12 md:w-[50px]"
+              className="text-xl p-2 rounded-sm w-14 md:w-[50px]"
             >
               <img src={linkedinIcon} alt="Linkedin" />
             </a>
