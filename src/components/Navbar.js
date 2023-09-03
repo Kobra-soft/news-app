@@ -36,12 +36,12 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           <div className="flex flex-1 items-center">
             <label className="switch mx-4" onClick={toggleDarkMode}>
               {isDarkMode ? (
-                <img src={SunIcon} alt="Sun" className="h-7 w-7 rounded-full" />
+                <img src={SunIcon} alt="Sun" className="h-6 w-6 rounded-full" />
               ) : (
                 <img
                   src={MoonIcon}
                   alt="Moon"
-                  className="h-7 w-7 rounded-full"
+                  className="h-6 w-6 rounded-full"
                 />
               )}
             </label>
@@ -51,13 +51,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={MenuIcon2}
                     alt="Menu2"
-                    className="h-10 w-10 rounded-full"
+                    className="h-8 w-8 rounded-full"
                   />
                 ) : (
                   <img
                     src={MenuIcon}
                     alt="Menu"
-                    className="h-10 w-10 rounded-full"
+                    className="h-8 w-8 rounded-full"
                   />
                 )}
               </label>

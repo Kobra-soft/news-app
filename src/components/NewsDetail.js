@@ -27,21 +27,30 @@ function NewsDetail() {
   }
 
   return (
-    <div className="container lg:w-[900px] mx-auto mt-0 py-5">
-      <div className="bg-white p-4 rounded shadow-md">
+    <div className="container lg:w-[900px] p-4 mx-auto mt-0 py-5">
+      <div className="bg-white p-0 shadow-md">
         <img
           src={article.image}
           alt={article.title}
           className="w-full object-fill mb-4 lg:h-[600px] lg:w-full"
         />
-        <h1 className="text-2xl font-poppins font-bold">{article.title}</h1>
+        <h1
+          className="text-2xl text-left px-3
+        font-ibmplexsans font-extrabold tracking-tighter leading-7"
+        >
+          {article.title}
+        </h1>
         <div className="mt-4 overflow-x-auto">
-          <pre className="text-left whitespace-pre-line font-poppins">
+          <pre className="text-left whitespace-pre-line font-poppins px-3">
             {article.content}
           </pre>
         </div>
-        <p className="mt-4 font-poppins font-bold">By {article.author}</p>
-        <p className="mt-4 font-poppins font-light">{article.date}</p>
+        <p className="mt-4 text-center font-poppins font-bold px-0">
+          By {article.author}
+        </p>
+        <p className="mt-4 text-right font-poppins font-light px-4 pb-3">
+          {article.date}
+        </p>
       </div>
     </div>
   );

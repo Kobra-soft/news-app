@@ -35,7 +35,7 @@ function Footer({ isDarkMode }) {
 
   return (
     <footer
-      className={`p-16 mt-auto relative shadow-md  border-[#B5B5B5] ${
+      className={`p-8 mt-auto relative shadow-md ${
         isDarkMode ? "bg-[#282634]" : "bg-gray-100"
       }`}
     >
@@ -54,7 +54,7 @@ function Footer({ isDarkMode }) {
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-9 md:w-[36px]"
+              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
             >
               <img src={facebookIcon} alt="Facebook" />
             </a>
@@ -63,7 +63,7 @@ function Footer({ isDarkMode }) {
               href="https://twitter.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-9 md:w-[36px]"
+              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
             >
               <img src={twitterIcon} alt="Twitter" />
             </a>
@@ -72,7 +72,7 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-9 md:w-[36px]"
+              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
             >
               <img src={youtubeIcon} alt="Youtube" />
             </a>
@@ -81,7 +81,7 @@ function Footer({ isDarkMode }) {
               href="https://github.com/Kobra-soft"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-9 md:w-[36px]"
+              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
             >
               <img src={githubIcon} alt="Github" />
             </a>
@@ -90,7 +90,7 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-9 md:w-[36px]"
+              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
             >
               <img src={linkedinIcon} alt="Linkedin" />
             </a>
@@ -100,7 +100,81 @@ function Footer({ isDarkMode }) {
           News Hub
         </p> */}
 
-        <div className="flex justify-center items-center pb-6 pt-8">
+        {/* Additional Links */}
+        <div className="flex flex-col items-center mt-8 mb-8">
+          <a
+            href="#about-us"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2 pt-4"
+          >
+            About Us
+          </a>
+          <a
+            href="#about-us"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+          >
+            A-Z Index
+          </a>
+          <a
+            href="#faq"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+          >
+            Editorial Policy
+          </a>
+          <a
+            href="#about-us"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+          >
+            Cookie Preferences
+          </a>
+          <a
+            href="#faq"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="#contact"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+          >
+            Terms & Conditions
+          </a>
+          <a
+            href="#faq"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+          >
+            Accessibility Statement
+          </a>
+          <a
+            href="#contact"
+            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2 pb-4"
+          >
+            Contact Us
+          </a>
+          {/* Add more links as needed */}
+        </div>
+
+        {/*         <div className="flex justify-center items-center pt-8">
+          <a
+            href="#about-us"
+            className="text-base font-poppins font-normal text-[#b5b5b5] hover:text-[#ff4057] px-2 mx-2"
+          >
+            About Us
+          </a>
+          <a
+            href="#faq"
+            className="text-base font-poppins font-normal text-[#b5b5b5] hover:text-[#ff4057] px-2 mx-2"
+          >
+            FAQ
+          </a>
+          <a
+            href="#contact"
+            className="text-base font-poppins font-normal text-[#b5b5b5] hover:text-[#ff4057] px-2 mx-2"
+          >
+            Contact
+          </a>
+        </div> */}
+
+        <div className="flex justify-center items-center pb-6 pt-0">
           <img src={logoPath} alt="Logo" className="h-12 rounded-sm" />
         </div>
 
