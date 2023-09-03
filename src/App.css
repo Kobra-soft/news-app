@@ -61,13 +61,13 @@
 /* New code for background of app.js main window! */
 /* Light Theme */
 .light-bg {
-  background-color: #fff; /* Set your desired light background color */
+  background-color: #eaeaea; /* Set your desired light background color */
   color: #000; /* Set your desired light text color */
 }
 
 /* Dark Theme */
 .dark-bg {
-  background-color: #222222; /* Set your desired dark background color */
-  color: #ffffff; /* Set your desired dark text color */
+  background-color: #1c1c1c; /* Set your desired dark background color */
+  color: #000000; /* Set your desired dark text color */
 }
 

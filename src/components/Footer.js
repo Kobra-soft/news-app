@@ -29,15 +29,16 @@ function Footer({ isDarkMode }) {
 
   return (
     <footer
-      className={`p-20 mt-auto ${
-        isDarkMode ? "bg-[#282634] text-white" : "bg-gray-100 text-black"
-      }`}
+      className={`p-20 mt-auto ${isDarkMode ? "bg-[#282634]" : "bg-gray-100"}`}
     >
       <div className="container mx-auto">
-        <p className="text-center text-xl font-semibold p-2 font-poppins text-[#dcdcdc]">
+        <p
+          className={`text-center text-xl font-semibold p-2 font-poppins ${
+            isDarkMode ? "text-[#DCDCDC]" : "text-[#000000]"
+          }`}
+        >
           Follow Us
         </p>
-
         {/* Social Media Icons */}
         <div className="text-center p-4">
           <div className="flex justify-center">
@@ -85,23 +86,11 @@ function Footer({ isDarkMode }) {
             >
               <img src={linkedinIcon} alt="Linkedin" />
             </a>
-
-            {/* Other social media icons can be added similarly */}
-
-            {/*             <div className="text-center rounded-sm w-[10rem]">
-              <img
-                src={shareIcon}
-                alt="Share"
-                className={isDarkMode ? "dark-icon" : "light-icon"}
-              />
-            </div> */}
           </div>
         </div>
-
         <p className="text-center text-3xl mt-8 p-4 w-full font-poppins font-extrabold text-[#ff4057]">
           News Hub
         </p>
-
         <p className="text-center text-base py-4 border-t w-full font-poppins font-light text-[#dcdcdc]">
           &copy; {new Date().getFullYear()} - All rights reserved
         </p>
