@@ -16,7 +16,7 @@ function NewsList({ isDarkMode, toggleDarkMode }) {
   }, []);
 
   return (
-    <div className="container mx-auto py-5 px-0 bg-[#eaeaea]">
+    <div className="container mx-auto py-5 px-0 bg-[#d8d8d8]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {articles.map((article) => (
           <Link to={`/article/${article.id}`} key={article.id}>
@@ -49,7 +49,7 @@ function NewsList({ isDarkMode, toggleDarkMode }) {
               </div>
 
               {/* DATE */}
-              <div className="bg-black/90 px-3 py-1 absolute bottom-3 right-3 w-auto border border-[#b5b5b5] rounded-sm">
+              <div className=" px-3 py-1 absolute bottom-3 right-3 w-auto">
                 <p className="text-xs font-poppins font-normal text-[#B5B5B5]">
                   {article.date}
                 </p>
