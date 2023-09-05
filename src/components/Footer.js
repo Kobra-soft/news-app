@@ -54,7 +54,7 @@ function Footer({ isDarkMode }) {
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
+              className="w-9 md:w-[40px] bg-gray-100 hover:bg-[#ffffff] p-1 rounded-sm border border-[#b5b5b5]"
             >
               <img src={facebookIcon} alt="Facebook" />
             </a>
@@ -63,7 +63,7 @@ function Footer({ isDarkMode }) {
               href="https://twitter.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
+              className="w-9 md:w-[40px] bg-gray-100 hover:bg-[#ffffff] p-1 rounded-sm border border-[#b5b5b5]"
             >
               <img src={twitterIcon} alt="Twitter" />
             </a>
@@ -72,7 +72,7 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
+              className="w-9 md:w-[40px] bg-gray-100 hover:bg-[#ffffff] p-1 rounded-sm border border-[#b5b5b5]"
             >
               <img src={youtubeIcon} alt="Youtube" />
             </a>
@@ -81,7 +81,7 @@ function Footer({ isDarkMode }) {
               href="https://github.com/Kobra-soft"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
+              className="w-9 md:w-[40px] bg-gray-100 hover:bg-[#ffffff] p-1 rounded-sm border border-[#b5b5b5]"
             >
               <img src={githubIcon} alt="Github" />
             </a>
@@ -90,7 +90,7 @@ function Footer({ isDarkMode }) {
               href="https://youtube.com/your-twitter-page"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl p-0 rounded-sm w-8 md:w-[36px]"
+              className="w-9 md:w-[40px] bg-gray-100 hover:bg-[#ffffff] p-1 rounded-sm border border-[#b5b5b5]"
             >
               <img src={linkedinIcon} alt="Linkedin" />
             </a>
@@ -101,52 +101,52 @@ function Footer({ isDarkMode }) {
         </p> */}
 
         {/* Additional Links */}
-        <div className="flex flex-col items-center mt-4 mb-4">
+        <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#DCDCDC]">
           <a
             href="#about-us"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2 pt-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-1"
           >
             About Us
           </a>
           <a
             href="#about-us"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-1"
           >
             A-Z Index
           </a>
           <a
             href="#faq"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-1"
           >
             Editorial Policy
           </a>
           <a
             href="#about-us"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-1"
           >
             Cookie Preferences
           </a>
           <a
             href="#faq"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-1"
           >
             Privacy Policy
           </a>
           <a
             href="#contact"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-1"
           >
             Terms & Conditions
           </a>
           <a
             href="#faq"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-1"
           >
             Accessibility Statement
           </a>
           <a
             href="#contact"
-            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2 pb-2"
+            className="text-[14px] font-rubik font-normal tracking-wide text-[#797979] hover:text-[#dcdcdc] hover:bg-black px-3 py-1 mb-0"
           >
             Contact Us
           </a>
@@ -174,7 +174,7 @@ function Footer({ isDarkMode }) {
           </a>
         </div> */}
 
-        <div className="flex justify-center items-center pb-6 pt-0">
+        <div className="flex justify-center items-center pb-4 border-t pt-8 border-[#DCDCDC]">
           <img src={logoPath} alt="Logo" className="h-12 rounded-sm" />
         </div>
 
@@ -183,7 +183,7 @@ function Footer({ isDarkMode }) {
         </p> */}
 
         <p
-          className={`text-center text-base py-4 border-t border-[#DCDCDC] 
+          className={`text-center text-[14.4px] py-0
           w-full font-rubik font-light tracking-normal ${
             isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
           }`}
