@@ -41,7 +41,7 @@ function Footer({ isDarkMode }) {
     >
       <div className="container mx-auto">
         <p
-          className={`text-center text-xl font-semibold p-4 font-poppins ${
+          className={`text-center text-xl font-semibold p-4 font-inter ${
             isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
           }`}
         >
@@ -49,7 +49,7 @@ function Footer({ isDarkMode }) {
         </p>
         {/* Social Media Icons */}
         <div className="text-center p-0">
-          <div className="flex justify-center space-x-3.5">
+          <div className="flex justify-center space-x-4">
             <a
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
@@ -101,52 +101,52 @@ function Footer({ isDarkMode }) {
         </p> */}
 
         {/* Additional Links */}
-        <div className="flex flex-col items-center mt-8 mb-8">
+        <div className="flex flex-col items-center mt-4 mb-4">
           <a
             href="#about-us"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2 pt-4"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2 pt-2"
           >
             About Us
           </a>
           <a
             href="#about-us"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
           >
             A-Z Index
           </a>
           <a
             href="#faq"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
           >
             Editorial Policy
           </a>
           <a
             href="#about-us"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
           >
             Cookie Preferences
           </a>
           <a
             href="#faq"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
           >
             Privacy Policy
           </a>
           <a
             href="#contact"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
           >
             Terms & Conditions
           </a>
           <a
             href="#faq"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2"
           >
             Accessibility Statement
           </a>
           <a
             href="#contact"
-            className="text-lg font-poppins font-normal text-[#9f9f9f] hover:text-[#ff4057] px-2 my-2 pb-4"
+            className="text-base font-rubik font-normal tracking-wide text-[#797979] hover:text-[#ff4057] px-2 my-2 pb-2"
           >
             Contact Us
           </a>
@@ -183,7 +183,8 @@ function Footer({ isDarkMode }) {
         </p> */}
 
         <p
-          className={`text-center text-base py-4 border-t border-[#DCDCDC] w-full font-poppins font-normal ${
+          className={`text-center text-base py-4 border-t border-[#DCDCDC] 
+          w-full font-rubik font-light tracking-normal ${
             isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
           }`}
         >
