@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function NewsList({ isDarkMode, toggleDarkMode }) {
+function NewsList({ isDarkMode }) {
   const [articles, setArticles] = React.useState([]);
   const borderColor = isDarkMode
-    ? "border-black border-b"
-    : "border-[#b5b5b5] border-b-2";
+    ? "border-[#b5b5b5] border-b"
+    : "border-[#000000] border-b";
 
   React.useEffect(() => {
     // Fetch data from your JSON file or an API using axios
@@ -16,13 +16,12 @@ function NewsList({ isDarkMode, toggleDarkMode }) {
   }, []);
 
   return (
-    <div className="container mx-auto py-5 px-0 ">
+    <div className="container mx-auto py-5 px-0">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {articles.map((article) => (
           <Link to={`/article/${article.id}`} key={article.id}>
-            {/*  NEWSLIST TITLE CONTENT SECTION!! */}
             <div
-              className={`relative shadow-md hover:shadow-xl hover:border bg-white border-[#b5b5b5] ${borderColor}`}
+              className={`relative shadow-md hover:shadow-xl hover:border ${borderColor}`}
             >
               <img
                 src={article.image}
@@ -30,12 +29,26 @@ function NewsList({ isDarkMode, toggleDarkMode }) {
                 className="w-full h-[244px] max-w-full object-cover"
               />
               {/* TITLE */}
-              <h2
-                className="text-[22px] bg-[#f8f8f8] font-ibmplexsans font-extrabold tracking-tighter leading-7
-              text-left pl-4 p-5 mx-0 my-0 pb-16 border-t-[0.010px] border-[#b5b5b5]"
+
+              {/* This div controls the background color */}
+              <div
+                className={`h-40 ${
+                  isDarkMode
+                    ? "bg-[#101010]"
+                    : "bg-white" /* This should change text color in dark mode */
+                }`}
               >
-                {article.title}
-              </h2>
+                <h2
+                  className={`text-[22px] font-ibmplexsans font-extrabold tracking-tighter leading-7
+                  text-left pl-4 p-5 py-4 ${
+                    isDarkMode
+                      ? "text-white"
+                      : "text-black" /* This should change text color */
+                  }`}
+                >
+                  {article.title}
+                </h2>
+              </div>
 
               {/* GENRE = FOOTBALL, F1 ETC */}
               <div className="bg-black/80 px-3 py-1 absolute left-4 top-3 w-auto border border-[#B5B5B5] rounded-e-sm">
@@ -51,7 +64,7 @@ function NewsList({ isDarkMode, toggleDarkMode }) {
                 </p>
               </div>
 
-              {/* DATE */}
+              {/* /* DATE */}
               <div className=" px-0 py-1 absolute bottom-3 right-4 w-auto">
                 <p className="text-xs font-poppins font-normal text-[#7a7a7a]">
                   {article.date}

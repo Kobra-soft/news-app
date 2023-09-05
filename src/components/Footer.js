@@ -96,9 +96,6 @@ function Footer({ isDarkMode }) {
             </a>
           </div>
         </div>
-        {/* <p className="text-center text-3xl mt-8 p-4 w-full font-poppins font-extrabold text-[#ff4057]">
-          News Hub
-        </p> */}
 
         {/* Additional Links */}
         <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#DCDCDC]">
@@ -153,34 +150,9 @@ function Footer({ isDarkMode }) {
           {/* Add more links as needed */}
         </div>
 
-        {/*         <div className="flex justify-center items-center pt-8">
-          <a
-            href="#about-us"
-            className="text-base font-poppins font-normal text-[#b5b5b5] hover:text-[#ff4057] px-2 mx-2"
-          >
-            About Us
-          </a>
-          <a
-            href="#faq"
-            className="text-base font-poppins font-normal text-[#b5b5b5] hover:text-[#ff4057] px-2 mx-2"
-          >
-            FAQ
-          </a>
-          <a
-            href="#contact"
-            className="text-base font-poppins font-normal text-[#b5b5b5] hover:text-[#ff4057] px-2 mx-2"
-          >
-            Contact
-          </a>
-        </div> */}
-
         <div className="flex justify-center items-center pb-4 border-t pt-8 border-[#DCDCDC]">
           <img src={logoPath} alt="Logo" className="h-12 rounded-sm" />
         </div>
-
-        {/* <p className="text-center text-base py-4 border-t border-[#B5B5B5] w-full font-poppins font-normal text-[#000000]">
-          &copy; {new Date().getFullYear()} - All rights reserved
-        </p> */}
 
         <p
           className={`text-center text-[14.4px] py-0

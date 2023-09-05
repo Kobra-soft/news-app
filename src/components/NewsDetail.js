@@ -27,7 +27,7 @@ function NewsDetail() {
   }
 
   return (
-    <div className="container lg:w-[900px] p-4 mx-auto mt-0 py-5">
+    <div className="container lg:w-[900px] p-0 mx-auto mt-0 py-5">
       <div className="bg-white p-0 shadow-md">
         <img
           src={article.image}

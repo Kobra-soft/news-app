@@ -22,8 +22,11 @@ function App() {
         <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <div style={{ flex: 1 }}>
           <Routes>
-            <Route path="/" element={<NewsList />} />
-            <Route path="/article/:id" element={<NewsDetail />} />
+            <Route path="/" element={<NewsList isDarkMode={isDarkMode} />} />
+            <Route
+              path="/article/:id"
+              element={<NewsDetail isDarkMode={isDarkMode} />}
+            />
           </Routes>
         </div>
         <Footer isDarkMode={isDarkMode} />

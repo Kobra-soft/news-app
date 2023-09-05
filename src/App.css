@@ -61,9 +61,6 @@
   }
 }
 
-/* New code BELOW */
-
-/* Add these styles to your CSS (e.g., App.css) */
 .sun-icon {
   fill: yellow; /* Change the fill color to yellow */
 }
@@ -73,15 +70,14 @@
 }
 
 /* New code for background of app.js main window! */
+
 /* Light Theme */
 .light-bg {
-  background-color: #d8d8d8; /* Set your desired light background color */
-  color: #000; /* Set your desired light text color */
+  background-color: #d8d8d8;
 }
 
 /* Dark Theme */
 .dark-bg {
-  background-color: #1c1c1c; /* Set your desired dark background color */
-  color: #000000; /* Set your desired dark text color */
+  background-color: #1c1c1c;
 }
 
