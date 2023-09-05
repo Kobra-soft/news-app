@@ -17,11 +17,11 @@ import LogoImage1 from "../logos_png/news-hub-logo-red-dark.png";
 import LogoImage2 from "../logos_png/news-hub-logo-black-white.png";
 import LogoImage3 from "../logos_png/news-hub-logo-white-black.png";
 
-import DarkLogo from "../logos_png/news-hub-logo-red-dark.png"; // Import dark mode logo
+import DarkLogo from "../logos_png/news-hub-logo-white-black.png"; // Import dark mode logo
 import LightLogo from "../logos_png/news-hub-logo-black-white.png"; // Import light mode logo
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
-  const bgColor = isDarkMode ? "bg-[#282634]" : "bg-gray-100";
+  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-gray-100";
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
 
   // Define the logo path based on dark or light mode
@@ -31,7 +31,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
     <nav className={`p-4 relative shadow-md ${bgColor}`}>
       <div className="flex justify-between items-center">
         <div className="flex items-center"></div>
-        <img src={logoPath} alt="Logo" className="h-12 ml-6 rounded-sm" />
+        <img src={logoPath} alt="Logo" className="h-12 ml-6 rounded-none" />
         <div className="">
           <div className="flex flex-1 items-center">
             <label className="switch mx-4" onClick={toggleDarkMode}>
