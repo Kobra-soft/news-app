@@ -78,7 +78,8 @@
 
 /* Dark Theme */
 .dark-bg {
-  background-color: #1c1c1c;
+  /* background-color: #212121; */
+  background-color: #333;
 }
 
 /* No Hover Background for MOBILE DEVICES removes lock on press */
