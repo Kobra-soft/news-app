@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+// Import the clock SVG icon
+import ClockIcon from "../icons/time-outline-light.svg"; // Adjust the path as needed
+
 function NewsList({ isDarkMode }) {
   const [articles, setArticles] = React.useState([]);
   const borderColor = isDarkMode
@@ -20,8 +23,11 @@ function NewsList({ isDarkMode }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {articles.map((article) => (
           <Link to={`/article/${article.id}`} key={article.id}>
+            {/* !!!! TITLE PADDING BOTTOM UNDERNEATH (background) !!!! */}
             <div
-              className={`relative shadow-md hover:shadow-xl hover:border ${borderColor}`}
+              className={`relative shadow-md hover:shadow-xl hover:border ${borderColor} ${
+                isDarkMode ? "bg-[#101010]" : "bg-white"
+              }`}
             >
               <img
                 src={article.image}
@@ -32,55 +38,47 @@ function NewsList({ isDarkMode }) {
 
               {/* This div controls the background color */}
               <div
-                className={`h-40 ${
-                  isDarkMode
-                    ? "bg-[#101010]"
-                    : "bg-white" /* This should change text color in dark mode */
-                }`}
+                className={`h-auto ${isDarkMode ? "bg-[#101010]" : "bg-white"}`}
               >
-                <h2
+                <h2 /* !!!! TITLE PADDING MAINTOP - SCALES SHORT AND LONGER (background) !!!! */
                   className={`text-[22px] font-ibmplexsans font-extrabold tracking-tighter leading-7
-                  text-left pl-3 px-3 py-4 ${
-                    isDarkMode
-                      ? "text-white"
-                      : "text-black" /* This should change text color */
+                  text-left pl-3 px-3 pt-3 pb-6 ${
+                    isDarkMode ? "text-white" : "text-black"
                   }`}
                 >
                   {article.title}
                 </h2>
               </div>
 
-              {/* GENRE = FOOTBALL, F1 ETC */}
-              {/*               <div className="bg-black/80 px-3 py-1 absolute left-4 top-3 w-auto border border-[#B5B5B5] rounded-e-sm">
-                <p className="text-xs font-poppins font-normal text-[#ffffff]">
-                  {article.genre}
-                </p>
-              </div> */}
+              <div className="flex justify-between items-center px-3 pb-3">
+                <div className="flex">
+                  {/* First "Genre" */}
+                  <div className="bg-white/70 px-3 py-1 border border-black rounded-sm">
+                    <p className="text-xs font-poppins font-normal text-black">
+                      {article.genre}
+                    </p>
+                  </div>
+                  {/* Second "CLUB / PLAYER ETC" */}
+                  <div className="bg-white/70 px-3 py-1 border border-black rounded-sm ml-2">
+                    <p className="text-xs font-poppins font-normal text-black">
+                      {article.label}
+                    </p>
+                  </div>
+                </div>
 
-              {/* GENRE */}
-              {/*               <div
-                className={`bg-black/80 px-3 py-1 absolute left-3 top-3 w-auto border border-[#B5B5B5] 
-                rounded-e-sm text-xs font-poppins font-normal ${
-                  isDarkMode
-                    ? "text-black bg-white/90"
-                    : "text-white bg-black/80"
-                }`}
-              >
-                <p>{article.genre}</p>
-              </div> */}
-
-              {/* CLUB / PLAYER ETC */}
-              <div className="bg-white/70 px-3 py-1 absolute bottom-3 left-3 w-auto border border-black rounded-sm">
-                <p className="text-xs font-poppins font-normal text-black">
-                  {article.label}
-                </p>
-              </div>
-
-              {/* /* DATE */}
-              <div className=" px-0 py-1 absolute bottom-3 right-3 w-auto">
-                <p className="text-xs font-poppins font-normal text-[#7a7a7a]">
-                  {article.date}
-                </p>
+                {/* Date and Clock Icon together */}
+                <div className="flex items-center">
+                  <img
+                    className="w-5 h-5 rounded-full mx-1"
+                    src={ClockIcon}
+                    alt="Clock Icon"
+                  />
+                  <div className="p-0 mb-[0.5px]">
+                    <p className="text-xs font-rubik font-normal tracking-wide text-[#797979]">
+                      {article.date}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </Link>
