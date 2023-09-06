@@ -151,7 +151,7 @@ function Footer({ isDarkMode }) {
             href="#about-us"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
@@ -161,7 +161,7 @@ function Footer({ isDarkMode }) {
             href="#about-us"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
@@ -171,7 +171,7 @@ function Footer({ isDarkMode }) {
             href="#faq"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
@@ -181,7 +181,7 @@ function Footer({ isDarkMode }) {
             href="#about-us"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
@@ -191,7 +191,7 @@ function Footer({ isDarkMode }) {
             href="#faq"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
@@ -201,7 +201,7 @@ function Footer({ isDarkMode }) {
             href="#contact"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
@@ -211,7 +211,7 @@ function Footer({ isDarkMode }) {
             href="#faq"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
@@ -221,7 +221,7 @@ function Footer({ isDarkMode }) {
             href="#contact"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4"
+                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
