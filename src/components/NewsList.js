@@ -6,7 +6,7 @@ function NewsList({ isDarkMode }) {
   const [articles, setArticles] = React.useState([]);
   const borderColor = isDarkMode
     ? "border-[#b5b5b5] border-b"
-    : "border-[#000000] border-b";
+    : "border-gray-400 border-b";
 
   React.useEffect(() => {
     // Fetch data from your JSON file or an API using axios

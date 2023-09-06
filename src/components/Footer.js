@@ -146,7 +146,7 @@ function Footer({ isDarkMode }) {
         </div>
 
         {/* Additional Links */}
-        <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#797979]">
+        <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#b5b5b5]">
           <a
             href="#about-us"
             className={`text-[16px] font-rubik font-normal tracking-wide text-[#797979] px-8 py-1 mb-1 rounded-none ${
@@ -230,7 +230,7 @@ function Footer({ isDarkMode }) {
           {/* Add more links as needed */}
         </div>
 
-        <div className="flex justify-center items-center pb-4 border-t pt-8 border-[#797979]">
+        <div className="flex justify-center items-center pb-4 border-t pt-8 border-[#b5b5b5]">
           <img src={logoPath} alt="Logo" className="h-12 rounded-none" />
         </div>
 
