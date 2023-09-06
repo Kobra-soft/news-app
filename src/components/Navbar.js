@@ -95,7 +95,6 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 className={`switch mx-0 bg-[] p-0 rounded-full ${
                   moonIconClicked ? "no-hover-background" : ""
                 }`}
-                onClick={handleMoonIconClick}
               >
                 {isDarkMode ? (
                   <img
