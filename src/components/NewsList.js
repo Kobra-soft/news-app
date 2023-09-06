@@ -26,7 +26,7 @@ function NewsList({ isDarkMode }) {
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-full h-[244px] max-w-full object-cover"
+                className="w-full h-[245px] max-w-full object-center"
               />
               {/* TITLE */}
 
@@ -58,7 +58,7 @@ function NewsList({ isDarkMode }) {
               </div> */}
 
               {/* GENRE */}
-              <div
+              {/*               <div
                 className={`bg-black/80 px-3 py-1 absolute left-3 top-3 w-auto border border-[#B5B5B5] 
                 rounded-e-sm text-xs font-poppins font-normal ${
                   isDarkMode
@@ -67,7 +67,7 @@ function NewsList({ isDarkMode }) {
                 }`}
               >
                 <p>{article.genre}</p>
-              </div>
+              </div> */}
 
               {/* CLUB / PLAYER ETC */}
               <div className="bg-white/70 px-3 py-1 absolute bottom-3 left-3 w-auto border border-black rounded-sm">
