@@ -81,3 +81,7 @@
   background-color: #1c1c1c;
 }
 
+/* No Hover Background for MOBILE DEVICES removes lock on press */
+.no-hover-background {
+  background-color: transparent !important;
+}
