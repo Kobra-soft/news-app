@@ -22,7 +22,7 @@
     "source": "CNN"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Who could Red Bull sign to replace Perez in F1 2025?",
     "date": "6 hours ago",
     "content": "This is the content of article 2.",
@@ -32,7 +32,7 @@
     "label": "Red Bull"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Martin Brundle on the Italian GP: 10 for Max Verstappen, Lewis Hamilton disappoints and Carlos Sainz stars",
     "date": "1 day ago",
     "content": "This is the content of article 2.",
@@ -42,7 +42,7 @@
     "label": "Italian GP"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "How much elite clubs earned from releasing players for 2022 World Cup",
     "date": "1 hour ago",
     "content": "This is the content of article 2.",
@@ -52,7 +52,7 @@
     "label": "World Cup"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Carlo Ancelotti backs Jude Bellingham ability with Karim Benzema remark",
     "date": "2 hours ago",
     "content": "This is the content of article 2.",
@@ -62,7 +62,7 @@
     "label": "Real Madrid"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Who are the Premier League captains for 2023/24?",
     "date": "4 hours ago",
     "content": "This is the content of article 2.",
@@ -72,7 +72,7 @@
     "label": "Premier League"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Erik ten Hag accuses Man Utd players of not doing basic thing against Tottenham",
     "date": "6 hours ago",
     "content": "This is the content of article 2.",
@@ -82,7 +82,7 @@
     "label": "Man United"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Why did Rodrygo take Real Madrid’s penalty against Celta Vigo: 2023/24 Los Blancos spot-kick takers",
     "date": "12 hours ago",
     "content": "This is the content of article 2.",
@@ -92,7 +92,7 @@
     "label": "Real Madrid"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Carlo Ancelotti hopeful Vinicius Junior injury is not serious",
     "date": "1 day ago",
     "content": "This is the content of article 2.",
@@ -102,7 +102,7 @@
     "label": "Real Madrid"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Jurgen Klopp reveals why he's excited about Dominik Szoboszlai",
     "date": "1 day ago",
     "content": "Jurgen Klopp is excited about what's to come from Dominik Szoboszlai after a fast start to his career at Liverpool.\n\nThe Hungarian has been the standout player in a new-look Liverpool midfield, playing in a more withdrawn role than the one he often took up at RB Leipzig.\n\nLiverpool have picked up four points from their first two games, drawing at Chelsea before taking Bournemouth down 3-1 at Anfield, and Szoboszlai impressed in both outings, covering the most distance of any player in the latter fixture.\n\nNewcastle provide Liverpool's third test of the season, away at St James' Park, and Klopp spoke about the impact of Szoboszlai ahead of the game to Sky Sports, revealing what he likes about the midfielder's game and what supporters can look forward to seeing in the future.\n\n\"His energy, combined with technique, desire...pretty much all attributes you want to see,\" Klopp remarked about the things he likes about Szoboszlai.\n\n\"The last thing you would think when you see him playing is that he is only 22. So there's a lot more to come, when he settles in.\nREAD THE LATEST LIVERPOOL NEWS, TRANSFER RUMOURS & GOSSIP\n•\nPremier League fixtures today - your guide to Sunday's games\n•\nJurgen Klopp sends encouraging message to Liverpool fans over Mohamed Salah exit\n•\nFootball transfer rumours: Man Utd's shock Bertrand link; Cancelo to Barcelona close\n•\n2023/24 Premier League bookings, red cards and suspension list\n\n\"Obviously he has no problem to adapt to everything in an instant. There's still more to come and we are really pleased. From the first day he is full of energy, in the middle of the team already. He just loves playing this kind of football. I think he plays a different position to what he played at RB Leipzig, for example, but with his skillset he can probably play higher up the pitch as well.\n\n\"He has the speed to pass players. He has the technique, he has the finishing skills - we didn't even see them yet properly, but his shooting is really special. We put him now slightly deeper and more in the game. He obviously enjoys that a lot and he's doing well. He's doing really well.\"\n\nKlopp also reiterated his belief that Mohamed Salah is \"100 per cent committed\" to Liverpool amid interest in taking the Egyptian to the Saudi Pro League.\n\n90min understands Saudi chiefs are keen to make Salah the highest-paid player in world football, with Al Ittihad weighing up whether to make an offer before the English transfer window closes on September 1.\n\nEven if a bid is not forthcoming, Saudi are likely to return for Salah in 2024 - the original timeframe they had put on moves for Salah and Juventus midfielder Paul Pogba.",
@@ -112,7 +112,7 @@
     "label": "Liverpool"
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Man Utd 3-2 Nottingham Forest: Player ratings as Fernandes penalty completes comeback",
     "date": "1 day ago",
     "content": "This is the content of article 2.",
@@ -122,7 +122,7 @@
     "label": "Man United"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Arsenal 2-2 Fulham: Player ratings as Palhinha snatches late point for Cottagers",
     "date": "2 days ago",
     "content": "This is the content of article 2.",
@@ -130,35 +130,5 @@
     "author": "Grey Whitebloom",
     "genre": "Football",
     "label": "Arsenal"
-  },
-  {
-    "id": 12,
-    "title": "Real Madrid squad ratings on EA Sports FC 24",
-    "date": "2 days ago",
-    "content": "This is the content of article 2.",
-    "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_5205,h_2927,x_0,y_446/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8h69p7nzvfb9yr54p.jpg",
-    "author": "James Cormack",
-    "genre": "Football",
-    "label": "Real Madrid"
-  },
-  {
-    "id": 13,
-    "title": "Fulham confirm signing of Raul Jimenez from Wolves",
-    "date": "3 days ago",
-    "content": "This is the content of article 2.",
-    "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_6000,h_3375,x_0,y_290/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h67f0azyg54tcsv9vt.jpg",
-    "author": "Braden Chalker",
-    "genre": "Football",
-    "label": "Fulham"
-  },
-  {
-    "id": 14,
-    "title": "2023/24 Premier League season ticket prices",
-    "date": "3 days ago",
-    "content": "This is the content of article 2.",
-    "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4426,h_2489,x_0,y_277/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h3mffhpbwt19cj0fjc.jpg",
-    "author": "Grey Whitebloom",
-    "genre": "Football",
-    "label": "Premier League"
   }
 ]
