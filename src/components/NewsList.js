@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 // Import the clock SVG icon
-import ClockIcon from "../icons/time-outline-light.svg"; // Adjust the path as needed
+/* import ClockIcon from "../icons/time-outline-light.svg"; */ // Adjust the path as needed
+
+import clockIconLight from "../icons/time-outline-light.svg";
+import clockIconDark from "../icons/time-outline-dark.svg";
 
 function NewsList({ isDarkMode }) {
   const [articles, setArticles] = React.useState([]);
   const borderColor = isDarkMode
     ? "border-[#b5b5b5] border-b"
     : "border-gray-400 border-b";
+  // Determine which set of icons to use based on the theme
+  const clockIcon = isDarkMode ? clockIconDark : clockIconLight;
 
   React.useEffect(() => {
     // Fetch data from your JSON file or an API using axios
@@ -53,14 +58,26 @@ function NewsList({ isDarkMode }) {
               <div className="flex justify-between items-center px-3 pb-3">
                 <div className="flex">
                   {/* First "Genre" */}
-                  <div className="bg-white/70 px-3 py-1 border border-black rounded-sm">
-                    <p className="text-xs font-poppins font-normal text-black">
+                  <div
+                    className={`px-3 py-1 border border-black rounded-sm ${
+                      isDarkMode
+                        ? "bg-[#101010] border-white text-white"
+                        : "bg-white     border-black text-black"
+                    }`}
+                  >
+                    <p className="text-xs font-poppins font-normal">
                       {article.genre}
                     </p>
                   </div>
                   {/* Second "CLUB / PLAYER ETC" */}
-                  <div className="bg-white/70 px-3 py-1 border border-black rounded-sm ml-2">
-                    <p className="text-xs font-poppins font-normal text-black">
+                  <div
+                    className={`mx-2 px-3 py-1 border border-black rounded-sm ${
+                      isDarkMode
+                        ? "bg-[#101010] border-white text-white"
+                        : "bg-white     border-black text-black"
+                    }`}
+                  >
+                    <p className="text-xs font-poppins font-normal">
                       {article.label}
                     </p>
                   </div>
@@ -70,11 +87,17 @@ function NewsList({ isDarkMode }) {
                 <div className="flex items-center">
                   <img
                     className="w-5 h-5 rounded-full mx-1"
-                    src={ClockIcon}
+                    src={isDarkMode ? clockIconDark : clockIconLight}
                     alt="Clock Icon"
                   />
-                  <div className="p-0 mb-[0.5px]">
-                    <p className="text-xs font-rubik font-normal tracking-wide text-[#797979]">
+                  <div className="">
+                    <p
+                      className={`p-0 mb-[0.5px] text-xs font-rubik font-normal tracking-wide ${
+                        isDarkMode
+                          ? "bg-[#101010] text-white"
+                          : "bg-white     text-[#797979]"
+                      }`}
+                    >
                       {article.date}
                     </p>
                   </div>
