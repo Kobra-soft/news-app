@@ -92,9 +92,9 @@ function NewsList({ isDarkMode }) {
                   />
                   <div className="">
                     <p
-                      className={`p-0 mb-[0.5px] text-xs font-rubik font-normal tracking-wide ${
+                      className={`p-0 mb-[0.5px] text-xs font-poppins font-normal tracking-wide ${
                         isDarkMode
-                          ? "bg-[#101010] text-white"
+                          ? "bg-[#101010] text-[#b3b3b3]"
                           : "bg-white     text-[#797979]"
                       }`}
                     >

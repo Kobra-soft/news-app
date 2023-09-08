@@ -33,39 +33,64 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   // Function to handle the Sun icon click
   const handleSunIconClick = () => {
     setSunIconClicked(true);
-
-    // Remove the no-hover-background class after a short delay (e.g., 500 milliseconds)
     setTimeout(() => {
       setSunIconClicked(false);
     }, 500);
-
-    // Call the toggleDarkMode function
-    toggleDarkMode();
+    // Call the toggleDarkMode function with the opposite of the current mode
+    toggleDarkMode(!isDarkMode); // Toggle the mode
   };
 
   // Function to handle the Moon icon click
   const handleMoonIconClick = () => {
     setMoonIconClicked(true);
-
-    // Remove the no-hover-background class after a short delay (e.g., 500 milliseconds)
     setTimeout(() => {
       setMoonIconClicked(false);
     }, 500);
-
-    // Call the toggleDarkMode function
-    toggleDarkMode();
+    // Call the toggleDarkMode function with the opposite of the current mode
+    toggleDarkMode(!isDarkMode); // Toggle the mode
   };
 
   return (
-    <nav className={`p-4 relative shadow-md" ${bgColor}`}>
+    <nav className={`p-4 relative shadow-md ${bgColor}`}>
       <div className="flex justify-between items-center">
-        <div className="flex items-center"></div>
-        <img src={logoPath} alt="Logo" className="h-12 ml-8 rounded-none" />
+        <div className="flex items-center">
+          {/* Left icon */}
+          <label
+            className={`switch mx-1 ${
+              moonIconClicked ? "no-hover-background" : ""
+            }`}
+            // create a NAV MENU
+            /* onClick={handleMoonIconClick} */
+          >
+            {isDarkMode ? (
+              <img
+                src={MenuIcon2}
+                alt="Menu2"
+                className={`h-10 w-10 rounded-full p-1 ${
+                  !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
+                }`}
+              />
+            ) : (
+              <img
+                src={MenuIcon}
+                alt="Menu"
+                className={`h-10 w-10 rounded-full p-1 ${
+                  !("ontouchstart" in window) ? "hover:bg-gray-200" : ""
+                }`}
+              />
+            )}
+          </label>
+        </div>
+        <img
+          src={logoPath}
+          alt="Logo"
+          className="h-10 w-44 ml-0 rounded-none"
+        />
         <div className="">
           <div className="flex flex-1 items-center">
-            {/* <label className="switch mx-1" onClick={toggleDarkMode}> */}
+            {/* Right icon (Sun/Moon) */}
             <label
-              className={`switch mx-1 ${
+              className={`switch mx-0 bg-[] p-0 rounded-full ${
                 sunIconClicked ? "no-hover-background" : ""
               }`}
               onClick={handleSunIconClick}
@@ -75,7 +100,6 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   src={SunIcon}
                   alt="Sun"
                   className={`h-10 w-10 rounded-full p-2 ${
-                    // Apply hover effect on desktop, not on mobile
                     !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
                   }`}
                 />
@@ -84,39 +108,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   src={MoonIcon}
                   alt="Moon"
                   className={`h-10 w-10 rounded-full p-2 ${
-                    // Apply hover effect on desktop, not on mobile
                     !("ontouchstart" in window) ? "hover:bg-gray-200" : ""
                   }`}
                 />
               )}
             </label>
-            {
-              <label
-                className={`switch mx-0 bg-[] p-0 rounded-full ${
-                  moonIconClicked ? "no-hover-background" : ""
-                }`}
-              >
-                {isDarkMode ? (
-                  <img
-                    src={MenuIcon2}
-                    alt="Menu2"
-                    className={`h-10 w-10 rounded-full p-1 ${
-                      // Apply hover effect on desktop, not on mobile
-                      !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
-                    }`}
-                  />
-                ) : (
-                  <img
-                    src={MenuIcon}
-                    alt="Menu"
-                    className={`h-10 w-10 rounded-full p-1 ${
-                      // Apply hover effect on desktop, not on mobile
-                      !("ontouchstart" in window) ? "hover:bg-gray-200" : ""
-                    }`}
-                  />
-                )}
-              </label>
-            }
           </div>
         </div>
       </div>
