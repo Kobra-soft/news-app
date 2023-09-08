@@ -84,7 +84,7 @@ function NewsList({ isDarkMode }) {
                 </div>
 
                 {/* Date and Clock Icon together */}
-                <div className="flex items-center">
+                <div className="flex items-center mr-1">
                   <img
                     className="w-5 h-5 rounded-full mx-1"
                     src={isDarkMode ? clockIconDark : clockIconLight}
