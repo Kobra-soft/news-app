@@ -17,14 +17,14 @@ import LogoImage1 from "../logos_png/news-hub-logo-red-dark.png";
 import LogoImage2 from "../logos_png/news-hub-logo-black-white.png";
 import LogoImage3 from "../logos_png/news-hub-logo-white-black.png";
 
-import DarkLogo from "../logos_png/news-hub-logo-white-black.png"; // Import dark mode logo
-import LightLogo from "../logos_png/news-hub-logo-black-white.png"; // Import light mode logo
+import DarkLogo from "../logos_png/news-hub-logo-black-white.png"; // Import dark mode logo
+import LightLogo from "../logos_png/news-hub-logo-white-black.png"; // Import light mode logo
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
   const [sunIconClicked, setSunIconClicked] = useState(false);
   const [moonIconClicked, setMoonIconClicked] = useState(false);
 
-  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-gray-100";
+  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-white";
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
 
   // Define the logo path based on dark or light mode
@@ -41,7 +41,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   };
 
   // Function to handle the Moon icon click
-  const handleMoonIconClick = () => {
+  /*   const handleMoonIconClick = () => {
     setMoonIconClicked(true);
     setTimeout(() => {
       setMoonIconClicked(false);
@@ -49,7 +49,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
     // Call the toggleDarkMode function with the opposite of the current mode
     toggleDarkMode(!isDarkMode); // Toggle the mode
   };
-
+ */
   return (
     <nav className={`p-4 relative shadow-md ${bgColor}`}>
       <div className="flex justify-between items-center">
