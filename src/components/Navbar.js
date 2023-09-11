@@ -37,6 +37,7 @@ import LightLogo from "../logos_png/news-hub-logo-white-black.png"; // Import li
 function Navbar({ isDarkMode, toggleDarkMode }) {
   const [sunIconClicked, setSunIconClicked] = useState(false);
   const [moonIconClicked, setMoonIconClicked] = useState(false);
+  const [menuIconClicked, setMenuIconClicked] = useState(false);
 
   const bgColor = isDarkMode ? "bg-[#000000]" : "bg-white";
   /*   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black"; */
@@ -55,10 +56,20 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   };
 
   // Function to handle the Moon icon click
-  const handleMoonIconClick = () => {
+  /*   const handleMoonIconClick = () => {
     setMoonIconClicked(true);
     setTimeout(() => {
       setMoonIconClicked(false);
+    }, 500);
+    // Call the toggleDarkMode function with the opposite of the current mode
+    toggleDarkMode(!isDarkMode); // Toggle the mode
+  }; */
+
+  // Function to handle the Menu icon click
+  const handleMenuIconClick = () => {
+    setMenuIconClicked(true);
+    setTimeout(() => {
+      setMenuIconClicked(false);
     }, 500);
     // Call the toggleDarkMode function with the opposite of the current mode
     toggleDarkMode(!isDarkMode); // Toggle the mode
@@ -72,9 +83,9 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           {/* onClick event listener for (Menu > Navigation Menu) */}
           <label
             className={`switch mx-0 ${
-              moonIconClicked ? "no-hover-background" : ""
+              menuIconClicked ? "no-hover-background" : ""
             }`}
-            onClick={handleMoonIconClick}
+            /* onClick={handleMenuIconClick} */
           >
             {isDarkMode ? (
               <img

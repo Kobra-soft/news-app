@@ -25,7 +25,7 @@ function NewsList({ isDarkMode }) {
 
   return (
     <div className="container mx-auto py-5 px-0">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {articles.map((article) => (
           <Link to={`/article/${article.id}`} key={article.id}>
             {/* !!!! TITLE PADDING BOTTOM UNDERNEATH (background) !!!! */}
@@ -47,7 +47,7 @@ function NewsList({ isDarkMode }) {
               >
                 <h2 /* !!!! TITLE PADDING MAINTOP - SCALES SHORT AND LONGER (background) !!!! */
                   className={`text-[22px] font-ibmplexsans font-extrabold tracking-tighter leading-7
-                  text-left pl-3 px-3 pt-3 pb-6 ${
+                  text-left pl-3 px-3 pt-4 pb-6 ${
                     isDarkMode ? "text-white" : "text-black"
                   }`}
                 >
@@ -55,29 +55,33 @@ function NewsList({ isDarkMode }) {
                 </h2>
               </div>
 
+              {/* WORKING HERE ON THE FONTS */}
+              {/* WORKING HERE ON THE FONTS */}
+              {/* WORKING HERE ON THE FONTS */}
+
               <div className="flex justify-between items-center px-3 pb-3">
                 <div className="flex">
                   {/* First "Genre" */}
                   <div
-                    className={`px-3 py-1 border border-black rounded-sm ${
+                    className={`px-3 py-2 rounded-none ${
                       isDarkMode
-                        ? "bg-[#101010] border-white text-white"
-                        : "bg-white     border-black text-black"
+                        ? "bg-[#101010] border border-white    text-white"
+                        : "bg-white     border border-gray-400 text-[#222526]"
                     }`}
                   >
-                    <p className="text-xs font-poppins font-normal">
+                    <p className="text-[15px] font-assistant font-normal">
                       {article.genre}
                     </p>
                   </div>
                   {/* Second "CLUB / PLAYER ETC" */}
                   <div
-                    className={`mx-2 px-3 py-1 border border-black rounded-sm ${
+                    className={`mx-2 px-3 py-2 rounded-none ${
                       isDarkMode
-                        ? "bg-[#101010] border-white text-white"
-                        : "bg-white     border-black text-black"
+                        ? "bg-[#101010] border border-white    text-white"
+                        : "bg-white     border border-gray-400 text-[#222526]"
                     }`}
                   >
-                    <p className="text-xs font-poppins font-normal">
+                    <p className="text-[15px] font-assistant font-normal">
                       {article.label}
                     </p>
                   </div>
