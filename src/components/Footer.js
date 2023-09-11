@@ -41,11 +41,11 @@ function Footer({ isDarkMode }) {
     >
       <div className="container mx-auto">
         <p
-          className={`text-center text-[22px] font-extrabold p-4 font-inter ${
+          className={`text-center text-[14px] font-medium p-4 font-inter ${
             isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
           }`}
         >
-          Follow Us
+          FOLLOW US
         </p>
         {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
         <div className="text-center p-0">
