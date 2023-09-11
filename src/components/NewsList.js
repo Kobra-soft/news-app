@@ -46,7 +46,7 @@ function NewsList({ isDarkMode }) {
                 className={`h-auto ${isDarkMode ? "bg-[#101010]" : "bg-white"}`}
               >
                 <h2 /* !!!! TITLE PADDING MAINTOP - SCALES SHORT AND LONGER (background) !!!! */
-                  className={`text-[22px] font-ibmplexsans font-extrabold tracking-tighter leading-7
+                  className={`text-[22px] font-mada font-extrabold tracking-tighter leading-7
                   text-left pl-3 px-3 pt-4 pb-6 ${
                     isDarkMode ? "text-white" : "text-black"
                   }`}
@@ -69,7 +69,7 @@ function NewsList({ isDarkMode }) {
                         : "bg-white     border border-gray-400 text-[#222526]"
                     }`}
                   >
-                    <p className="text-[15px] font-assistant font-normal">
+                    <p className="text-[15px] font-mada font-semibold">
                       {article.genre}
                     </p>
                   </div>
@@ -81,7 +81,7 @@ function NewsList({ isDarkMode }) {
                         : "bg-white     border border-gray-400 text-[#222526]"
                     }`}
                   >
-                    <p className="text-[15px] font-assistant font-normal">
+                    <p className="text-[15px] font-mada font-semibold">
                       {article.label}
                     </p>
                   </div>
@@ -96,7 +96,7 @@ function NewsList({ isDarkMode }) {
                   />
                   <div className="">
                     <p
-                      className={`p-0 mb-[0.5px] text-xs font-poppins font-normal tracking-wide ${
+                      className={`p-0 mb-[-1px] text-sm font-mada font-semibold tracking-wide ${
                         isDarkMode
                           ? "bg-[#101010] text-[#b3b3b3]"
                           : "bg-white     text-[#797979]"
