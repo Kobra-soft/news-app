@@ -1,0 +1,17 @@
+<svg
+  fill="#000000"
+  version="1.1"
+  baseProfile="tiny"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="800px"
+  height="800px"
+  viewBox="0 0 42 42"
+  xmlSpace="preserve"
+  className="h-7 w-7 mx-0 transform rotate-180"
+>
+  <polygon
+    fillRule="evenodd"
+    points="31,38.32 13.391,21 31,3.68 28.279,1 8,21.01 28.279,41 "
+  />
+</svg>

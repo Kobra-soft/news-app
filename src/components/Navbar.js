@@ -71,7 +71,9 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
                 alt="Back"
                 className={`back-icon w-[40px] sm:w-[40px] rounded-full p-[0.44rem] sm:p-[0.44rem] ml-0 mr-2 ${
-                  !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
+                  !("ontouchstart" in window)
+                    ? "hover:bg-[#222222]"
+                    : "hover:bg-[#ebebeb]"
                 }`}
               />
             </Link>

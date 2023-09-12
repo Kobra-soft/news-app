@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ["IBM Plex Sans", "sans"],
         montserrat: ["Montserrat", "sans"],
         quicksand: ["Quicksand", "sans"],
         poppins: ["Poppins", "sans"],
@@ -19,12 +18,12 @@ module.exports = {
         assistant: ["Assistant", "sans"],
         ubuntu: ["Ubuntu", "sans"],
         ptsans: ["PT Sans", "sans"],
-        mukta: ["Mukta", "sans"],
+        /* mukta: ["Mukta", "sans"], */
         miriam: ["Miriam Libre", "sans"],
-        hindSiliguri: ["Hind", "sans"],
+        /* hindSiliguri: ["Hind", "sans"],
         hindMadurai: ["Hind", "sans"],
-        hindVadodara: ["Hind", "sans"],
-        sourceSans3: ["Source Sans Pro", "sans"],
+        hindVadodara: ["Hind", "sans"], */
+        /* sourceSans3: ["Source Sans Pro", "sans"], */
         mada: ["Mada", "sans"],
       },
     },
