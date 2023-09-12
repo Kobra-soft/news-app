@@ -1,3 +1,15 @@
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "../App.css";
+/* import BackButtonIcon from "../icons/back-button-svgrepo-com-light.svg";
+import BackButtonIcon2 from "../icons/back-button-svgrepo-com-dark.svg"; */
+import BackButtonIcon from "../icons/back-svgrepo-com4-light.svg";
+import BackButtonIcon2 from "../icons/back-svgrepo-com4-dark.svg";
+import MoonIcon from "../icons/contrast-light2.svg";
+import SunIcon from "../icons/contrast-dark2.svg";
+import MenuIcon from "../icons/menu-sharp-dark.svg";
+import MenuIcon2 from "../icons/menu-sharp-light.svg";
+
 // png logos (15kb each)
 /* import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
 import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
@@ -5,19 +17,6 @@ import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
 // webp logos (9kb each)
 import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
 import LightLogo from "../logos_png/news-hub-logo-white-black.webp";
-
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "../App.css";
-
-import BackButtonIcon from "../icons/back-button-svgrepo-com-light.svg";
-import BackButtonIcon2 from "../icons/back-button-svgrepo-com-dark.svg";
-
-import MoonIcon from "../icons/contrast-light2.svg";
-import SunIcon from "../icons/contrast-dark2.svg";
-
-import MenuIcon from "../icons/icons8-menu-dark.svg";
-import MenuIcon2 from "../icons/icons8-menu-light.svg";
 
 function Navbar({ isDarkMode, toggleDarkMode }) {
   const location = useLocation();
@@ -50,16 +49,6 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
     toggleDarkMode(!isDarkMode); // Toggle the mode
   };
 
-  // Function to handle the Moon icon click
-  /*   const handleMoonIconClick = () => {
-    setMoonIconClicked(true);
-    setTimeout(() => {
-      setMoonIconClicked(false);
-    }, 500);
-    // Call the toggleDarkMode function with the opposite of the current mode
-    toggleDarkMode(!isDarkMode); // Toggle the mode
-  }; */
-
   // Function to handle the Menu icon click
   /*   const handleMenuIconClick = () => {
     setMenuIconClicked(true);
@@ -74,14 +63,14 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
     <nav className={`py-4 sm:py-2 relative shadow-md ${bgColor}`}>
       <div className="flex justify-between items-center px-0 mx-2">
         {/* Left LOGO */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           {showBackButton && (
             <Link to="/" className="back-button" title="Back">
               {/* Custom back icon */}
               <img
                 src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
                 alt="Back"
-                className={`back-icon w-[32px] sm:w-[32px] rounded-full p-[0.0rem] ml-2 mr-2 ${
+                className={`back-icon w-[40px] sm:w-[40px] rounded-full p-[0.44rem] sm:p-[0.44rem] ml-0 mr-2 ${
                   !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
                 }`}
               />
@@ -93,7 +82,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             className={`h-10 w-44 ml-0 ${
               showBackButton ? "2" : "0"
             } rounded-none`}
-            loading="lazy" // Add this attribute
+            loading="lazy"
           />
         </div>
 
@@ -110,7 +99,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={SunIcon}
                 alt="Sun"
-                className={`w-[46px] sm:w-[46px] rounded-full p-[0.64rem] ${
+                className={`w-[46px] sm:w-[43px] rounded-full p-[0.64rem]  ${
                   !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
                 }`}
                 style={{ rotate: "180deg" }}
@@ -119,7 +108,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MoonIcon}
                 alt="Moon"
-                className={`w-[46px] sm:w-[46px] rounded-full p-[0.64rem] ${
+                className={`w-[46px] sm:w-[43px] rounded-full p-[0.64rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
                 }`}
               />
@@ -137,7 +126,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MenuIcon2}
                 alt="Menu2"
-                className={`w-[46px] sm:w-[46px] rounded-full p-[0.6rem] ${
+                className={`w-[46px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
                 }`}
               />
@@ -145,7 +134,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MenuIcon}
                 alt="Menu"
-                className={`w-[46px] sm:w-[46px] rounded-full p-[0.6rem] ${
+                className={`w-[46px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
                 }`}
               />
