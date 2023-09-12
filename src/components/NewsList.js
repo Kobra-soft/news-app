@@ -25,7 +25,7 @@ function NewsList({ isDarkMode }) {
 
   return (
     <div className="container mx-auto py-5 px-0">
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {articles.map((article) => (
           <Link to={`/article/${article.id}`} key={article.id}>
             {/* !!!! TITLE PADDING BOTTOM UNDERNEATH (background) !!!! */}
@@ -37,7 +37,7 @@ function NewsList({ isDarkMode }) {
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-full h-[245px] max-w-full object-center"
+                className="w-full h-[245px] max-w-full object-center sm:object-center md:object-center"
               />
               {/* TITLE */}
 
@@ -47,7 +47,7 @@ function NewsList({ isDarkMode }) {
               >
                 <h2 /* !!!! TITLE PADDING MAINTOP - SCALES SHORT AND LONGER (background) !!!! */
                   className={`text-[22px] font-mada font-extrabold tracking-tighter leading-7
-                  text-left pl-3 px-3 pt-4 pb-6 ${
+                  text-left pl-3 px-3 pt-4 pb-4 ${
                     isDarkMode ? "text-white" : "text-black"
                   }`}
                 >
@@ -96,7 +96,7 @@ function NewsList({ isDarkMode }) {
                   />
                   <div className="">
                     <p
-                      className={`p-0 mb-[-1px] text-sm font-mada font-semibold tracking-wide ${
+                      className={`p-0 mb-[0px] text-[13px] font-inter font-semibold tracking-wide ${
                         isDarkMode
                           ? "bg-[#101010] text-[#b3b3b3]"
                           : "bg-white     text-[#797979]"
