@@ -18,8 +18,13 @@ import linkedinIconDark from "../icons/logo-linkedin-dark.svg";
 import shareIconLight from "../icons/share-social-light.svg";
 import shareIconDark from "../icons/share-social-dark.svg";
 
-import DarkLogo from "../logos_png/news-hub-logo-black-white.png"; // Import dark mode logo
-import LightLogo from "../logos_png/news-hub-logo-white-black.png"; // Import light mode logo
+// png logos (15kb each)
+/* import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
+import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
+
+// webp logos (9kb each)
+import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
+import LightLogo from "../logos_png/news-hub-logo-white-black.webp";
 
 function Footer({ isDarkMode }) {
   // Determine which set of icons to use based on the theme

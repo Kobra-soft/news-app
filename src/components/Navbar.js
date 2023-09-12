@@ -1,5 +1,10 @@
-import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
-import LightLogo from "../logos_png/news-hub-logo-white-black.png";
+// png logos (15kb each)
+/* import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
+import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
+
+// webp logos (9kb each)
+import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
+import LightLogo from "../logos_png/news-hub-logo-white-black.webp";
 
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -25,6 +30,15 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   const bgColor = isDarkMode ? "bg-[#000000]" : "bg-white";
   // Define the logo path based on dark or light mode
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
+
+  useEffect(() => {
+    // Preload logo images
+    const preloadImages = [DarkLogo, LightLogo];
+    preloadImages.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
 
   // Function to handle the Sun icon click
   const handleSunIconClick = () => {
@@ -79,6 +93,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             className={`h-10 w-44 ml-0 ${
               showBackButton ? "2" : "0"
             } rounded-none`}
+            loading="lazy" // Add this attribute
           />
         </div>
 
