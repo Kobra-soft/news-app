@@ -8,6 +8,24 @@ import axios from "axios";
 import clockIconLight from "../icons/time-outline-light.svg";
 import clockIconDark from "../icons/time-outline-dark.svg";
 
+import likeIconLight from "../icons/like-svgrepo-com1.svg";
+import likeIconDark from "../icons/like-svgrepo-com1.svg";
+
+/* import likeIconLight from "../icons/like-svgrepo-com2.svg";
+import likeIconDark from "../icons/like-svgrepo-com2.svg"; */
+
+/* import likeIconLight from "../icons/like-svgrepo-com.svg";
+import likeIconDark from "../icons/like-svgrepo-com.svg"; */
+
+/* import commentIconLight from "../icons/comment-ellipsis-svgrepo-com.svg";
+import commentIconDark from "../icons/comment-ellipsis-svgrepo-com.svg"; */
+
+import commentIconLight from "../icons/comment-dots-svgrepo-com2.svg";
+import commentIconDark from "../icons/comment-dots-svgrepo-com2.svg";
+
+import shareIconLight from "../icons/share-svgrepo-com2.svg";
+import shareIconDark from "../icons/share-svgrepo-com2.svg";
+
 /* import chevronRightLightIcon from "../icons/back-svgrepo-com4-light.svg";
 import chevronRightDarkIcon from "../icons/back-svgrepo-com4-dark.svg"; */
 
@@ -85,8 +103,16 @@ function NewsList({ isDarkMode }) {
                   isDarkMode ? "bg-[#101010]" : "bg-white"
                 }`}
               >
-                <h2
+                {/* <h2
                   className={`text-[22px] font-rubik font-extrabold tracking-tighter leading-7
+                  text-left pl-3.5 pr-4 pt-5 pb-5 ${
+                    isDarkMode ? "text-white" : "text-[#292929]"
+                  }`}
+                >
+                  {article.title}
+                </h2> */}
+                <h2
+                  className={`text-[21px] font-rubik font-bold tracking-tight leading-6
                   text-left pl-3.5 pr-4 pt-5 pb-5 ${
                     isDarkMode ? "text-white" : "text-[#292929]"
                   }`}
@@ -113,8 +139,8 @@ function NewsList({ isDarkMode }) {
                   <div
                     className={`mx-0 px-3 py-2 rounded-none ${
                       isDarkMode
-                        ? "bg-[#101010] border-[1.5px] border-white    text-white"
-                        : "bg-white     border-[1.5px] border-gray-700 text-[#000000]"
+                        ? "bg-[#101010] border-[1px] border-white    text-white"
+                        : "bg-white     border-[1px] border-gray-600 text-[#000000]"
                     }`}
                   >
                     <p className="text-[15px] font-mada font-semibold">
@@ -141,6 +167,29 @@ function NewsList({ isDarkMode }) {
                       {article.date}
                     </p>
                   </div>
+                </div>
+                {/* Add a new div for like, comment, and share icons */}
+                <div className="flex items-center ml-2">
+                  {/* Like Icon */}
+                  <img
+                    className="w-9 mx-2"
+                    src={isDarkMode ? likeIconDark : likeIconLight}
+                    alt="Like Icon"
+                  />
+
+                  {/* Comment Icon */}
+                  <img
+                    className="w-8 mx-1"
+                    src={isDarkMode ? commentIconDark : commentIconLight}
+                    alt="Comment Icon"
+                  />
+
+                  {/* Share Icon */}
+                  <img
+                    className="w-7 mx-0 ml-1.5"
+                    src={isDarkMode ? shareIconDark : shareIconLight}
+                    alt="Share Icon"
+                  />
                 </div>
               </div>
             </div>
