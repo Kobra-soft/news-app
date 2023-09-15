@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import "../App.css";
 /* import BackButtonIcon from "../icons/back-button-svgrepo-com-light.svg";
 import BackButtonIcon2 from "../icons/back-button-svgrepo-com-dark.svg"; */
-import BackButtonIcon from "../icons/back-svgrepo-com4-light.svg";
-import BackButtonIcon2 from "../icons/back-svgrepo-com4-dark.svg";
+import BackButtonIcon from "../icons/back-light-svgrepo-com-light.svg";
+import BackButtonIcon2 from "../icons/back-light-svgrepo-com-dark.svg";
 import MoonIcon from "../icons/contrast-light2.svg";
 import SunIcon from "../icons/contrast-dark2.svg";
 import MenuIcon from "../icons/menu-sharp-dark.svg";
@@ -61,7 +61,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
   return (
     <nav className={`py-4 sm:py-2 relative shadow-md ${bgColor}`}>
-      <div className="flex justify-between items-center px-0 mx-2">
+      <div className="flex justify-between items-center px-0 mx-1">
         {/* Left LOGO */}
         <div className="flex items-center ">
           {showBackButton && (
@@ -70,7 +70,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
                 alt="Back"
-                className={`back-icon w-[40px] sm:w-[40px] rounded-full p-[0.44rem] sm:p-[0.44rem] ml-0 mr-2 ${
+                className={`back-icon w-[36px] sm:w-[36px] rounded-full p-[0.44rem] sm:p-[0.44rem] ml-0 mr-1 ${
                   !("ontouchstart" in window)
                     ? "hover:bg-[#222222]"
                     : "hover:bg-[#ebebeb]"
@@ -89,7 +89,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
         </div>
 
         {/* Right SVG ICONS (Sun/Moon and Menu) */}
-        <div className="flex items-center space-x-0 mx-0">
+        <div className="flex items-center space-x-0 mx-1">
           {/* onClick event listener for (Light/Dark Mode - Toggle) */}
           <label
             className={`switch mx-0 rounded-full ${
@@ -101,7 +101,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={SunIcon}
                 alt="Sun"
-                className={`w-[46px] sm:w-[43px] rounded-full p-[0.64rem]  ${
+                className={`w-[42px] sm:w-[43px] rounded-full p-[0.64rem]  ${
                   !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
                 }`}
                 style={{ rotate: "180deg" }}
@@ -110,7 +110,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MoonIcon}
                 alt="Moon"
-                className={`w-[46px] sm:w-[43px] rounded-full p-[0.64rem] ${
+                className={`w-[42px] sm:w-[43px] rounded-full p-[0.64rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
                 }`}
               />
@@ -128,7 +128,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MenuIcon2}
                 alt="Menu2"
-                className={`w-[46px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
+                className={`w-[40px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
                 }`}
               />
@@ -136,7 +136,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MenuIcon}
                 alt="Menu"
-                className={`w-[46px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
+                className={`w-[40px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
                 }`}
               />
