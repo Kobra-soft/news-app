@@ -19,7 +19,7 @@
     "author_image": "https://www.mtsolar.us/wp-content/uploads/2020/04/avatar-placeholder.png",
     "author": "Issy Ronald",
     "date": "3 days ago",
-    "source": "CNN"
+    "source": "Sky Sports"
   },
   {
     "id": 2,
@@ -29,7 +29,8 @@
     "image": "https://cdn-2.motorsport.com/images/amp/YP3Mv1X2/s1000/sergio-perez-red-bull-racing-c.webp",
     "author": "Filip Cleeren",
     "genre": "Formula 1",
-    "label": "Red Bull"
+    "label": "Red Bull",
+    "source": "F1 Motorworld"
   },
   {
     "id": 3,
@@ -39,7 +40,8 @@
     "image": "https://e2.365dm.com/23/09/768x432/skysports-f1-max-verstappen_6273281.jpg?20230903151950",
     "author": "Martin Brundle ",
     "genre": "Formula 1",
-    "label": "Italian GP"
+    "label": "Italian GP",
+    "source": "ESPN Sports"
   },
   {
     "id": 4,
@@ -49,7 +51,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_5430,h_3054,x_0,y_507/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h57phaj26t0xfcpvyf.jpg",
     "author": "Euan Burns",
     "genre": "Football",
-    "label": "World Cup"
+    "label": "World Cup",
+    "source": "90 Mins"
   },
   {
     "id": 5,
@@ -59,7 +62,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4000,h_2250,x_0,y_0/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8kavrbc2q9nf1wsj1.jpg",
     "author": "Jack Gallagher",
     "genre": "Football",
-    "label": "Real Madrid"
+    "label": "Real Madrid",
+    "source": "Mirror"
   },
   {
     "id": 6,
@@ -69,7 +73,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_5042,h_2836,x_0,y_332/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h6gxad18drkzaf5xsh.jpg",
     "author": "Ewan Ross-Murray",
     "genre": "Football",
-    "label": "Premier League"
+    "label": "Premier League",
+    "source": "Daily Mail"
   },
   {
     "id": 7,
@@ -79,7 +84,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2772,h_1559,x_0,y_36/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8rjk3b8dh8e12adt9.jpg",
     "author": "Toby Cudworth",
     "genre": "Football",
-    "label": "Man United"
+    "label": "Man United",
+    "source": "News Today"
   },
   {
     "id": 8,
@@ -89,7 +95,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4500,h_2531,x_0,y_72/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8rm64dnp58x2pte07.jpg",
     "author": "Ewan Ross-Murray",
     "genre": "Football",
-    "label": "Real Madrid"
+    "label": "Real Madrid",
+    "source": "Madrid Daily"
   },
   {
     "id": 9,
@@ -99,7 +106,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4500,h_2531,x_0,y_261/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8rexkkp6m8chnf19c.jpg",
     "author": "Toby Cudworth",
     "genre": "Football",
-    "label": "Real Madrid"
+    "label": "Real Madrid",
+    "source": "BBC Sports"
   },
   {
     "id": 10,
@@ -109,7 +117,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2782,h_1564,x_20,y_129/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8s96c32bq5zkxvs1q.jpg",
     "author": "Toby Cudworth",
     "genre": "Football",
-    "label": "Liverpool"
+    "label": "Liverpool",
+    "source": "Sky Sports"
   },
   {
     "id": 11,
@@ -119,7 +128,8 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3434,h_1931,x_16,y_73/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8s8acfn6ng3dmct86.jpg",
     "author": "Jude Summerfield",
     "genre": "Football",
-    "label": "Man United"
+    "label": "Man United",
+    "source": "ESPN Football"
   },
   {
     "id": 12,
@@ -129,6 +139,7 @@
     "image": "https://images2.minutemediacdn.com/image/upload/c_crop,w_7058,h_3970,x_0,y_237/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FGettyImages%2Fmmsport%2F90min_en_international_web%2F01h8s986mzmy4e9b59ek.jpg",
     "author": "Grey Whitebloom",
     "genre": "Football",
-    "label": "Arsenal"
+    "label": "Arsenal",
+    "source": "The Athletic"
   }
 ]

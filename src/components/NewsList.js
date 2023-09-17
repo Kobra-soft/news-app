@@ -8,8 +8,11 @@ import axios from "axios";
 import clockIconLight from "../icons/time-outline-light.svg";
 import clockIconDark from "../icons/time-outline-dark.svg";
 
-import likeIconLight from "../icons/like-svgrepo-com1.svg";
-import likeIconDark from "../icons/like-svgrepo-com1.svg";
+/* import likeIconLight from "../icons/like-svgrepo-com1.svg";
+import likeIconDark from "../icons/like-svgrepo-com1.svg"; */
+
+import likeIconLight from "../icons/nb-like-dark.svg";
+import likeIconDark from "../icons/nb-like.svg";
 
 /* import likeIconLight from "../icons/like-svgrepo-com2.svg";
 import likeIconDark from "../icons/like-svgrepo-com2.svg"; */
@@ -20,11 +23,26 @@ import likeIconDark from "../icons/like-svgrepo-com.svg"; */
 /* import commentIconLight from "../icons/comment-ellipsis-svgrepo-com.svg";
 import commentIconDark from "../icons/comment-ellipsis-svgrepo-com.svg"; */
 
-import commentIconLight from "../icons/comment-dots-svgrepo-com2.svg";
-import commentIconDark from "../icons/comment-dots-svgrepo-com2.svg";
+/* import commentIconLight from "../icons/comment-dots-svgrepo-com2.svg";
+import commentIconDark from "../icons/comment-dots-svgrepo-com2.svg"; */
 
-import shareIconLight from "../icons/share-svgrepo-com2.svg";
-import shareIconDark from "../icons/share-svgrepo-com2.svg";
+import commentIconLight from "../icons/comment-dots-solid-svgrepo-com.svg";
+import commentIconDark from "../icons/comment-dots-solid-svgrepo-com-dark.svg";
+
+/* import commentIconLight from "../icons/nb-comment-dark.svg";
+import commentIconDark from "../icons/nb-comment.svg"; */
+
+import saveIconLight from "../icons/bookmark-outline.svg";
+import saveIconDark from "../icons/bookmark-outline-dark.svg";
+
+/* import shareIconLight from "../icons/share-svgrepo-com2.svg";
+import shareIconDark from "../icons/share-svgrepo-com2.svg"; */
+
+import shareIconLight from "../icons/nb-share-dark.svg";
+import shareIconDark from "../icons/nb-share.svg";
+
+/* import shareIconLight from "../icons/share-arrow-svgrepo-dark.svg";
+import shareIconDark from "../icons/share-arrow-svgrepo-dark.svg"; */
 
 /* import chevronRightLightIcon from "../icons/back-svgrepo-com4-light.svg";
 import chevronRightDarkIcon from "../icons/back-svgrepo-com4-dark.svg"; */
@@ -94,7 +112,7 @@ function NewsList({ isDarkMode }) {
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-full h-[205px] max-w-full object-center sm:object-center md:object-center rounded-t-xl"
+                className="w-full h-[225px] max-w-full object-center sm:object-center md:object-center rounded-t-xl"
               />
               {/* This div controls the background color */}
               {/* TITLE */}
@@ -113,34 +131,40 @@ function NewsList({ isDarkMode }) {
                 </h2> */}
 
                 {/* Clock & Date (Icon) & (Text) */}
-                {/* Clock & Date (Icon) & (Text) */}
-                <div className="flex items-center space-x-1 pt-2 px-2">
-                  <img
-                    className="w-5 rounded-full mx-1"
-                    src={isDarkMode ? clockIconDark : clockIconLight}
-                    alt="Clock Icon"
-                  />
-                  <div className="">
+                {/* Date and Author (Icon) & (Text) */}
+                <div className="flex items-center justify-between py-2 px-2">
+                  <div className="flex items-center space-x-0">
+                    <img
+                      className="w-5 rounded-full mx-1"
+                      src={isDarkMode ? clockIconDark : clockIconLight}
+                      alt="Clock Icon"
+                    />
                     <p
-                      className={`p-0 mb-[0px] text-[12.5px] font-inter font-semibold tracking-wide ${
+                      className={`p-0 mb-[0px] text-[12.5px] font-mada font-semibold ${
                         isDarkMode
-                          ? "bg-[#101010] text-[#b3b3b3]"
-                          : "bg-white text-[#5b5b5b]"
+                          ? "bg-[#101010] text-[#5b5b5b]"
+                          : "bg-white text-[#353535]"
                       }`}
                     >
                       {article.date}
                     </p>
                   </div>
-                </div>
 
-                {/* Author */}
-                <div className="bg-white text-black flex items-center justify-end px-3 font-mada font-medium">
-                  By - {article.author}
+                  {/* Author */}
+                  <div
+                    className={`flex items-center text-[12.5px] font-mada font-semibold mr-2 ${
+                      isDarkMode
+                        ? "bg-[#101010] text-[#5b5b5b]"
+                        : "bg-white text-[#353535]"
+                    }`}
+                  >
+                    {article.source}
+                  </div>
                 </div>
 
                 <h2
-                  className={`text-[21px] font-rubik font-bold tracking-tight leading-6
-                  text-left pl-3.5 pr-4 pt-5 pb-5 ${
+                  className={`text-[21px] text-center font-rubik font-extrabold tracking-tighter leading-6
+                  px-3 pt-4 pb-4 ${
                     isDarkMode ? "text-white" : "text-[#292929]"
                   }`}
                 >
@@ -164,7 +188,7 @@ function NewsList({ isDarkMode }) {
                   </div> */}
 
                   {/* Second label - CLUB/PLAYER ETC" */}
-                  <div
+                  {/*                   <div
                     className={`mx-1 px-3 py-2 rounded-none ${
                       isDarkMode
                         ? "bg-[#101010] border-[1px] border-white    text-white"
@@ -174,7 +198,7 @@ function NewsList({ isDarkMode }) {
                     <p className="text-[15px] font-mada font-semibold">
                       {article.label}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Clock & Date (Icon) & (Text) */}
@@ -198,35 +222,48 @@ function NewsList({ isDarkMode }) {
                 </div> */}
               </div>
               {/* Bottom of card div - with LIKE, COMMENT, SHARE */}
-              <div className="flex items-center justify-end px-4 py-4 bg-white h-auto w-auto space-x-3 text-[15px] font-mada font-semibold rounded-b-xl">
+              <div
+                className="flex items-center justify-center px-3 py-3 pb-4 h-auto w-auto space-x-4 
+              text-[15px] font-mada font-semibold rounded-b-xl"
+              >
                 {/* Like */}
                 <div className="flex items-center space-x-1">
                   <img
-                    className="w-8 mx-0"
+                    className="w-7 mx-[-1px]"
                     src={isDarkMode ? likeIconDark : likeIconLight}
                     alt="Like Icon"
                   />
-                  <span className="text-xs text-black ">Like</span>
+                  <span className="text-xs text-[#5b5b5b]">Like</span>
                 </div>
 
                 {/* Comment */}
                 <div className="flex items-center space-x-1">
                   <img
-                    className="w-7 mx-0"
+                    className="w-7 mx-[-1px]"
                     src={isDarkMode ? commentIconDark : commentIconLight}
                     alt="Comment Icon"
                   />
-                  <span className="text-xs text-black">Comment</span>
+                  <span className="text-xs text-[#5b5b5b]">Comment</span>
+                </div>
+
+                {/* Pin/Fave */}
+                <div className="flex items-center space-x-1">
+                  <img
+                    className="w-7 mx-[-4px]"
+                    src={isDarkMode ? saveIconDark : saveIconLight}
+                    alt="Save Icon"
+                  />
+                  <span className="text-xs text-[#5b5b5b]">Bookmark</span>
                 </div>
 
                 {/* Share */}
                 <div className="flex items-center space-x-1">
                   <img
-                    className="w-6 mx-0"
+                    className="w-7 mx-[-1px]"
                     src={isDarkMode ? shareIconDark : shareIconLight}
                     alt="Share Icon"
                   />
-                  <span className="text-xs text-black">Share</span>
+                  <span className="text-xs text-[#5b5b5b]">Share</span>
                 </div>
               </div>
             </div>
