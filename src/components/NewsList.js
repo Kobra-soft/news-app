@@ -32,8 +32,8 @@ import chevronRightDarkIcon from "../icons/back-svgrepo-com4-dark.svg"; */
 /* import chevronRightLightIcon from "../icons/back-svgrepo-com-chevron-light.svg";
 import chevronRightDarkIcon from "../icons/back-svgrepo-com-chevron-light.svg"; */
 
-import chevronRightLightIcon from "../icons/back-light-svgrepo-com-light.svg";
-import chevronRightDarkIcon from "../icons/back-light-svgrepo-com-dark.svg";
+import chevronRightLightIcon from "../icons/chevron-back-outline-dark.svg";
+import chevronRightDarkIcon from "../icons/chevron-back-outline.svg";
 
 function NewsList({ isDarkMode }) {
   const [articles, setArticles] = React.useState([]);
@@ -53,7 +53,7 @@ function NewsList({ isDarkMode }) {
   return (
     <div className="container mx-auto pb-10 py-5 px-0">
       {/* This div controls the NEWSLIST CARD - Padding / Rounded - needs to be done here */}
-      <div className="flex justify-between mx-4 items-center px-0 py-3.5 relative">
+      <div className="flex justify-between ml-4 items-center px-0 py-3.5 relative">
         <div className="flex items-center">
           <text
             className={`text-[22px] font-rubik font-bold ${
@@ -66,16 +66,16 @@ function NewsList({ isDarkMode }) {
         </div>
         {/* Add a line with mx-2 padding on both sides */}
         <div
-          className={`h-[2px] ml-3 mr-[-3px] mx-0 flex-grow ${
+          className={`h-[2px] ml-3 mx-0 flex-grow ${
             isDarkMode ? "bg-white" : "bg-[#292929]"
           }`}
         >
           {" "}
         </div>
-
+        {/* Chevron Right > - After Line ---------- */}
         <div className="flex items-center">
           <img
-            className="w-[24px] mx-0"
+            className="w-7 mr-2 items-center"
             src={isDarkMode ? chevronRightDarkIcon : chevronRightLightIcon}
             alt="Chevron Right Icon"
             style={{ transform: "rotate(180deg)" }}
@@ -111,6 +111,33 @@ function NewsList({ isDarkMode }) {
                 >
                   {article.title}
                 </h2> */}
+
+                {/* Clock & Date (Icon) & (Text) */}
+                {/* Clock & Date (Icon) & (Text) */}
+                <div className="flex items-center space-x-1 pt-2 px-2">
+                  <img
+                    className="w-5 rounded-full mx-1"
+                    src={isDarkMode ? clockIconDark : clockIconLight}
+                    alt="Clock Icon"
+                  />
+                  <div className="">
+                    <p
+                      className={`p-0 mb-[0px] text-[12.5px] font-inter font-semibold tracking-wide ${
+                        isDarkMode
+                          ? "bg-[#101010] text-[#b3b3b3]"
+                          : "bg-white text-[#5b5b5b]"
+                      }`}
+                    >
+                      {article.date}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Author */}
+                <div className="bg-white text-black flex items-center justify-end px-3 font-mada font-medium">
+                  By - {article.author}
+                </div>
+
                 <h2
                   className={`text-[21px] font-rubik font-bold tracking-tight leading-6
                   text-left pl-3.5 pr-4 pt-5 pb-5 ${
@@ -121,7 +148,7 @@ function NewsList({ isDarkMode }) {
                 </h2>
               </div>
 
-              <div className="flex justify-between items-center px-4 pb-5">
+              <div className="flex justify-between items-center px-2 pb-0">
                 <div className="flex">
                   {/* First "Genre - FOOTBALL/FORMULA1 ETC" */}
                   {/*                   <div
@@ -135,9 +162,10 @@ function NewsList({ isDarkMode }) {
                       {article.genre}
                     </p>
                   </div> */}
+
                   {/* Second label - CLUB/PLAYER ETC" */}
                   <div
-                    className={`mx-0 px-3 py-2 rounded-none ${
+                    className={`mx-1 px-3 py-2 rounded-none ${
                       isDarkMode
                         ? "bg-[#101010] border-[1px] border-white    text-white"
                         : "bg-white     border-[1px] border-gray-600 text-[#000000]"
@@ -150,7 +178,7 @@ function NewsList({ isDarkMode }) {
                 </div>
 
                 {/* Clock & Date (Icon) & (Text) */}
-                <div className="flex items-center mr-0.5">
+                {/*                 <div className="flex items-center mr-0.5">
                   <img
                     className="w-5 rounded-full mx-1"
                     src={isDarkMode ? clockIconDark : clockIconLight}
@@ -167,29 +195,38 @@ function NewsList({ isDarkMode }) {
                       {article.date}
                     </p>
                   </div>
-                </div>
-                {/* Add a new div for like, comment, and share icons */}
-                <div className="flex items-center ml-2">
-                  {/* Like Icon */}
+                </div> */}
+              </div>
+              {/* Bottom of card div - with LIKE, COMMENT, SHARE */}
+              <div className="flex items-center justify-end px-4 py-4 bg-white h-auto w-auto space-x-3 text-[15px] font-mada font-semibold rounded-b-xl">
+                {/* Like */}
+                <div className="flex items-center space-x-1">
                   <img
-                    className="w-9 mx-2"
+                    className="w-8 mx-0"
                     src={isDarkMode ? likeIconDark : likeIconLight}
                     alt="Like Icon"
                   />
+                  <span className="text-xs text-black ">Like</span>
+                </div>
 
-                  {/* Comment Icon */}
+                {/* Comment */}
+                <div className="flex items-center space-x-1">
                   <img
-                    className="w-8 mx-1"
+                    className="w-7 mx-0"
                     src={isDarkMode ? commentIconDark : commentIconLight}
                     alt="Comment Icon"
                   />
+                  <span className="text-xs text-black">Comment</span>
+                </div>
 
-                  {/* Share Icon */}
+                {/* Share */}
+                <div className="flex items-center space-x-1">
                   <img
-                    className="w-7 mx-0 ml-1.5"
+                    className="w-6 mx-0"
                     src={isDarkMode ? shareIconDark : shareIconLight}
                     alt="Share Icon"
                   />
+                  <span className="text-xs text-black">Share</span>
                 </div>
               </div>
             </div>

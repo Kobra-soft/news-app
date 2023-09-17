@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../App.css";
-/* import BackButtonIcon from "../icons/back-button-svgrepo-com-light.svg";
-import BackButtonIcon2 from "../icons/back-button-svgrepo-com-dark.svg"; */
-import BackButtonIcon from "../icons/back-light-svgrepo-com-light.svg";
-import BackButtonIcon2 from "../icons/back-light-svgrepo-com-dark.svg";
-import MoonIcon from "../icons/contrast-light2.svg";
-import SunIcon from "../icons/contrast-dark2.svg";
-import MenuIcon from "../icons/menu-sharp-dark.svg";
-import MenuIcon2 from "../icons/menu-sharp-light.svg";
+/* import BackButtonIcon from "../icons/chevron-back-outline.svg";
+import BackButtonIcon2 from "../icons/chevron-back-outline-dark.svg"; */
+import BackButtonIcon from "../icons/arrow-back-outline-dark.svg";
+import BackButtonIcon2 from "../icons/arrow-back-outline.svg";
+
+/* import MoonIcon from "../icons/contrast-light2.svg";
+import SunIcon from "../icons/contrast-dark2.svg"; */
+
+import MoonIcon from "../icons/contrast-outline-dark.svg";
+import SunIcon from "../icons/contrast-outline.svg";
+
+/* import MenuIcon from "../icons/menu-sharp-dark.svg";
+import MenuIcon2 from "../icons/menu-sharp-light.svg"; */
+import MenuIcon from "../icons/menu-outline-dark.svg";
+import MenuIcon2 from "../icons/menu-outline.svg";
 
 // png logos (15kb each)
 /* import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
@@ -70,10 +77,12 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
                 alt="Back"
-                className={`back-icon w-[36px] sm:w-[36px] rounded-full p-[0.44rem] sm:p-[0.44rem] ml-0 mr-1 ${
+                className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-0 mr-1 ${
                   !("ontouchstart" in window)
-                    ? "hover:bg-[#222222]"
-                    : "hover:bg-[#ebebeb]"
+                    ? isDarkMode
+                      ? "hover:bg-[#222222]" // Dark mode hover background color
+                      : "hover:bg-[#ebebeb]" // Light mode hover background color
+                    : "" // No hover effect on touch devices
                 }`}
               />
             </Link>
@@ -101,18 +110,19 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={SunIcon}
                 alt="Sun"
-                className={`w-[42px] sm:w-[43px] rounded-full p-[0.64rem]  ${
+                className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
                 }`}
-                style={{ rotate: "180deg" }}
+                style={{ rotate: "0deg" }}
               />
             ) : (
               <img
                 src={MoonIcon}
                 alt="Moon"
-                className={`w-[42px] sm:w-[43px] rounded-full p-[0.64rem] ${
+                className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
                 }`}
+                style={{ rotate: "180deg" }}
               />
             )}
           </label>
@@ -128,7 +138,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MenuIcon2}
                 alt="Menu2"
-                className={`w-[40px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
+                className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
                 }`}
               />
@@ -136,7 +146,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               <img
                 src={MenuIcon}
                 alt="Menu"
-                className={`w-[40px] sm:w-[42px] rounded-full p-[0.28rem] sm:p-[0.30rem] ${
+                className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
                   !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
                 }`}
               />
