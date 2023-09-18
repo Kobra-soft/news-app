@@ -119,7 +119,7 @@ function NewsList({ isDarkMode }) {
                 </h2>
               </div>
 
-              {/* Bottom of card div - with LIKE, COMMENT, SHARE */}
+              {/* Bottom of card div - with LIKE, COMMENT, SAVE & SHARE */}
               <div
                 className="flex items-center justify-center px-3 py-3 pb-4 h-auto w-auto 
                 space-x-4 text-[15px] font-mada font-semibold rounded-b-xl"
