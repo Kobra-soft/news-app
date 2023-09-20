@@ -158,7 +158,7 @@ function NewsList({ isDarkMode }) {
                 </div>
 
                 {/* Pin/Fave */}
-                <div className="flex items-center space-x-1">
+                {/*                 <div className="flex items-center space-x-1">
                   <img
                     className="w-7 mx-[-4px]"
                     src={isDarkMode ? saveIconDark : saveIconLight}
@@ -171,7 +171,7 @@ function NewsList({ isDarkMode }) {
                   >
                     Bookmark
                   </span>
-                </div>
+                </div> */}
 
                 {/* Share */}
                 <div className="flex items-center space-x-1">
