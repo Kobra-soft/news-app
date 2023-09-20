@@ -38,6 +38,7 @@ import shareIconDark from "../icons/share-arrow-svgrepo-dark.svg"; */
 import chevronRightDarkIcon from "../icons/back-svgrepo-com4-dark.svg"; */
 /* import chevronRightLightIcon from "../icons/back-svgrepo-com-chevron-light.svg";
 import chevronRightDarkIcon from "../icons/back-svgrepo-com-chevron-light.svg"; */
+
 import chevronRightLightIcon from "../icons/chevron-back-outline-dark.svg";
 import chevronRightDarkIcon from "../icons/chevron-back-outline.svg";
 
@@ -79,7 +80,7 @@ function NewsList({ isDarkMode }) {
                 }`}
               >
                 {/* Date and Source (Icon) & (Text) */}
-                <div className="flex items-center justify-between py-2 px-2">
+                <div className="flex items-center justify-between py-2 pt-3 px-2">
                   <div className="flex items-center space-x-0">
                     <img
                       className="w-5 rounded-full mx-1"
@@ -89,7 +90,7 @@ function NewsList({ isDarkMode }) {
                     <p
                       className={`p-0 mb-[0px] text-[12.5px] font-mada font-semibold ${
                         isDarkMode
-                          ? "bg-[#101010] text-[#5b5b5b]"
+                          ? "bg-[#101010] text-white"
                           : "bg-white text-[#353535]"
                       }`}
                     >
@@ -101,7 +102,7 @@ function NewsList({ isDarkMode }) {
                   <div
                     className={`flex items-center text-[12.5px] font-mada font-semibold mr-2 ${
                       isDarkMode
-                        ? "bg-[#101010] text-[#5b5b5b]"
+                        ? "bg-[#101010] text-white"
                         : "bg-white text-[#353535]"
                     }`}
                   >
@@ -110,8 +111,8 @@ function NewsList({ isDarkMode }) {
                 </div>
 
                 <h2
-                  className={`text-[21px] text-center font-rubik font-extrabold tracking-tighter leading-6
-                  px-3 pt-4 pb-4 ${
+                  className={`text-[22px] text-center font-rubik font-extrabold tracking-tighter leading-6
+                  px-3.5 pt-4 pb-4 ${
                     isDarkMode ? "text-white" : "text-[#292929]"
                   }`}
                 >
@@ -131,7 +132,13 @@ function NewsList({ isDarkMode }) {
                     src={isDarkMode ? likeIconDark : likeIconLight}
                     alt="Like Icon"
                   />
-                  <span className="text-xs text-[#5b5b5b]">Like</span>
+                  <span
+                    className={`text-xs ${
+                      isDarkMode ? "text-white" : "text-[#292929]"
+                    }`}
+                  >
+                    Like
+                  </span>
                 </div>
 
                 {/* Comment */}
@@ -141,7 +148,13 @@ function NewsList({ isDarkMode }) {
                     src={isDarkMode ? commentIconDark : commentIconLight}
                     alt="Comment Icon"
                   />
-                  <span className="text-xs text-[#5b5b5b]">Comment</span>
+                  <span
+                    className={`text-xs ${
+                      isDarkMode ? "text-white" : "text-[#292929]"
+                    }`}
+                  >
+                    Comment
+                  </span>
                 </div>
 
                 {/* Pin/Fave */}
@@ -151,7 +164,13 @@ function NewsList({ isDarkMode }) {
                     src={isDarkMode ? saveIconDark : saveIconLight}
                     alt="Save Icon"
                   />
-                  <span className="text-xs text-[#5b5b5b]">Bookmark</span>
+                  <span
+                    className={`text-xs ${
+                      isDarkMode ? "text-white" : "text-[#292929]"
+                    }`}
+                  >
+                    Bookmark
+                  </span>
                 </div>
 
                 {/* Share */}
@@ -161,7 +180,13 @@ function NewsList({ isDarkMode }) {
                     src={isDarkMode ? shareIconDark : shareIconLight}
                     alt="Share Icon"
                   />
-                  <span className="text-xs text-[#5b5b5b]">Share</span>
+                  <span
+                    className={`text-xs ${
+                      isDarkMode ? "text-white" : "text-[#292929]"
+                    }`}
+                  >
+                    Share
+                  </span>
                 </div>
               </div>
             </div>
