@@ -36,7 +36,7 @@ function NewsDetail() {
         />
         <h1
           className="text-2xl text-left px-3
-        font-rubik font-extrabold tracking-tighter leading-7 text-[#292929]"
+        font-rubik font-extrabold tracking-normal leading-7 text-[#292929]"
         >
           {article.title}
         </h1>

@@ -15,14 +15,12 @@ import likeIconDark from "../icons/like-svgrepo-com2.svg"; */
 /* import likeIconLight from "../icons/like-svgrepo-com.svg";
 import likeIconDark from "../icons/like-svgrepo-com.svg"; */
 
-/* import commentIconLight from "../icons/comment-ellipsis-svgrepo-com.svg";
-import commentIconDark from "../icons/comment-ellipsis-svgrepo-com.svg"; */
 /* import commentIconLight from "../icons/comment-dots-svgrepo-com2.svg";
 import commentIconDark from "../icons/comment-dots-svgrepo-com2.svg"; */
-import commentIconLight from "../icons/comment-dots-solid-svgrepo-com.svg";
-import commentIconDark from "../icons/comment-dots-solid-svgrepo-com-dark.svg";
-/* import commentIconLight from "../icons/nb-comment-dark.svg";
-import commentIconDark from "../icons/nb-comment.svg"; */
+/* import commentIconLight from "../icons/comment-dots-solid-svgrepo-com.svg";
+import commentIconDark from "../icons/comment-dots-solid-svgrepo-com-dark.svg"; */
+import commentIconLight from "../icons/nb-comment-dark.svg";
+import commentIconDark from "../icons/nb-comment.svg";
 
 import saveIconLight from "../icons/bookmark-outline.svg";
 import saveIconDark from "../icons/bookmark-outline-dark.svg";
@@ -111,7 +109,7 @@ function NewsList({ isDarkMode }) {
                 </div>
 
                 <h2
-                  className={`text-[22px] text-center font-rubik font-extrabold tracking-tighter leading-6
+                  className={`text-[22px] text-center font-rubik font-extrabold tracking-normal leading-6
                   px-3.5 pt-4 pb-4 ${
                     isDarkMode ? "text-white" : "text-[#292929]"
                   }`}
