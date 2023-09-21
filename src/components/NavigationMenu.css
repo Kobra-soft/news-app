@@ -1,14 +1,17 @@
 /* NavigationMenu.css */
 
+/* Default styles for desktop and tablet */
 .navigation-menu {
   z-index: 100;
-  position: fixed; /* Change to fixed for full-height overlay */
-  top: 0;
-  left: -250px; /* Start offscreen */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: -100px; /* Start offscreen */
   width: 300px;
-  height: 100%; /* Cover the entire height */
-  background-color: #fff; /* Set your desired background color */
+  height: auto; /* Allow menu to expand based on content */
+  background-color: #ffffff; /* Set your desired background color */
   transition: left 0.3s ease-in-out;
+  display: block; /* Display as a block by default */
 }
 
 .navigation-menu.open {
@@ -26,7 +29,6 @@
 
 .navigation-menu ul li a {
   text-decoration: none;
-  color: #333; /* Set your desired text color */
 }
 
 .navigation-menu button {
@@ -38,6 +40,42 @@
   cursor: pointer;
   padding: 5px 10px;
   font-size: 16px;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+  .navigation-menu {
+    position: fixed; /* Fixed position to cover entire viewport */
+    left: 0; /* Display menu on mobile screens */
+    width: 100%; /* Full width on mobile */
+    height: calc(100% - 72px); /* Full height minus the navbar height */
+    top: 72px; /* Place menu below the navbar on mobile */
+    z-index: 101; /* Place above the navbar */
+  }
+}
+
+/* Styles for wider screens (desktop and tablet) */
+@media screen and (min-width: 768px) {
+  .navigation-menu {
+    width: 100%; /* Full width for screens larger than mobile */
+    left: 0; /* Display menu on wider screens */
+  }
+
+  .navigation-menu ul {
+    display: flex; /* Display menu items horizontally for desktop and tablet */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Space items evenly */
+    padding: 0 20px; /* Add horizontal padding to menu items */
+  }
+
+  .navigation-menu ul li {
+    margin-bottom: 0; /* Remove margin between menu items */
+  }
+
+  .navigation-menu ul li a {
+    color: #000000; /* Set your desired text color */
+    margin-right: 40px; /* Add spacing between menu items */
+  }
 }
 
 /* Add additional styling as needed */

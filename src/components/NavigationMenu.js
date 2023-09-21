@@ -12,32 +12,31 @@ const NavigationMenu = ({ isOpen, closeMenu, isDarkMode }) => {
     <div className={`navigation-menu ${isOpen ? "open" : ""}`}>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Sports</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">Tech</Link>
         </li>
         <li>
-          <Link to="/services">Services</Link>
+          <Link to="/services">Gaming</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">Media</Link>
         </li>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Space</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">Travel</Link>
         </li>
         <li>
-          <Link to="/services">Services</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/services">Cinema</Link>
         </li>
       </ul>
-      <button onClick={closeMenu}>Close</button>
-      <img
+
+      {/* <button onClick={closeMenu}>Close</button> */}
+
+      {/*       <img
         src={isDarkMode ? CloseIcon2 : CloseIcon}
         onClick={closeMenu}
         alt="Close"
@@ -50,7 +49,7 @@ const NavigationMenu = ({ isOpen, closeMenu, isDarkMode }) => {
             ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
             : "" // No hover background for mobile devices!!!
         }`}
-      />
+      /> */}
     </div>
   );
 };

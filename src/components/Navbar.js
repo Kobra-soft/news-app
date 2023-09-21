@@ -66,7 +66,9 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   };
 
   return (
-    <nav className={`py-4 sm:py-2 relative shadow-md ${bgColor}`}>
+    <nav
+      className={`py-4 sm:py-4 md:py-2 lg:py-2 xl:py-2 relative shadow-md ${bgColor}`}
+    >
       <div className="flex justify-between items-center px-0 mx-1">
         {/* Left LOGO */}
         <div className="flex items-center ">
