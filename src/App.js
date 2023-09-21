@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NewsList from "./components/NewsList";
 import NewsDetail from "./components/NewsDetail";
+import "./App.css";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);

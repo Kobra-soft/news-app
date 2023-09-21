@@ -1,0 +1,43 @@
+/* NavigationMenu.css */
+
+.navigation-menu {
+  z-index: 100;
+  position: fixed; /* Change to fixed for full-height overlay */
+  top: 0;
+  left: -250px; /* Start offscreen */
+  width: 300px;
+  height: 100%; /* Cover the entire height */
+  background-color: #fff; /* Set your desired background color */
+  transition: left 0.3s ease-in-out;
+}
+
+.navigation-menu.open {
+  left: 0; /* Slide in when open */
+}
+
+.navigation-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation-menu ul li {
+  margin-bottom: 20px;
+}
+
+.navigation-menu ul li a {
+  text-decoration: none;
+  color: #333; /* Set your desired text color */
+}
+
+.navigation-menu button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgb(230, 230, 230);
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+/* Add additional styling as needed */

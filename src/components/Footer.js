@@ -148,7 +148,7 @@ function Footer({ isDarkMode }) {
         <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#b5b5b5]">
           <a
             href="#aboutUs"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-1 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-1 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -158,7 +158,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#A-Z_Index"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -168,7 +168,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#editorialPolicy"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -178,7 +178,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#cookiePreferences"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -188,7 +188,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#privacyPolicy"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -198,7 +198,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#terms&Conditions"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -208,7 +208,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#accessibility"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -218,7 +218,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#contactUs"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-5 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"

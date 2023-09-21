@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../App.css";
+import NavigationMenu from "./NavigationMenu.js";
+
 /* import BackButtonIcon from "../icons/chevron-back-outline.svg";
 import BackButtonIcon2 from "../icons/chevron-back-outline-dark.svg"; */
 import BackButtonIcon from "../icons/arrow-back-outline-dark.svg";
@@ -25,16 +27,24 @@ import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
 import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
 import LightLogo from "../logos_png/news-hub-logo-white-black.webp";
 
+import CloseIcon from "../icons/close-outline.svg";
+import CloseIcon2 from "../icons/close-outline-darkmode.svg";
+
 function Navbar({ isDarkMode, toggleDarkMode }) {
   const location = useLocation();
   const [menuIconClicked, setMenuIconClicked] = useState(false);
   const [sunIconClicked, setSunIconClicked] = useState(false);
   const [moonIconClicked, setMoonIconClicked] = useState(false);
   const showBackButton = location.pathname !== "/"; // Show the back button when not on the homepage
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuIconClicked(!menuIconClicked);
+    setMenuOpen(!menuOpen);
+  };
 
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
   const bgColor = isDarkMode ? "bg-[#000000]" : "bg-white";
-  // Define the logo path based on dark or light mode
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
@@ -52,19 +62,8 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
     setTimeout(() => {
       setSunIconClicked(false);
     }, 500);
-    // Call the toggleDarkMode function with the opposite of the current mode
     toggleDarkMode(!isDarkMode); // Toggle the mode
   };
-
-  // Function to handle the Menu icon click
-  /*   const handleMenuIconClick = () => {
-    setMenuIconClicked(true);
-    setTimeout(() => {
-      setMenuIconClicked(false);
-    }, 500);
-    // Call the toggleDarkMode function with the opposite of the current mode
-    toggleDarkMode(!isDarkMode); // Toggle the mode
-  }; */
 
   return (
     <nav className={`py-4 sm:py-2 relative shadow-md ${bgColor}`}>
@@ -78,11 +77,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
                 alt="Back"
                 className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-0 mr-1 ${
-                  !("ontouchstart" in window)
-                    ? isDarkMode
-                      ? "hover:bg-[#222222]" // Dark mode hover background color
-                      : "hover:bg-[#ebebeb]" // Light mode hover background color
-                    : "" // No hover effect on touch devices
+                  isDarkMode
+                    ? !("ontouchstart" in window)
+                      ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                      : "" // No hover background for mobile devices!!!
+                    : !("ontouchstart" in window)
+                    ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                    : "" // No hover background for mobile devices!!!
                 }`}
               />
             </Link>
@@ -96,7 +97,6 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             loading="lazy"
           />
         </div>
-
         {/* Right SVG ICONS (Sun/Moon and Menu) */}
         <div className="flex items-center space-x-0 mx-1">
           {/* onClick event listener for (Light/Dark Mode - Toggle) */}
@@ -111,7 +111,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 src={SunIcon}
                 alt="Sun"
                 className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
-                  !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
+                  isDarkMode
+                    ? !("ontouchstart" in window)
+                      ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                      : "" // No hover background for mobile devices!!!
+                    : !("ontouchstart" in window)
+                    ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                    : "" // No hover background for mobile devices!!!
                 }`}
                 style={{ rotate: "0deg" }}
               />
@@ -120,39 +126,65 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 src={MoonIcon}
                 alt="Moon"
                 className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
-                  !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
+                  isDarkMode
+                    ? !("ontouchstart" in window)
+                      ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                      : "" // No hover background for mobile devices!!!
+                    : !("ontouchstart" in window)
+                    ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                    : "" // No hover background for mobile devices!!!
                 }`}
                 style={{ rotate: "180deg" }}
               />
             )}
           </label>
 
-          {/* Left SVG ICON (Menu) */}
+          {/* Render the menu icon based on menuOpen state */}
           <label
             className={`switch mx-0 ${
               menuIconClicked ? "no-hover-background" : ""
             }`}
-            /* onClick={handleMenuIconClick} */
+            onClick={toggleMenu}
           >
-            {isDarkMode ? (
+            {menuOpen ? ( // If the menu is open, display the close (X) icon
               <img
-                src={MenuIcon2}
-                alt="Menu2"
+                src={isDarkMode ? CloseIcon2 : CloseIcon}
+                alt="Close"
                 className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
-                  !("ontouchstart" in window) ? "hover:bg-[#222222]" : ""
+                  isDarkMode
+                    ? !("ontouchstart" in window)
+                      ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                      : "" // No hover background for mobile devices!!!
+                    : !("ontouchstart" in window)
+                    ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                    : "" // No hover background for mobile devices!!!
                 }`}
               />
             ) : (
-              <img
-                src={MenuIcon}
-                alt="Menu"
-                className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
-                  !("ontouchstart" in window) ? "hover:bg-[#ebebeb]" : ""
-                }`}
-              />
+              // Otherwise, display the menu icon along with the dark/light mode icons
+              <>
+                <img
+                  src={isDarkMode ? MenuIcon2 : MenuIcon}
+                  alt="Menu"
+                  className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
+                    isDarkMode
+                      ? !("ontouchstart" in window)
+                        ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                        : "" // No hover background for mobile devices!!!
+                      : !("ontouchstart" in window)
+                      ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                      : "" // No hover background for mobile devices!!!
+                  }`}
+                />
+                {/* You can add dark/light mode icons here */}
+              </>
             )}
           </label>
         </div>
+        {menuIconClicked && (
+          <NavigationMenu isOpen={menuIconClicked} closeMenu={toggleMenu} />
+        )}
+        {/* Render the menu if menuIconClicked is true */}
       </div>
     </nav>
   );
