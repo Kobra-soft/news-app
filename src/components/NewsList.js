@@ -57,7 +57,7 @@ function NewsList({ isDarkMode }) {
 
   return (
     <div className="container mx-auto pb-10 py-5 px-0">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-5">
         {articles.map((article, index) => (
           <Link to={`/article/${article.id}`} key={article.id}>
             {index < 1 ? (
@@ -70,7 +70,7 @@ function NewsList({ isDarkMode }) {
               rounded-t-xl rounded-b-xl ${
                 isDarkMode ? "bg-[#101010]" : "bg-white"
               }`}
-                style={{ maxWidth: "390px", margin: "0 auto" }} // Set maximum width and center the card
+                style={{ maxWidth: "480px", margin: "0 auto" }} // Set maximum width and center the card
               >
                 <img
                   src={article.image}
@@ -211,32 +211,50 @@ function NewsList({ isDarkMode }) {
               // !!!!! For items beyond the first item n the data.json array[1]>, use a different div structure
               // !!!!!
               <div
-                className={`relative p-1 shadow-none hover:shadow-xl hover:border 
+                className={`relative p-0 shadow-md hover:shadow-xl hover:border 
                 rounded-t-xl rounded-b-xl ${
                   isDarkMode ? "bg-[#222222]" : "bg-[#f0f0f0]"
                 }`}
+                style={{ maxWidth: "480px", margin: "0 auto" }} // Set maximum width and center the card
               >
                 {/* Customize the structure for items beyond the first one here */}
-                <div className="flex">
+                <div
+                  className="flex mx-0 px-0 bg-white rounded-xl items-center"
+                  style={{ minHeight: "0px" }}
+                >
                   {/* Left side (text title) */}
-                  <div className="w-3/4">
-                    <h2
-                      className={`text-[16px] sm:text-[19px]
-                      text-left font-rubik font-extrabold tracking-normal leading-6 px-4 pt-2 pb-2 ${
-                        isDarkMode ? "text-white" : "text-[#292929]"
-                      }`}
-                    >
-                      {article.title}
-                    </h2>
+                  <div
+                    className="w-3/4 "
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      minHeight: "100%",
+                    }}
+                  >
+                    <div className=" ml-0 mx-3">
+                      <h2
+                        className={`text-[14px] sm:text-[19px] max-h-12
+                        text-left font-rubik font-bold tracking-tight leading-0 ml-4 pt-0 pb-0${
+                          isDarkMode ? "text-white" : "text-[#292929]"
+                        }`}
+                      >
+                        {article.title.length > 66
+                          ? `${article.title.substring(0, 66)}...`
+                          : article.title}
+                      </h2>
+                    </div>
+                    {/* Add additional content or space as needed */}
+                    <div style={{ flex: 1 }}></div>
                   </div>
                   {/* Right side (smaller image) */}
-                  <div className="w-1/4">
+                  <div className="w-1/4 p-0 pt-2 pb-2 pr-2">
                     <img
                       src={article.image}
                       alt={article.title}
                       className={`w-full ${
                         index === 1 ? "max-h-[100px]" : "max-h-[50px]"
-                      }`} // Adjust the max height as needed
+                      }`}
                     />
                   </div>
                 </div>
