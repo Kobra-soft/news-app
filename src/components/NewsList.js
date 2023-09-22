@@ -72,7 +72,7 @@ function NewsList({ isDarkMode }) {
                 // !!!!!
                 <div
                   className={`relative shadow-md hover:shadow-xl hover:border 
-                max-w-[480px] sm:max-w-[480px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px
+                max-w-[480px] sm:max-w-[480px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px]
               rounded-t-xl rounded-b-xl ${
                 isDarkMode ? "bg-[#101010]" : "bg-white"
               }`}
@@ -217,7 +217,7 @@ function NewsList({ isDarkMode }) {
                 // !!!!! For items beyond the first item n the data.json array[1]>, use a different div structure
                 // !!!!!
                 <div
-                  className={`relative p-0 shadow-md hover:shadow-xl hover:border
+                  className={`relative py-4 shadow-md hover:shadow-xl hover:border
                 rounded-t-xl rounded-b-xl
                 max-w-[480px] sm:max-w-[480px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px]
                 ${isDarkMode ? "bg-[#101010]" : "bg-white"}`}
@@ -226,7 +226,7 @@ function NewsList({ isDarkMode }) {
                   {/* Customize the structure for items beyond the first one here */}
                   <div
                     className="flex mx-0 px-0 rounded-xl items-center"
-                    style={{ minHeight: "80px" }}
+                    style={{ minHeight: "100px", maxHeight: "100px" }}
                   >
                     {/* Left side (text title) */}
                     <div
@@ -238,13 +238,13 @@ function NewsList({ isDarkMode }) {
                         minHeight: "100%",
                       }}
                     >
-                      <div className=" ml-0 mx-3">
+                      <div className=" ml-0 mx-5">
                         <h2
-                          className={`text-[14px] sm:text-[19px] max-h-12 text-left font-rubik font-bold tracking-tight leading-0 ml-4 pt-0 pb-0
+                          className={`text-[14px] sm:text-[14px] text-left font-rubik font-extrabold tracking-tight leading-0 ml-4 pt-0 pb-0
                           ${isDarkMode ? "text-white" : "text-[#292929]"}`}
                         >
-                          {article.title.length > 66
-                            ? `${article.title.substring(0, 66)}...`
+                          {article.title.length > 100
+                            ? `${article.title.substring(0, 100)}...`
                             : article.title}
                         </h2>
                       </div>
@@ -252,13 +252,12 @@ function NewsList({ isDarkMode }) {
                       <div style={{ flex: 1 }}></div>
                     </div>
                     {/* Right side (smaller image) */}
-                    <div className="w-1/4 p-0 pt-2 pb-2 pr-3">
+                    <div className="p-0 pt-0 pb-0 pr-[1px]">
                       <img
+                        className="rounded-e-lg object-fill"
                         src={article.image}
                         alt={article.title}
-                        className={`w-full ${
-                          index === 1 ? "max-h-[100px]" : "max-h-[50px]"
-                        }`}
+                        style={{ height: "130px", width: "180px" }} // Adjust the height value as needed
                       />
                     </div>
                   </div>
