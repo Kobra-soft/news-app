@@ -240,7 +240,7 @@ function NewsList({ isDarkMode }) {
                     >
                       <div className=" ml-0 mx-5">
                         <h2
-                          className={`text-[14px] sm:text-[14px] text-left font-rubik font-extrabold tracking-tight leading-0 ml-4 pt-0 pb-0
+                          className={`text-[14px] sm:text-[14px] text-left font-rubik font-bold tracking-tight leading-0 ml-4 pt-0 pb-0
                           ${isDarkMode ? "text-white" : "text-[#292929]"}`}
                         >
                           {article.title.length > 100
