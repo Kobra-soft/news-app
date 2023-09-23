@@ -62,10 +62,10 @@ function NewsList({ isDarkMode }) {
         className="flex flex-col items-center justify-center"
         style={{ minHeight: "100vh" }}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 px-5">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2 px-5">
           {articles.map((article, index) => (
             <Link to={`/article/${article.id}`} key={article.id}>
-              {index < 1 ? (
+              {index < 3 ? (
                 // !!!!!
                 // !!!!! For the first item in the data.json array[0], use this div structure
                 // !!!!! if index less than index 1 <<< display in the div below
@@ -128,7 +128,9 @@ function NewsList({ isDarkMode }) {
                     isDarkMode ? "text-white" : "text-[#292929]"
                   }`}
                     >
-                      {article.title}
+                      {article.title.length > 86
+                        ? `${article.title.substring(0, 86)}...`
+                        : article.title}
                     </h2>
                     {/*                 <div
                   className={`flex items-center justify-start text-[13.5px] font-mada font-semibold px-4 border-b py-3 ${
