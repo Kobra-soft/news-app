@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -42,6 +42,8 @@ import chevronRightDarkIcon from "../icons/chevron-back-outline.svg";
 
 function NewsList({ isDarkMode }) {
   const [articles, setArticles] = React.useState([]);
+  const [articles2, setArticles2] = React.useState([]);
+  const [showAll, setShowAll] = React.useState(false);
   const borderColor = isDarkMode
     ? "border-[#b5b5b5] border-b"
     : "border-gray-400 border-b";
@@ -53,31 +55,36 @@ function NewsList({ isDarkMode }) {
     axios.get("/data.json").then((response) => {
       setArticles(response.data);
     });
+
+    // Fetch data from data2.json for the second div
+    axios.get("/data2.json").then((response) => {
+      setArticles2(response.data);
+    });
   }, []);
 
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
+  const filteredArticles = showAll ? articles2 : articles2.slice(0, 15);
+
   return (
-    <div className="container mx-auto pb-10 py-5 px-0">
-      {/* Center the content using flexbox */}
-      <div
-        className="flex flex-col items-center justify-center"
-        style={{ minHeight: "100vh" }}
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2 px-5">
+    <div className="container mx-auto pb-10 py-10 md:py-10 lg:py-10 xl:py-10 px-2">
+      <div className="flex flex-col items-center justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 max-w-7xl">
           {articles.map((article, index) => (
             <Link to={`/article/${article.id}`} key={article.id}>
-              {index < 3 ? (
-                // !!!!!
-                // !!!!! For the first item in the data.json array[0], use this div structure
-                // !!!!! if index less than index 1 <<< display in the div below
-                // !!!!!
+              {/* {index % 1 === 0 ? ( */}
+              {index < 6 ? (
                 <div
                   className={`relative shadow-md hover:shadow-xl hover:border 
-                max-w-[480px] sm:max-w-[480px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px]
-              rounded-t-xl rounded-b-xl ${
-                isDarkMode ? "bg-[#101010]" : "bg-white"
-              }`}
-                  /* style={{ maxWidth: "480px", margin: "0 auto" }} */ // Set maximum width and center the card
+                  max-w-[460px] sm:max-w-[460px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px]
+                  rounded-t-xl rounded-b-xl ${
+                    isDarkMode ? "bg-[#101010]" : "bg-white"
+                  }`}
                 >
+                  {/* Big card content */}
+                  {/* ... (rest of your big card content) */}
                   <img
                     src={article.image}
                     alt={article.title}
@@ -122,25 +129,16 @@ function NewsList({ isDarkMode }) {
                     </div>
 
                     <h2
-                      className={`text-[22px] sm:text-[19px]
+                      className={`text-[21px] sm:text-[22px] md:text-[18px]
                   text-left font-rubik font-extrabold tracking-normal leading-6
                   px-4 pt-2 pb-5 border-b ${
                     isDarkMode ? "text-white" : "text-[#292929]"
                   }`}
                     >
-                      {article.title.length > 86
-                        ? `${article.title.substring(0, 86)}...`
+                      {article.title.length > 68
+                        ? `${article.title.substring(0, 68)}...`
                         : article.title}
                     </h2>
-                    {/*                 <div
-                  className={`flex items-center justify-start text-[13.5px] font-mada font-semibold px-4 border-b py-3 ${
-                    isDarkMode
-                      ? "bg-[#101010] text-[#757575]"
-                      : "bg-white text-[#757575]"
-                  }`}
-                >
-                  By - {article.author}
-                </div> */}
                   </div>
 
                   {/* Bottom of card div - with LIKE, COMMENT, SAVE & SHARE */}
@@ -181,20 +179,6 @@ function NewsList({ isDarkMode }) {
                     </div>
 
                     {/* Pin/Fave */}
-                    {/*                 <div className="flex items-center space-x-1">
-                  <img
-                    className="w-7 mx-[-4px]"
-                    src={isDarkMode ? saveIconDark : saveIconLight}
-                    alt="Save Icon"
-                  />
-                  <span
-                    className={`text-xs ${
-                      isDarkMode ? "text-white" : "text-[#292929]"
-                    }`}
-                  >
-                    Bookmark
-                  </span>
-                </div> */}
 
                     {/* Share */}
                     <div className="flex items-center space-x-1">
@@ -213,60 +197,59 @@ function NewsList({ isDarkMode }) {
                     </div>
                   </div>
                 </div>
-              ) : (
-                // else if index greater than index 1 >>> than display in the div below
-                // !!!!!
-                // !!!!! For items beyond the first item n the data.json array[1]>, use a different div structure
-                // !!!!!
-                <div
-                  className={`relative py-4 shadow-md hover:shadow-xl hover:border
-                rounded-t-xl rounded-b-xl
-                max-w-[480px] sm:max-w-[480px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px]
-                ${isDarkMode ? "bg-[#101010]" : "bg-white"}`}
-                  /* style={{ maxWidth: "480px", margin: "0 auto" }}  */ // Set maximum width and center the card
-                >
-                  {/* Customize the structure for items beyond the first one here */}
-                  <div
-                    className="flex mx-0 px-0 rounded-xl items-center"
-                    style={{ minHeight: "100px", maxHeight: "100px" }}
-                  >
-                    {/* Left side (text title) */}
-                    <div
-                      className="w-3/4"
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                        minHeight: "100%",
-                      }}
-                    >
-                      <div className=" ml-0 mx-5">
-                        <h2
-                          className={`text-[14px] sm:text-[14px] text-left font-rubik font-bold tracking-tight leading-0 ml-4 pt-0 pb-0
-                          ${isDarkMode ? "text-white" : "text-[#292929]"}`}
-                        >
-                          {article.title.length > 100
-                            ? `${article.title.substring(0, 100)}...`
-                            : article.title}
-                        </h2>
-                      </div>
-                      {/* Add additional content or space as needed */}
-                      <div style={{ flex: 1 }}></div>
-                    </div>
-                    {/* Right side (smaller image) */}
-                    <div className="p-0 pt-0 pb-0 pr-[1px]">
-                      <img
-                        className="rounded-e-lg object-fill"
-                        src={article.image}
-                        alt={article.title}
-                        style={{ height: "130px", width: "180px" }} // Adjust the height value as needed
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
+              ) : null}
             </Link>
           ))}
+
+          {/* <div className="bg-red-400"></div> */}
+          {filteredArticles.slice(6).map((article) => (
+            <Link to={`/article/${article.id}`} key={article.id}>
+              <div
+                className={`relative py-4 shadow-md hover:shadow-xl hover:border
+                rounded-t-xl rounded-b-xl max-w-[480px] ${
+                  isDarkMode ? "bg-[#101010]" : "bg-white"
+                }`}
+              >
+                {/* Small card content */}
+                {/* ... (rest of your small card content) */}
+                <div className="flex items-center">
+                  {/* Left side (image) */}
+                  <div className="w-28 h-[85px] ml-3 flex items-center">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="object-cover w-full h-full rounded-lg"
+                    />
+                  </div>
+                  {/* Spacing */}
+                  <div className="w-2"></div>{" "}
+                  {/* You can adjust the width of the gap here. */}
+                  {/* Right side (text content) */}
+                  <div className="flex-1 flex items-center">
+                    <h2
+                      className={`mx-1 mr-5 text-[14px] sm:text-[14px] text-left font-rubik font-bold tracking-tight leading-0 ${
+                        isDarkMode ? "text-white" : "text-[#292929]"
+                      }`}
+                    >
+                      {article.title.length > 50
+                        ? `${article.title.substring(0, 71)}...`
+                        : article.title}
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <button
+            onClick={toggleShowAll}
+            className="bg-black border border-solid border-gray-500 hover:bg-gray-500 hover:text-white
+             text-gray-200 hover:border-transparent font-poppins font-medium text-base px-14 py-3 rounded-lg
+             "
+          >
+            {showAll ? "Show Less Articles" : "Load More Articles"}
+          </button>
         </div>
       </div>
     </div>
