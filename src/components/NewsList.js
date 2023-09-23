@@ -129,7 +129,7 @@ function NewsList({ isDarkMode }) {
                     </div>
 
                     <h2
-                      className={`text-[21px] sm:text-[22px] md:text-[18px]
+                      className={`text-[22px] sm:text-[22px] md:text-[18px]
                   text-left font-rubik font-extrabold tracking-normal leading-6
                   px-4 pt-2 pb-5 border-b ${
                     isDarkMode ? "text-white" : "text-[#292929]"
