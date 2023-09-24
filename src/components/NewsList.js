@@ -50,154 +50,207 @@ function NewsList({ isDarkMode }) {
   // Determine which set of icons to use based on the theme
   const clockIcon = isDarkMode ? clockIconDark : clockIconLight;
 
-  React.useEffect(() => {
+  // Inside your component, make an API request
+  /*   useEffect(() => {
+    const apiKey = "f6b499e9ef0d7e84bc4b01cd73323fb3";
+    const apiUrl = `http://api.mediastack.com/v1/news?access_key=f6b499e9ef0d7e84bc4b01cd73323fb3&languages=en&countries=gb`;
+
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        // Filter out articles with null images
+        const newsData = response.data.data.filter((article, index, self) => {
+          // Check if the current article's image is unique within the array
+          return (
+            article.image !== null &&
+            self.findIndex((a) => a.image === article.image) === index
+          );
+        });
+
+        setArticles(newsData);
+      })
+      .catch((error) => {
+        console.error("Error fetching news data:", error);
+      });
+  }, []); */
+
+  /*     axios
+      .get(apiUrl)
+      .then((response) => {
+        // Filter out articles with null images
+        const newsData = response.data.data.filter(
+          (article) => article.image !== null
+        );
+        setArticles(newsData);
+      })
+      .catch((error) => {
+        console.error("Error fetching news data:", error);
+      });
+  }, []); */
+
+  useEffect(() => {
     // Fetch data from your JSON file or API (using axios)
-    axios.get("/data.json").then((response) => {
+    axios.get("/data2.json").then((response) => {
       setArticles(response.data);
     });
-
-    // Fetch data from data2.json for the second div
-    axios.get("/data2.json").then((response) => {
-      setArticles2(response.data);
-    });
   }, []);
+
+  const topArticles = articles.slice(0, 6); // Get the first 6 articles
+  const bottomArticles = articles.slice(0, 24); // Get articles from index 7 onwards
 
   const toggleShowAll = () => {
     setShowAll(!showAll);
   };
 
-  const filteredArticles = showAll ? articles2 : articles2.slice(0, 15);
+  const filteredArticles = showAll ? bottomArticles : topArticles;
 
   return (
     <div className="container mx-auto pb-10 py-10 md:py-10 lg:py-10 xl:py-10 px-2">
       <div className="flex flex-col items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 max-w-7xl">
-          {articles.map((article, index) => (
+          {/* {articles.map((article, index) => ( */}
+          {topArticles.map((article, index) => (
             <Link to={`/article/${article.id}`} key={article.id}>
               {/* {index % 1 === 0 ? ( */}
-              {index < 6 ? (
-                <div
-                  className={`relative shadow-md hover:shadow-xl hover:border 
+              <div
+                className={`relative shadow-md hover:shadow-xl hover:border 
                   max-w-[460px] sm:max-w-[460px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px]
                   rounded-t-xl rounded-b-xl ${
                     isDarkMode ? "bg-[#101010]" : "bg-white"
                   }`}
-                >
-                  {/* Big card content */}
-                  {/* ... (rest of your big card content) */}
+              >
+                {/* Big card content */}
+                {/* ... (rest of your big card content) */}
+
+                {/* Conditionally render the image or placeholder */}
+                {article.image ? (
                   <img
                     src={article.image}
-                    alt={article.title}
+                    alt=""
                     className="w-full h-[225px] max-w-full object-center sm:object-center md:object-center rounded-t-xl"
                   />
-                  {/* This div controls the background color (CARD) */}
-                  {/* TITLE */}
-                  <div
-                    className={`h-auto  ${
-                      isDarkMode ? "bg-[#101010]" : "bg-white"
-                    }`}
-                  >
-                    {/* Date and Source (Icon) & (Text) */}
-                    <div className="flex items-center justify-between pt-3 pb-3 px-2">
-                      <div className="flex items-center space-x-0">
-                        <img
-                          className="w-5 rounded-full mx-1"
-                          src={isDarkMode ? clockIconDark : clockIconLight}
-                          alt="Clock Icon"
-                        />
-                        <p
-                          className={`p-0 mb-[0px] text-[12.5px] font-mada font-semibold ${
-                            isDarkMode
-                              ? "bg-[#101010] text-white"
-                              : "bg-white text-[#292929]"
-                          }`}
-                        >
-                          {article.date}
-                        </p>
-                      </div>
+                ) : (
+                  <img
+                    src={`http://via.placeholder.com/640x360`}
+                    alt=""
+                    className="w-full h-[225px] max-w-full object-center sm:object-center md:object-center rounded-t-xl"
+                  />
+                )}
 
-                      {/* Source */}
-                      <div
-                        className={`flex items-center text-[12.5px] font-mada font-semibold mr-2 ${
+                {/*                 <img
+                  src={article.image}
+                  alt=""
+                  className="w-full h-[225px] max-w-full object-center sm:object-center md:object-center rounded-t-xl"
+                /> */}
+
+                {/* This div controls the background color (CARD) */}
+                {/* TITLE */}
+                <div
+                  className={`h-auto  ${
+                    isDarkMode ? "bg-[#101010]" : "bg-white"
+                  }`}
+                >
+                  {/* Date and Source (Icon) & (Text) */}
+                  <div className="flex items-center justify-between pt-3 pb-3 px-2">
+                    <div className="flex items-center space-x-0">
+                      <img
+                        className="w-5 rounded-full mx-1"
+                        src={isDarkMode ? clockIconDark : clockIconLight}
+                        alt="Clock Icon"
+                      />
+                      <p
+                        className={`p-0 mb-[0px] text-[12.5px] font-mada font-semibold ${
                           isDarkMode
-                            ? "bg-[#101010] text-[#757575]"
-                            : "bg-white text-[#757575]"
+                            ? "bg-[#101010] text-white"
+                            : "bg-white text-[#292929]"
                         }`}
                       >
-                        {article.source}
-                      </div>
+                        {/* {article.date} */}
+                        {article.published_at.substring(0, 10)}
+                      </p>
                     </div>
 
-                    <h2
-                      className={`text-[22px] sm:text-[22px] md:text-[18px]
+                    {/* Source */}
+                    <div
+                      className={`flex items-center text-[12.5px] font-mada font-semibold mr-2 ${
+                        isDarkMode
+                          ? "bg-[#101010] text-[#757575]"
+                          : "bg-white text-[#757575]"
+                      }`}
+                    >
+                      {article.source}
+                    </div>
+                  </div>
+
+                  <h2
+                    className={`text-[22px] sm:text-[22px] md:text-[18px]
                   text-left font-rubik font-extrabold tracking-normal leading-6
                   px-4 pt-2 pb-5 border-b ${
                     isDarkMode ? "text-white" : "text-[#292929]"
                   }`}
+                  >
+                    {article.title.length > 68
+                      ? `${article.title.substring(0, 68)}...`
+                      : article.title}
+                  </h2>
+                </div>
+
+                {/* Bottom of card div - with LIKE, COMMENT, SAVE & SHARE */}
+                <div
+                  className="flex items-center justify-end px-4 py-3 pb-3 h-auto w-auto 
+                space-x-3 text-[15px] font-mada font-semibold rounded-b-xl"
+                >
+                  {/* Like */}
+                  <div className="flex items-center space-x-1">
+                    <img
+                      className="w-7 mx-[-1px]"
+                      src={isDarkMode ? likeIconDark : likeIconLight}
+                      alt="Like Icon"
+                    />
+                    <span
+                      className={`text-xs ${
+                        isDarkMode ? "text-white" : "text-[#292929]"
+                      }`}
                     >
-                      {article.title.length > 68
-                        ? `${article.title.substring(0, 68)}...`
-                        : article.title}
-                    </h2>
+                      Like
+                    </span>
                   </div>
 
-                  {/* Bottom of card div - with LIKE, COMMENT, SAVE & SHARE */}
-                  <div
-                    className="flex items-center justify-end px-4 py-3 pb-3 h-auto w-auto 
-                space-x-3 text-[15px] font-mada font-semibold rounded-b-xl"
-                  >
-                    {/* Like */}
-                    <div className="flex items-center space-x-1">
-                      <img
-                        className="w-7 mx-[-1px]"
-                        src={isDarkMode ? likeIconDark : likeIconLight}
-                        alt="Like Icon"
-                      />
-                      <span
-                        className={`text-xs ${
-                          isDarkMode ? "text-white" : "text-[#292929]"
-                        }`}
-                      >
-                        Like
-                      </span>
-                    </div>
+                  {/* Comment */}
+                  <div className="flex items-center space-x-1">
+                    <img
+                      className="w-7 mx-[-1px]"
+                      src={isDarkMode ? commentIconDark : commentIconLight}
+                      alt="Comment Icon"
+                    />
+                    <span
+                      className={`text-xs ${
+                        isDarkMode ? "text-white" : "text-[#292929]"
+                      }`}
+                    >
+                      Comment
+                    </span>
+                  </div>
 
-                    {/* Comment */}
-                    <div className="flex items-center space-x-1">
-                      <img
-                        className="w-7 mx-[-1px]"
-                        src={isDarkMode ? commentIconDark : commentIconLight}
-                        alt="Comment Icon"
-                      />
-                      <span
-                        className={`text-xs ${
-                          isDarkMode ? "text-white" : "text-[#292929]"
-                        }`}
-                      >
-                        Comment
-                      </span>
-                    </div>
+                  {/* Pin/Fave */}
 
-                    {/* Pin/Fave */}
-
-                    {/* Share */}
-                    <div className="flex items-center space-x-1">
-                      <img
-                        className="w-7 mx-[-1px]"
-                        src={isDarkMode ? shareIconDark : shareIconLight}
-                        alt="Share Icon"
-                      />
-                      <span
-                        className={`text-xs ${
-                          isDarkMode ? "text-white" : "text-[#292929]"
-                        }`}
-                      >
-                        Share
-                      </span>
-                    </div>
+                  {/* Share */}
+                  <div className="flex items-center space-x-1">
+                    <img
+                      className="w-7 mx-[-1px]"
+                      src={isDarkMode ? shareIconDark : shareIconLight}
+                      alt="Share Icon"
+                    />
+                    <span
+                      className={`text-xs ${
+                        isDarkMode ? "text-white" : "text-[#292929]"
+                      }`}
+                    >
+                      Share
+                    </span>
                   </div>
                 </div>
-              ) : null}
+              </div>
             </Link>
           ))}
 
@@ -215,11 +268,26 @@ function NewsList({ isDarkMode }) {
                 <div className="flex items-center">
                   {/* Left side (image) */}
                   <div className="w-28 h-[85px] ml-3 flex items-center">
-                    <img
+                    {/* Conditionally render the image or placeholder */}
+                    {article.image ? (
+                      <img
+                        src={article.image}
+                        alt=""
+                        className="object-cover w-full h-full rounded-lg"
+                      />
+                    ) : (
+                      <img
+                        src={`http://via.placeholder.com/640x360`}
+                        alt=""
+                        className="object-cover w-full h-full rounded-lg"
+                      />
+                    )}
+
+                    {/* <img
                       src={article.image}
                       alt={article.title}
                       className="object-cover w-full h-full rounded-lg"
-                    />
+                    /> */}
                   </div>
                   {/* Spacing */}
                   <div className="w-2"></div>{" "}

@@ -9,7 +9,7 @@
   left: -100px; /* Start offscreen */
   width: 300px;
   height: auto; /* Allow menu to expand based on content */
-  background-color: #ffffff; /* Set your desired background color */
+  background-color: #ed042d; /* Set your desired background color */
   transition: left 0.3s ease-in-out;
   display: block; /* Display as a block by default */
 }
