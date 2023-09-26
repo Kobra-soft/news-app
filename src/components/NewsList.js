@@ -316,7 +316,7 @@ function NewsList({ isDarkMode }) {
              text-gray-200 hover:border-transparent font-poppins font-medium text-base px-14 py-3 rounded-lg
              "
           >
-            {showAll ? "Show Less Articles" : "Load More Articles"}
+            {showAll ? "Show Less Articles?" : "Load More Articles?"}
           </button>
         </div>
       </div>
