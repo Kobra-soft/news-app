@@ -24,9 +24,13 @@ import MenuIcon2 from "../icons/menu-outline.svg";
 /* import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
 import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
 
-// webp logos (9kb each)
-import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
-import LightLogo from "../logos_png/news-hub-logo-white-black.webp";
+// webp logos (9kb each) ORIGINALS
+/* import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
+import LightLogo from "../logos_png/news-hub-logo-white-black.webp"; */
+
+// webp logos NEW REDONE DESIGNS
+import DarkLogo from "../logos_webp&svgs/High-Resolution-Logo-Black-on-Transparent-Background.webp";
+import LightLogo from "../logos_webp&svgs/High-Resolution-Logo-Color-on-Transparent-Background.webp";
 
 import CloseIcon from "../icons/close-outline.svg";
 import CloseIcon2 from "../icons/close-outline-darkmode.svg";
