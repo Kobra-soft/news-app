@@ -18,7 +18,7 @@ import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
 
 // webp logos (9kb each)
 import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
-import LightLogo from "../logos_png/news-hub-logo-white-black.webp";
+import LightLogo from "../logos_webp&svgs/High-Resolution-Logo-RedWhite-on-Transparent-Background.webp";
 
 function Footer({ isDarkMode }) {
   // Determine which set of icons to use based on the theme
