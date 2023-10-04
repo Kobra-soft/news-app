@@ -1,9 +1,5 @@
-.sticky-navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #ffffff; /* Change this to your desired background color */
-    /* Add any other styles you need for your navbar */
-  }
-  
-  /* Optional: Add styles to ensure proper spacing below the sticky navbar */
+/* .sticky-top-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+} */

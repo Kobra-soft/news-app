@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../App.css";
-import "../components/Navbar.css";
+/* import "../components/Navbar.css"; */
 import NavigationMenu from "./NavigationMenu.js";
 
 /* import BackButtonIcon from "../icons/chevron-back-outline.svg";
@@ -71,109 +71,95 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   };
 
   return (
-    <div className="sticky-navbar">
-      <nav
-        className={`py-4 sm:py-4 md:py-2 lg:py-2 xl:py-2 relative shadow-md ${bgColor}`}
-      >
-        <div className="flex justify-between items-center px-0 mx-1">
-          {/* Left LOGO */}
-          <div className="flex items-center ">
-            {showBackButton && (
-              <Link to="/" className="back-button" title="Back">
-                {/* Custom back icon */}
-                <img
-                  src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
-                  alt="Back"
-                  className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-0 mr-1 ${
-                    isDarkMode
-                      ? !("ontouchstart" in window)
-                        ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
-                        : "" // No hover background for mobile devices!!!
-                      : !("ontouchstart" in window)
-                      ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
-                      : "" // No hover background for mobile devices!!!
-                  }`}
-                />
-              </Link>
-            )}
-            <img
-              src={logoPath}
-              alt="Logo"
-              className={`h-10 w-44 ml-0 ${
-                showBackButton ? "2" : "0"
-              } rounded-none`}
-              loading="lazy"
-            />
-          </div>
-          {/* Right SVG ICONS (Sun/Moon and Menu) */}
-          <div className="flex items-center space-x-0 mx-1">
-            {/* onClick event listener for (Light/Dark Mode - Toggle) */}
-            <label
-              className={`switch mx-0 rounded-full ${
-                sunIconClicked ? "no-hover-background" : ""
-              }`}
-              onClick={handleSunIconClick}
-            >
-              {isDarkMode ? (
-                <img
-                  src={SunIcon}
-                  alt="Sun"
-                  className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
-                    isDarkMode
-                      ? !("ontouchstart" in window)
-                        ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
-                        : "" // No hover background for mobile devices!!!
-                      : !("ontouchstart" in window)
-                      ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
-                      : "" // No hover background for mobile devices!!!
-                  }`}
-                  style={{ rotate: "0deg" }}
-                />
-              ) : (
-                <img
-                  src={MoonIcon}
-                  alt="Moon"
-                  className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
-                    isDarkMode
-                      ? !("ontouchstart" in window)
-                        ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
-                        : "" // No hover background for mobile devices!!!
-                      : !("ontouchstart" in window)
-                      ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
-                      : "" // No hover background for mobile devices!!!
-                  }`}
-                  style={{ rotate: "180deg" }}
-                />
-              )}
-            </label>
-
-            {/* Render the menu icon based on menuOpen state */}
-            <label
-              className={`switch mx-0 ${
-                menuIconClicked ? "no-hover-background" : ""
-              }`}
-              onClick={toggleMenu}
-            >
-              {menuOpen ? ( // If the menu is open, display the close (X) icon
-                <img
-                  src={isDarkMode ? CloseIcon2 : CloseIcon}
-                  alt="Close"
-                  className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
-                    isDarkMode
-                      ? !("ontouchstart" in window)
-                        ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
-                        : "" // No hover background for mobile devices!!!
-                      : !("ontouchstart" in window)
-                      ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
-                      : "" // No hover background for mobile devices!!!
-                  }`}
-                />
-              ) : (
-                // Otherwise, display the menu icon along with the dark/light mode icons
-                <>
+    <>
+      {/* Top Bar Navbar (Logo, Sun/Moon, Menu) */}
+      <div className="sticky-top-navbar">
+        <nav
+          className={`py-4 sm:py-4 md:py-2 lg:py-2 xl:py-2 relative shadow-md ${bgColor}`}
+        >
+          <div className="flex justify-between items-center px-0 mx-1">
+            {/* Left LOGO */}
+            <div className="flex items-center ">
+              {showBackButton && (
+                <Link to="/" className="back-button" title="Back">
+                  {/* Custom back icon */}
                   <img
-                    src={isDarkMode ? MenuIcon2 : MenuIcon}
-                    alt="Menu"
+                    src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
+                    alt="Back"
+                    className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-0 mr-1 ${
+                      isDarkMode
+                        ? !("ontouchstart" in window)
+                          ? "hover:bg-[#222222] hover:bg-opacity-75" //  in dark mode
+                          : "" // No hover background for mobile devices!!!
+                        : !("ontouchstart" in window)
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                        : "" // No hover background for mobile devices!!!
+                    }`}
+                  />
+                </Link>
+              )}
+              <img
+                src={logoPath}
+                alt="Logo"
+                className={`h-10 w-44 ml-0 ${
+                  showBackButton ? "2" : "0"
+                } rounded-none`}
+                loading="lazy"
+              />
+            </div>
+            {/* Right SVG ICONS (Sun/Moon and Menu) */}
+            <div className="flex items-center space-x-0 mx-1">
+              {/* onClick event listener for (Light/Dark Mode - Toggle) */}
+              <label
+                className={`switch mx-0 rounded-full ${
+                  sunIconClicked ? "no-hover-background" : ""
+                }`}
+                onClick={handleSunIconClick}
+              >
+                {isDarkMode ? (
+                  <img
+                    src={SunIcon}
+                    alt="Sun"
+                    className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
+                      isDarkMode
+                        ? !("ontouchstart" in window)
+                          ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                          : "" // No hover background for mobile devices!!!
+                        : !("ontouchstart" in window)
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                        : "" // No hover background for mobile devices!!!
+                    }`}
+                    style={{ rotate: "0deg" }}
+                  />
+                ) : (
+                  <img
+                    src={MoonIcon}
+                    alt="Moon"
+                    className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
+                      isDarkMode
+                        ? !("ontouchstart" in window)
+                          ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                          : "" // No hover background for mobile devices!!!
+                        : !("ontouchstart" in window)
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                        : "" // No hover background for mobile devices!!!
+                    }`}
+                    style={{ rotate: "180deg" }}
+                  />
+                )}
+              </label>
+
+              {/* Render the menu icon based on menuOpen state */}
+              <label
+                className={`switch mx-0 ${
+                  menuIconClicked ? "no-hover-background" : ""
+                }`}
+                onClick={toggleMenu}
+              >
+                {menuOpen ? ( // If the menu is open, display the close (X) icon
+                  <img
+                    src={isDarkMode ? CloseIcon2 : CloseIcon}
+                    alt="Close"
                     className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
@@ -184,18 +170,82 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                         : "" // No hover background for mobile devices!!!
                     }`}
                   />
-                  {/* You can add dark/light mode icons here */}
-                </>
-              )}
-            </label>
+                ) : (
+                  // Otherwise, display the menu icon along with the dark/light mode icons
+                  <>
+                    <img
+                      src={isDarkMode ? MenuIcon2 : MenuIcon}
+                      alt="Menu"
+                      className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
+                        isDarkMode
+                          ? !("ontouchstart" in window)
+                            ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                            : "" // No hover background for mobile devices!!!
+                          : !("ontouchstart" in window)
+                          ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                          : "" // No hover background for mobile devices!!!
+                      }`}
+                    />
+                    {/* You can add dark/light mode icons here */}
+                  </>
+                )}
+              </label>
+            </div>
+            {menuIconClicked && (
+              <NavigationMenu isOpen={menuIconClicked} closeMenu={toggleMenu} />
+            )}
+            {/* Render the menu if menuIconClicked is true */}
           </div>
-          {menuIconClicked && (
-            <NavigationMenu isOpen={menuIconClicked} closeMenu={toggleMenu} />
-          )}
-          {/* Render the menu if menuIconClicked is true */}
+        </nav>
+
+        {/* 2nd Navbar (Bottom Bar Nav Links) */}
+        <div className="sticky-bottom-navbar">
+          <nav className="bottom-navbar">
+            <div className="container mx-auto">
+              {/* Your bottom navbar content */}
+              <ul className="flex justify-between">
+                {/* Add your individual navigation links here */}
+                <li>
+                  <Link to="/general" className="nav-link">
+                    General
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/business" className="nav-link">
+                    Business
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/entertainment" className="nav-link">
+                    Entertainment
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/health" className="nav-link">
+                    Health
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/science" className="nav-link">
+                    Science
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/sports" className="nav-link">
+                    Sports
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/technology" className="nav-link">
+                    Technology
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
-    </div>
+      </div>
+    </>
   );
 }
 

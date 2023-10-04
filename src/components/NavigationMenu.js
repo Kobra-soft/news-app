@@ -12,25 +12,10 @@ const NavigationMenu = ({ isOpen, closeMenu, isDarkMode }) => {
     <div className={`navigation-menu ${isOpen ? "open" : ""}`}>
       <ul>
         <li>
-          <Link to="/">Sports</Link>
+          <Link to="/">Settings</Link>
         </li>
         <li>
-          <Link to="/about">Tech</Link>
-        </li>
-        <li>
-          <Link to="/services">Gaming</Link>
-        </li>
-        <li>
-          <Link to="/contact">Media</Link>
-        </li>
-        <li>
-          <Link to="/">Space</Link>
-        </li>
-        <li>
-          <Link to="/about">Travel</Link>
-        </li>
-        <li>
-          <Link to="/services">Cinema</Link>
+          <Link to="/about">Dark Mode / Light Mode</Link>
         </li>
       </ul>
 

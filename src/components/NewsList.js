@@ -51,11 +51,11 @@ function NewsList({ isDarkMode }) {
   const clockIcon = isDarkMode ? clockIconDark : clockIconLight;
 
   // Inside your component, make an API request
-  /*   useEffect(() => {
+  useEffect(() => {
     const apiKey = "f6b499e9ef0d7e84bc4b01cd73323fb3";
-    const apiUrl = `http://api.mediastack.com/v1/news?access_key=f6b499e9ef0d7e84bc4b01cd73323fb3&languages=en&countries=gb`;
+    const apiUrl = `http://api.mediastack.com/v1/news?access_key=f6b499e9ef0d7e84bc4b01cd73323fb3&languages=en&countries=gb&limit=30`;
 
-    axios
+    /*     axios
       .get(apiUrl)
       .then((response) => {
         // Filter out articles with null images
@@ -74,7 +74,7 @@ function NewsList({ isDarkMode }) {
       });
   }, []); */
 
-  /*     axios
+    axios
       .get(apiUrl)
       .then((response) => {
         // Filter out articles with null images
@@ -86,11 +86,11 @@ function NewsList({ isDarkMode }) {
       .catch((error) => {
         console.error("Error fetching news data:", error);
       });
-  }, []); */
+  }, []);
 
   useEffect(() => {
     // Fetch data from your JSON file or API (using axios)
-    axios.get("/data2.json").then((response) => {
+    axios.get("/data3.json").then((response) => {
       setArticles(response.data);
     });
   }, []);

@@ -104,7 +104,63 @@
   background-color: #333;
 }
 
-/* No Hover Background for MOBILE DEVICES removes lock on press */
-.no-hover-background {
-  background-color: transparent !important;
+ /* 2nd Navbar Links! CSS RULES! */
+/* ||||||||||||||||||||||||||||||||||||||||||||||| */
+/* ||||||||||||||||||||||||||||||||||||||||||||||| */
+
+/* Add this CSS to style the sticky container */
+/* CSS styles for the second navigation bar */
+
+.sticky-top-navbar {
+  position: sticky;
+  top: 0;
+  /* Other styles */
+  z-index: 2; /* Ensure it's above the second navbar */
+}
+
+.sticky-bottom-navbar {
+  position: sticky;
+  top: 0;
+  /* Other styles */
+  z-index: 1; /* Ensure it's below the top navbar */
+}
+
+/* Add this CSS to style the navigation links container */
+.bottom-navbar {
+  padding: 0px 0; /* Adjust padding as needed */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks for links */
+}
+
+/* Style the individual navigation links */
+.bottom-navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-navbar li {
+  margin: 0;
+}
+
+.bottom-navbar a {
+  text-decoration: none;
+  color: #333; /* Set your desired link color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  display: inline-block; /* Ensure links stay in a single line */
+}
+
+.bottom-navbar a:hover {
+  background-color: #ddd; /* Set your desired hover background color */
+}
+
+/* Media query for screens with a maximum width of 768px (typical mobile devices) */
+@media (max-width: 768px) {
+  .bottom-navbar-container {
+    /* Adjust styles for mobile devices */
+    padding: 4px 0;
+  }
 }
