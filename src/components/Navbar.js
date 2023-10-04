@@ -49,7 +49,8 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   };
 
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
-  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ed042d]";
+  /* const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ed042d]"; */
+  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#fafafa]";
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
@@ -75,9 +76,9 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
       {/* Top Bar Navbar (Logo, Sun/Moon, Menu) */}
       <div className="sticky-top-navbar">
         <nav
-          className={`py-4 sm:py-4 md:py-2 lg:py-2 xl:py-2 relative shadow-md ${bgColor}`}
+          className={`py-4 sm:py-4 md:py-3 lg:py-3 xl:py-3 relative shadow-md ${bgColor}`}
         >
-          <div className="flex justify-between items-center px-0 mx-1">
+          <div className="flex justify-between items-center mx-1">
             {/* Left LOGO */}
             <div className="flex items-center ">
               {showBackButton && (
@@ -98,14 +99,51 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   />
                 </Link>
               )}
-              <img
+
+              <div className="flex items-center space-x-0 mx-1">
+                {/* <img
                 src={logoPath}
                 alt="Logo"
                 className={`h-10 w-44 ml-0 ${
                   showBackButton ? "2" : "0"
                 } rounded-none`}
                 loading="lazy"
-              />
+              /> */}
+
+                <text
+                  className="text-3xl text-[#ed042d] font-poppins font-extrabold 
+                mx-3 sm:mx-3 md:mx-2 lg:mx-2"
+                >
+                  NEWS HUB
+                </text>
+              </div>
+
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search the web"
+                  className="border border-gray-300 rounded-full ml-2 py-2 px-6 pr-80 focus:outline-none focus:ring focus:border-blue-300"
+                />
+                <button
+                  className="absolute inset-y-0 right-0 px-2 my-[2px] mr-[2px] flex items-center
+                 bg-[#e3e3e3] rounded-e-full rounded-s-full "
+                >
+                  <img
+                    src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
+                    alt="Back"
+                    className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-0 mr-0 ${
+                      isDarkMode
+                        ? !("ontouchstart" in window)
+                          ? "hover:bg-[#222222] hover:bg-opacity-75" //  in dark mode
+                          : "" // No hover background for mobile devices!!!
+                        : !("ontouchstart" in window)
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                        : "" // No hover background for mobile devices!!!
+                    }`}
+                    style={{ rotate: "180deg" }}
+                  />
+                </button>
+              </div>
             </div>
             {/* Right SVG ICONS (Sun/Moon and Menu) */}
             <div className="flex items-center space-x-0 mx-1">
@@ -201,9 +239,9 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
         {/* 2nd Navbar (Bottom Bar Nav Links) */}
         <div className="sticky-bottom-navbar">
           <nav className="bottom-navbar">
-            <div className="container mx-auto">
+            <div className="container mx-auto text-[14px] text-[#757575] font-rubik font-semibold">
               {/* Your bottom navbar content */}
-              <ul className="flex justify-between">
+              <ul className="flex flex-wrap justify-center">
                 {/* Add your individual navigation links here */}
                 <li>
                   <Link to="/general" className="nav-link">
