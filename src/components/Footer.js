@@ -47,7 +47,7 @@ function Footer({ isDarkMode }) {
         isDarkMode ? "bg-[#000000]" : "bg-[#fafafa]"
       }`}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto md:max-w-screen-xl">
         <p
           className={`text-center text-[15px] font-medium p-4 font-inter ${
             isDarkMode ? "text-[#ffffff]" : "text-[#000000]"

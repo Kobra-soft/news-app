@@ -76,11 +76,16 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
       {/* Top Bar Navbar (Logo, Sun/Moon, Menu) */}
       <div className="sticky-top-navbar">
         <nav
-          className={`py-4 sm:py-4 md:py-3 lg:py-3 xl:py-3 relative shadow-md ${bgColor}`}
+          className={`py-4 sm:py-4 md:py-3 lg:py-3 xl:py-3 
+          mx-auto
+          relative shadow-md ${bgColor}`}
         >
-          <div className="flex justify-between items-center mx-1">
+          <div
+            className="container mx-auto md:max-w-screen-xl
+          flex justify-between items-center"
+          >
             {/* Left LOGO */}
-            <div className="flex items-center ">
+            <div className="flex items-center">
               {showBackButton && (
                 <Link to="/" className="back-button" title="Back">
                   {/* Custom back icon */}
@@ -100,7 +105,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </Link>
               )}
 
-              <div className="flex items-center space-x-0 mx-1">
+              <div className="flex items-center space-x-0 mx-0">
                 {/* <img
                 src={logoPath}
                 alt="Logo"
@@ -112,7 +117,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
                 <text
                   className="text-3xl text-[#ed042d] font-poppins font-extrabold 
-                mx-3 sm:mx-3 md:mx-2 lg:mx-2"
+                mx-2 sm:mx-2 md:mx-2 lg:mx-0"
                 >
                   NEWS HUB
                 </text>
@@ -122,10 +127,10 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 <input
                   type="text"
                   placeholder="Search the web"
-                  className="border border-gray-300 rounded-full ml-2 py-2 px-6 pr-80 focus:outline-none focus:ring focus:border-blue-300"
+                  className="border border-gray-300 rounded-full ml-5 py-2 px-6 pr-60 focus:outline-none focus:ring focus:border-blue-300"
                 />
                 <button
-                  className="absolute inset-y-0 right-0 px-2 my-[2px] mr-[2px] flex items-center
+                  className="absolute inset-y-0 right-0 px-0 my-[2px] mr-[2px] flex items-center
                  bg-[#e3e3e3] rounded-e-full rounded-s-full "
                 >
                   <img
@@ -146,7 +151,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               </div>
             </div>
             {/* Right SVG ICONS (Sun/Moon and Menu) */}
-            <div className="flex items-center space-x-0 mx-1">
+            <div className="flex items-center space-x-0 mx-0 ml-0">
               {/* onClick event listener for (Light/Dark Mode - Toggle) */}
               <label
                 className={`switch mx-0 rounded-full ${
@@ -239,10 +244,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
         {/* 2nd Navbar (Bottom Bar Nav Links) */}
         <div className="sticky-bottom-navbar">
           <nav className="bottom-navbar">
-            <div className="container mx-auto text-[14px] text-[#757575] font-rubik font-semibold">
-              {/* Your bottom navbar content */}
-              <ul className="flex flex-wrap justify-center">
-                {/* Add your individual navigation links here */}
+            <div
+              className="container mx-auto md:max-w-screen-xl 
+              py-1 px-0
+            text-[13px] text-[#757575] font-rubik font-medium"
+            >
+              {/* On larger screens, show the full navbar */}
+              <ul className="flex flex-wrap">
                 <li>
                   <Link to="/general" className="nav-link">
                     General

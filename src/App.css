@@ -114,23 +114,21 @@
 .sticky-top-navbar {
   position: sticky;
   top: 0;
-  /* Other styles */
-  z-index: 2; /* Ensure it's above the second navbar */
+  z-index: 2;
 }
 
 .sticky-bottom-navbar {
   position: sticky;
   top: 0;
-  /* Other styles */
-  z-index: 1; /* Ensure it's below the top navbar */
+  z-index: 1;
 }
 
 /* navigation links container */
 .bottom-navbar {
-  background-color: #fafafa; /* Set your desired background color */
-  border-bottom: 1px solid #ddd; /* Add a bottom border for separation */
+  background-color: #fafafa; 
+/*   border-bottom: 1px solid #ddd;  */
 /*   border-top: 1px solid #ddd;  */
-  padding: 6px 0; /* Adjust padding as needed */
+  padding: 8px 0; 
 
   /* Flex container styles */
   display: flex;
@@ -145,7 +143,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 120px; /* Adjust the gap between navigation links */
+  gap: 32px; /* Adjust the gap between navigation links */
 }
 
 .bottom-navbar li {
@@ -154,8 +152,7 @@
 
 .bottom-navbar a {
   text-decoration: none;
-  color: #5a5e61; /* Set your desired link color */
-  padding: 5px 10px; /* Adjust padding as needed */
+  color: #5a5e61; 
   transition: background-color 0.3s ease;
   display: inline-block;
 }
@@ -169,6 +166,6 @@
 /* Media query for screens with a maximum width of 768px (typical mobile devices) */
 @media (max-width: 768px) {
   .bottom-navbar-container {
-    padding: 4px 0;
+    padding: 0px 0;
   }
 }
