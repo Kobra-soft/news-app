@@ -89,7 +89,7 @@ function NewsList({ isDarkMode }) {
   const filteredArticles = showAll ? bottomArticles : topArticles; */
 
   // Function to format the relative time
-  function formatRelativeTime(publishedAt) {
+  /*   function formatRelativeTime(publishedAt) {
     const now = new Date();
     const diffInMilliseconds = now - new Date(publishedAt);
 
@@ -111,14 +111,14 @@ function NewsList({ isDarkMode }) {
       const days = Math.round(diffInMilliseconds / 86400000);
       return rtf.format(-days, "day");
     }
-  }
+  } */
 
   // Function to format the date in UK format (DD/MM/YY)
-  function formatUKDate(publishedAt) {
+  /*   function formatUKDate(publishedAt) {
     const date = new Date(publishedAt);
     const options = { day: "2-digit", month: "2-digit", year: "2-digit" };
     return date.toLocaleDateString("en-GB", options);
-  }
+  } */
 
   // Function to format the date and time in UK format (DD/MM/YY HH:mm)
   function formatUKDateTime(publishedAt) {
@@ -156,7 +156,7 @@ function NewsList({ isDarkMode }) {
                   }`}
                 >
                   {/* Left side (Image) */}
-                  <div className="rounded-tl-xl rounded-bl-xl overflow-hidden h-[170px] w-[190px]">
+                  <div className="rounded-tl-xl rounded-bl-xl overflow-hidden h-[150px] w-[150px]">
                     {article.image ? (
                       <img
                         src={article.image}
@@ -173,19 +173,19 @@ function NewsList({ isDarkMode }) {
                   </div>
 
                   {/* Right side (Content) */}
-                  <div className="flex-1 px-5 align-middle">
+                  <div className="flex-1 px-4 align-middle">
                     {/* Source */}
-                    <p className="text-left text-xs text-gray-700">
+                    <p className="text-left text-xs text-gray-700 font-inter">
                       {/* {article.category} · */} {article.source}
                     </p>
 
                     {/* Title */}
                     <h2
-                      className="text-left text-xl mt-1 font-extrabold 
+                      className="mt-1 text-left text-xl font-extrabold font-ptsans 
                       transition-all duration-300 hover:text-red-500 leading-tight
                       line-clamp-2"
                       style={{
-                        maxWidth: "45ch",
+                        maxWidth: "55ch",
                         /* maxHeight: "2.5rem", */
                         overflow: "hidden",
                       }}
@@ -194,12 +194,15 @@ function NewsList({ isDarkMode }) {
                     </h2>
 
                     {/* Description */}
-                    <p className="text-left text-sm mt-1 text-gray-800 line-clamp-2">
+                    <p
+                      className="text-left text-sm mt-1 text-gray-800 font-inter 
+                    line-clamp-2"
+                    >
                       {article.description}
                     </p>
 
                     {/* Published Date */}
-                    <p className="text-left text-xs mt-2 text-gray-500">
+                    <p className="text-left text-xs mt-2 text-gray-500 font-inter">
                       {/* {formatRelativeTime(article.published_at)} */}
                       {/* {formatUKDate(article.published_at)} */}
                       {formatUKDateTime(article.published_at)}
@@ -211,17 +214,17 @@ function NewsList({ isDarkMode }) {
           </div>
 
           {/* Right side */}
-          <div className="col-span-1 bg-green-400 p-0 w-[420px]">
+          <div className="col-span-1 bg-gray-200 mb-0 w-[420px]">
             {rightArticles.map((article) => (
               <Link to={`/article/${article.id}`} key={article.id}>
                 {/* Your small news card content */}
                 <div
-                  className={`relative py-28 shadow-md hover:shadow-xl
-          rounded-t-xl rounded-b-xl w-full ${
+                  className={`relative py-[75px] shadow-md hover:shadow-xl
+          rounded-t-xl rounded-b-xl w-full mb-3 ${
             isDarkMode ? "bg-[#101010]" : "bg-white"
           }`}
                 >
-                  {/* Small card content */}
+                  {/* Small card content py-[115.5px] */}
                   {/* ... */}
                 </div>
               </Link>
