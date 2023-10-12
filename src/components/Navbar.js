@@ -234,9 +234,9 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 )}
               </label>
             </div>
-            {menuIconClicked && (
+            {/*             {menuIconClicked && (
               <NavigationMenu isOpen={menuIconClicked} closeMenu={toggleMenu} />
-            )}
+            )} */}
             {/* Render the menu if menuIconClicked is true */}
           </div>
         </nav>

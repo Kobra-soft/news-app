@@ -88,6 +88,55 @@ function NewsList({ isDarkMode }) {
 
   const filteredArticles = showAll ? bottomArticles : topArticles; */
 
+  // Function to format the relative time
+  function formatRelativeTime(publishedAt) {
+    const now = new Date();
+    const diffInMilliseconds = now - new Date(publishedAt);
+
+    const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+    if (diffInMilliseconds < 60000) {
+      // Less than a minute ago
+      const seconds = Math.round(diffInMilliseconds / 1000);
+      return rtf.format(-seconds, "second");
+    } else if (diffInMilliseconds < 3600000) {
+      // Less than an hour ago
+      const minutes = Math.round(diffInMilliseconds / 60000);
+      return rtf.format(-minutes, "minute");
+    } else if (diffInMilliseconds < 86400000) {
+      // Less than a day ago
+      const hours = Math.round(diffInMilliseconds / 3600000);
+      return rtf.format(-hours, "hour");
+    } else {
+      // More than a day ago
+      const days = Math.round(diffInMilliseconds / 86400000);
+      return rtf.format(-days, "day");
+    }
+  }
+
+  // Function to format the date in UK format (DD/MM/YY)
+  function formatUKDate(publishedAt) {
+    const date = new Date(publishedAt);
+    const options = { day: "2-digit", month: "2-digit", year: "2-digit" };
+    return date.toLocaleDateString("en-GB", options);
+  }
+
+  // Function to format the date and time in UK format (DD/MM/YY HH:mm)
+  function formatUKDateTime(publishedAt) {
+    const date = new Date(publishedAt);
+    const options = {
+      day: "2-digit",
+      month: "2-digit",
+      year: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    };
+    const datePart = date.toLocaleDateString("en-GB", options);
+    /* const timePart = date.toLocaleTimeString("en-GB", options); */
+
+    return `${datePart} `;
+    /* return `${datePart} ${timePart}`; */
+  }
+
   return (
     <div
       className="container mx-auto md:max-w-screen-xl
@@ -107,7 +156,7 @@ function NewsList({ isDarkMode }) {
                   }`}
                 >
                   {/* Left side (Image) */}
-                  <div className="rounded-tl-xl rounded-bl-xl overflow-hidden h-[170px] w-[220px]">
+                  <div className="rounded-tl-xl rounded-bl-xl overflow-hidden h-[170px] w-[190px]">
                     {article.image ? (
                       <img
                         src={article.image}
@@ -126,8 +175,8 @@ function NewsList({ isDarkMode }) {
                   {/* Right side (Content) */}
                   <div className="flex-1 px-5 align-middle">
                     {/* Source */}
-                    <p className="text-left text-xs text-gray-500">
-                      {article.source}
+                    <p className="text-left text-xs text-gray-700">
+                      {/* {article.category} · */} {article.source}
                     </p>
 
                     {/* Title */}
@@ -145,13 +194,15 @@ function NewsList({ isDarkMode }) {
                     </h2>
 
                     {/* Description */}
-                    <p className="text-left text-sm mt-2 text-gray-700 line-clamp-2">
+                    <p className="text-left text-sm mt-1 text-gray-800 line-clamp-2">
                       {article.description}
                     </p>
 
                     {/* Published Date */}
                     <p className="text-left text-xs mt-2 text-gray-500">
-                      {article.published_at}
+                      {/* {formatRelativeTime(article.published_at)} */}
+                      {/* {formatUKDate(article.published_at)} */}
+                      {formatUKDateTime(article.published_at)}
                     </p>
                   </div>
                 </div>
@@ -160,12 +211,12 @@ function NewsList({ isDarkMode }) {
           </div>
 
           {/* Right side */}
-          <div className="col-span-1 bg-green-400 p-0 w-[420px] ">
+          <div className="col-span-1 bg-green-400 p-0 w-[420px]">
             {rightArticles.map((article) => (
               <Link to={`/article/${article.id}`} key={article.id}>
                 {/* Your small news card content */}
                 <div
-                  className={`relative py-14 shadow-md hover:shadow-xl
+                  className={`relative py-28 shadow-md hover:shadow-xl
           rounded-t-xl rounded-b-xl w-full ${
             isDarkMode ? "bg-[#101010]" : "bg-white"
           }`}
