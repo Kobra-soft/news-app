@@ -126,7 +126,7 @@
 /* navigation links container */
 .bottom-navbar {
   background-color: #fafafa; 
-/*   border-bottom: 1px solid #ddd;  */
+  border-bottom: 1px solid #ddd; 
 /*   border-top: 1px solid #ddd;  */
   padding: 8px 0; 
 
@@ -152,7 +152,7 @@
 
 .bottom-navbar a {
   text-decoration: none;
-  color: #5a5e61; 
+  /* color: #000000;  */
   transition: background-color 0.3s ease;
   display: inline-block;
 }
