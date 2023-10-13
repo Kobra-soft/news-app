@@ -22,8 +22,8 @@ import commentIconDark from "../icons/comment-dots-solid-svgrepo-com-dark.svg"; 
 import commentIconLight from "../icons/nb-comment-dark.svg";
 import commentIconDark from "../icons/nb-comment.svg";
 
-import saveIconLight from "../icons/bookmark-outline.svg";
-import saveIconDark from "../icons/bookmark-outline-dark.svg";
+/* import saveIconLight from "../icons/bookmark-outline.svg";
+import saveIconDark from "../icons/bookmark-outline-dark.svg"; */
 
 /* import shareIconLight from "../icons/share-svgrepo-com2.svg";
 import shareIconDark from "../icons/share-svgrepo-com2.svg"; */

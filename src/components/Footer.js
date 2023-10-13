@@ -33,7 +33,7 @@ function Footer({ isDarkMode }) {
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
-    // Preload logo images
+    // Preload logo images / LAZY LOADING
     const preloadImages = [DarkLogo, LightLogo];
     preloadImages.forEach((image) => {
       const img = new Image();

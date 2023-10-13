@@ -14,7 +14,7 @@ function NewsDetail() {
         const articleData = response.data.find(
           (item) => item.id === parseInt(id)
         );
-        console.log("Fetched article data:", articleData); // Add this line for debugging
+        console.log("Fetched article data:", articleData); // Added this line for debugging
         setArticle(articleData);
       })
       .catch((error) => {
@@ -23,11 +23,11 @@ function NewsDetail() {
   }, [id]);
 
   if (!article) {
-    return <div>Loading...</div>; // You can replace this with a loading spinner or message
+    return <div>Loading...</div>; // replace this with a loading spinner or message
   }
 
   return (
-    <div className="container lg:w-[900px] pt-10 mx-auto mt-0 py-5">
+    <div className="container md:max-w-screen-xl pt-10 mx-auto mt-0 py-5">
       <div className="bg-white p-0 shadow-md">
         <img
           src={article.image}

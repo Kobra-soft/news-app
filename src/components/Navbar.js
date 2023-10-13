@@ -54,7 +54,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
-    // Preload logo images
+    // Preload logo images / LAZY LOADING
     const preloadImages = [DarkLogo, LightLogo];
     preloadImages.forEach((image) => {
       const img = new Image();
@@ -78,7 +78,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
         <nav
           className={`py-4 sm:py-4 md:py-3 lg:py-3 xl:py-3 
           mx-auto
-          relative shadow-md ${bgColor}`}
+          relative ${bgColor}`}
         >
           <div
             className="container mx-auto md:max-w-screen-xl
@@ -229,7 +229,6 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                           : "" // No hover background for mobile devices!!!
                       }`}
                     />
-                    {/* You can add dark/light mode icons here */}
                   </>
                 )}
               </label>
@@ -246,7 +245,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           <nav className="bottom-navbar">
             <div
               className="container mx-auto md:max-w-screen-xl 
-              py-1 px-0
+              py-1 px-0 
             text-[13px] text-[#757575] font-rubik font-medium"
             >
               {/* On larger screens, show the full navbar */}

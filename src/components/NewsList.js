@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import clockIconLight from "../icons/time-outline-light.svg";
+// --------------------------------------------------------------------------------
+// TO CLEAN CODE COMMENTS BELOW --- AFTER LAYOUT DONE FOR WEB / MOBILE / TABLET ETC
+// --------------------------------------------------------------------------------
+
+/* import clockIconLight from "../icons/time-outline-light.svg";
 import clockIconDark from "../icons/time-outline-dark.svg";
 import likeIconLight from "../icons/nb-like-dark.svg";
 import likeIconDark from "../icons/nb-like.svg";
@@ -13,13 +17,19 @@ import saveIconDark from "../icons/bookmark-outline-dark.svg";
 import shareIconLight from "../icons/nb-share-dark.svg";
 import shareIconDark from "../icons/nb-share.svg";
 import chevronRightLightIcon from "../icons/chevron-back-outline-dark.svg";
-import chevronRightDarkIcon from "../icons/chevron-back-outline.svg";
+import chevronRightDarkIcon from "../icons/chevron-back-outline.svg"; */
+
+// --------------------------------------------------------------------------------
 
 function NewsList({ isDarkMode }) {
-  const [articles, setArticles] = React.useState([]);
+  // --------------------------------------------------------------------------------
+
+  /*   const [articles, setArticles] = React.useState([]);
   const [articles2, setArticles2] = React.useState([]);
   const [showAll, setShowAll] = React.useState(false);
-  const clockIcon = isDarkMode ? clockIconDark : clockIconLight;
+  const clockIcon = isDarkMode ? clockIconDark : clockIconLight; */
+
+  // --------------------------------------------------------------------------------
 
   const [leftArticles, setLeftArticles] = useState([]);
   const [rightArticles, setRightArticles] = useState([]);
@@ -121,7 +131,7 @@ function NewsList({ isDarkMode }) {
   } */
 
   // Function to format the date and time in UK format (DD/MM/YY HH:mm)
-  function formatUKDateTime(publishedAt) {
+  /*   function formatUKDateTime(publishedAt) {
     const date = new Date(publishedAt);
     const options = {
       day: "2-digit",
@@ -130,16 +140,30 @@ function NewsList({ isDarkMode }) {
       hour: "2-digit",
       minute: "2-digit",
     };
-    const datePart = date.toLocaleDateString("en-GB", options);
-    /* const timePart = date.toLocaleTimeString("en-GB", options); */
+    const datePart = date.toLocaleDateString("en-GB", options); */
+  /* const timePart = date.toLocaleTimeString("en-GB", options); */
 
-    return `${datePart} `;
-    /* return `${datePart} ${timePart}`; */
+  /* return `${datePart} `; */
+  /* return `${datePart} ${timePart}`; */
+  /*   } */
+
+  function formatCustomDateTime(inputDateTime) {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const date = new Date(inputDateTime);
+    const formattedDate = date.toLocaleDateString("en-US", options);
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const ampm = hours >= 12 ? "pm" : "am";
+    const formattedTime = `${hours % 12 || 12}:${minutes
+      .toString()
+      .padStart(2, "0")}${ampm}`;
+
+    return `${formattedDate}, ${formattedTime}`;
   }
 
   return (
     <div
-      className="container mx-auto md:max-w-screen-xl
+      className="container mx-auto md:max-w-screen-2xl
     pb-10 py-10 md:py-10 lg:py-10 xl:py-10 px-0 bg-gray-000"
     >
       <div className="flex flex-col items-center justify-center bg-gray-000">
@@ -197,6 +221,11 @@ function NewsList({ isDarkMode }) {
                     <p
                       className="text-left text-sm mt-1 text-gray-800 font-inter 
                     line-clamp-2"
+                      style={{
+                        maxWidth: "80ch",
+                        /* maxHeight: "2.5rem", */
+                        overflow: "hidden",
+                      }}
                     >
                       {article.description}
                     </p>
@@ -205,7 +234,8 @@ function NewsList({ isDarkMode }) {
                     <p className="text-left text-xs mt-2 text-gray-500 font-inter">
                       {/* {formatRelativeTime(article.published_at)} */}
                       {/* {formatUKDate(article.published_at)} */}
-                      {formatUKDateTime(article.published_at)}
+                      {/* {formatUKDateTime(article.published_at)} */}
+                      Published: {formatCustomDateTime(article.published_at)}
                     </p>
                   </div>
                 </div>
