@@ -177,13 +177,13 @@ function NewsList({ isDarkMode }) {
                   style={{ alignItems: "center" }}
                   className={` mb-3 relative shadow-md hover:shadow-lg 
                   rounded-[3px] flex 
-                  border-[0.5px] border-gray-400 ${
+                  border-[1px] border-[#c6c6c6] ${
                     isDarkMode ? "bg-[#101010]" : "bg-white"
                   }`}
                 >
                   {/* Left side (Image) */}
                   <div
-                    className="rounded-tl-[1px] rounded-bl-[1px] border-e-[0.5px] border-gray-400
+                    className="rounded-tl-[1px] rounded-bl-[1px] border-e-[1px] border-[#acacac]
                   overflow-hidden h-[150px] w-[150px]"
                   >
                     {article.image ? (
@@ -202,7 +202,7 @@ function NewsList({ isDarkMode }) {
                   </div>
 
                   {/* Right side (Content) */}
-                  <div className="flex-1 pl-4 pr-4 align-middle">
+                  <div className="flex-1 pl-5 pr-3 align-middle">
                     {/* Source */}
                     <p className="text-left text-[12px] text-gray-400 font-inter font-medium">
                       {/* {article.category} · */} {article.source}
@@ -212,7 +212,7 @@ function NewsList({ isDarkMode }) {
                     <h2
                       className="mt-1 text-left text-[18px] text-gray-900 font-black font-inter
                       transition-all duration-300 hover:text-red-500 leading-tight
-                      line-clamp-2"
+                      line-clamp-2 pr-3"
                       style={{
                         maxWidth: "68ch",
                         /* maxHeight: "2.5rem", */
@@ -225,7 +225,7 @@ function NewsList({ isDarkMode }) {
                     {/* Description */}
                     <p
                       className="text-left text-[15px] mt-1 text-gray-500 font-poppins font-light
-                    line-clamp-2 leading-5"
+                    line-clamp-2 leading-5 pr-7"
                       style={{
                         maxWidth: "95ch",
                         /* maxHeight: "2.5rem", */
@@ -236,7 +236,7 @@ function NewsList({ isDarkMode }) {
                     </p>
 
                     {/* Published Date */}
-                    <p className="text-left text-[11px] mt-2 text-gray-500 font-inter font-medium">
+                    <p className="text-left text-[11.5px] mt-2 text-gray-500 font-inter font-medium">
                       {/* {formatRelativeTime(article.published_at)} */}
                       {/* {formatUKDate(article.published_at)} */}
                       {/* {formatUKDateTime(article.published_at)} */}

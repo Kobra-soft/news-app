@@ -246,7 +246,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             <div
               className="container mx-auto md:max-w-screen-xl 
               py-1 px-0 
-            text-[15px] text-gray-900 font-inter font-semibold"
+            text-[14px] text-gray-900 font-inter font-bold"
             >
               {/* On larger screens, show the full navbar */}
               <ul className="flex flex-wrap">
