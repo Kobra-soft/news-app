@@ -199,7 +199,7 @@ function NewsList({ isDarkMode }) {
                   {/* Right side (Content) */}
                   <div className="flex-1 px-4 align-middle">
                     {/* Source */}
-                    <p className="text-left text-[12px] text-gray-700 font-inter font-medium">
+                    <p className="text-left text-[12px] text-gray-400 font-inter font-medium">
                       {/* {article.category} · */} {article.source}
                     </p>
 
@@ -231,7 +231,7 @@ function NewsList({ isDarkMode }) {
                     </p>
 
                     {/* Published Date */}
-                    <p className="text-left text-[12px] mt-1 text-red-800 font-inter font-normal">
+                    <p className="text-left text-[11px] mt-1.5 text-black font-inter font-medium">
                       {/* {formatRelativeTime(article.published_at)} */}
                       {/* {formatUKDate(article.published_at)} */}
                       {/* {formatUKDateTime(article.published_at)} */}
