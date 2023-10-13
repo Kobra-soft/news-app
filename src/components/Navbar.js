@@ -246,7 +246,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             <div
               className="container mx-auto md:max-w-screen-xl 
               py-1 px-0 
-            text-[13px] text-[#757575] font-rubik font-medium"
+            text-[15px] text-gray-900 font-inter font-semibold"
             >
               {/* On larger screens, show the full navbar */}
               <ul className="flex flex-wrap">
@@ -255,31 +255,49 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     General
                   </Link>
                 </li>
+                <p className="flex text-[11px] text-gray-400 items-center ">
+                  |
+                </p>
                 <li>
                   <Link to="/business" className="nav-link">
                     Business
                   </Link>
                 </li>
+                <p className="flex text-[11px] text-gray-400 items-center ">
+                  |
+                </p>
                 <li>
                   <Link to="/entertainment" className="nav-link">
                     Entertainment
                   </Link>
                 </li>
+                <p className="flex text-[11px] text-gray-400 items-center ">
+                  |
+                </p>
                 <li>
                   <Link to="/health" className="nav-link">
                     Health
                   </Link>
                 </li>
+                <p className="flex text-[11px] text-gray-400 items-center ">
+                  |
+                </p>
                 <li>
                   <Link to="/science" className="nav-link">
                     Science
                   </Link>
                 </li>
+                <p className="flex text-[11px] text-gray-400 items-center ">
+                  |
+                </p>
                 <li>
                   <Link to="/sports" className="nav-link">
                     Sports
                   </Link>
                 </li>
+                <p className="flex text-[11px] text-gray-400 items-center ">
+                  |
+                </p>
                 <li>
                   <Link to="/technology" className="nav-link">
                     Technology
