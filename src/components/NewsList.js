@@ -175,16 +175,16 @@ function NewsList({ isDarkMode }) {
                 {/* Your large news card content */}
                 <div
                   style={{ alignItems: "center" }}
-                  className={` mb-3 relative shadow-md hover:shadow-lg 
-                  rounded-[3px] flex 
+                  className={` mb-3 relative shadow-md hover:shadow-lg hover:bg-white
+                  rounded-[3px] flex
                   border-[1px] border-[#c6c6c6] ${
-                    isDarkMode ? "bg-[#101010]" : "bg-white"
+                    isDarkMode ? "bg-[#101010]" : "bg-transparent"
                   }`}
                 >
                   {/* Left side (Image) */}
                   <div
                     className="rounded-tl-[1px] rounded-bl-[1px] border-e-[1px] border-[#acacac]
-                  overflow-hidden h-[150px] w-[150px]"
+                  overflow-hidden h-[161px] w-[150px]"
                   >
                     {article.image ? (
                       <img
@@ -202,9 +202,9 @@ function NewsList({ isDarkMode }) {
                   </div>
 
                   {/* Right side (Content) */}
-                  <div className="flex-1 pl-5 pr-3 align-middle">
+                  <div className="flex-1 pl-5 pr-3 pt-3 pb-3 align-middle">
                     {/* Source */}
-                    <p className="text-left text-[12px] text-gray-400 font-inter font-medium">
+                    <p className="text-left text-[12px] text-gray-700 font-inter font-medium">
                       {/* {article.category} · */} {article.source}
                     </p>
 
@@ -224,7 +224,7 @@ function NewsList({ isDarkMode }) {
 
                     {/* Description */}
                     <p
-                      className="text-left text-[15px] mt-1 text-gray-500 font-poppins font-light
+                      className="text-left text-[14px] mt-1 text-gray-600 font-poppins font-normal
                     line-clamp-2 leading-5 pr-7"
                       style={{
                         maxWidth: "95ch",
@@ -249,15 +249,15 @@ function NewsList({ isDarkMode }) {
           </div>
 
           {/* Right side */}
-          <div className="col-span-1 bg-gray-200 mb-0 w-[420px]">
+          <div className="col-span-1 bg-gray-000 mb-0 w-[420px] ">
             {rightArticles.map((article) => (
               <Link to={`/article/${article.id}`} key={article.id}>
                 {/* Your small news card content */}
                 <div
-                  className={`relative py-[75px] shadow-md hover:shadow-xl
-          rounded-t-xl rounded-b-xl w-full mb-3 ${
-            isDarkMode ? "bg-[#101010]" : "bg-white"
-          }`}
+                  className={`relative py-[80.5px] shadow-md hover:shadow-lg hover:bg-white 
+                  border-[1px] border-[#acacac] rounded-[3px] w-full mb-3 ${
+                    isDarkMode ? "bg-[#101010]" : "bg-transparent"
+                  }`}
                 >
                   {/* Small card content py-[115.5px] */}
                   {/* ... */}

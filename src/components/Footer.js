@@ -44,7 +44,9 @@ function Footer({ isDarkMode }) {
   return (
     <footer
       className={`p-6 mt-auto relative shadow-md ${
-        isDarkMode ? "bg-[#000000]" : "bg-[#fafafa]"
+        isDarkMode
+          ? "bg-[#000000]"
+          : "bg-[#fafafa] border-t-[1px] border-[#c7c7c7]"
       }`}
     >
       <div className="container mx-auto md:max-w-screen-xl">
