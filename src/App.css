@@ -95,7 +95,8 @@
 /* Light Theme */
 .light-bg {
   /* background-color: #d8d8d8; */
-  background-color: #f7f7f8;
+  /* background-color: #f7f7f8; */
+  background-color: #f9f9f9;
 }
 
 /* Dark Theme */
@@ -126,8 +127,10 @@
 /* navigation links container */
 .bottom-navbar {
   background-color: #fafafa; 
+  /* background-color: #ff3557;  */
   border-bottom: 1px solid #ddd; 
-/*   border-top: 1px solid #ddd;  */
+  border-top: 1px solid #000; 
+  /* border-top: 1px solid #ddd; */
   padding: 8px 0;
   
   /* Add box shadow to create a shadow at the bottom */
