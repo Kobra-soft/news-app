@@ -23,7 +23,7 @@ function NewsDetail() {
   }, [id]);
 
   if (!article) {
-    return <div>Loading...</div>; // replace this with a loading spinner or message
+    return <div className="pt-56 font-bold text-xl">Loading...</div>; // replace this with a loading spinner or message
   }
 
   return (

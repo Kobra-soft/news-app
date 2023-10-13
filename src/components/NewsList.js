@@ -204,13 +204,17 @@ function NewsList({ isDarkMode }) {
                   {/* Right side (Content) */}
                   <div className="flex-1 pl-5 pr-3 pt-3 pb-3 align-middle">
                     {/* Source */}
-                    <p className="text-left text-[12px] text-gray-700 font-inter font-medium">
+                    <p
+                      className="text-left text-[12px] text-gray-700
+                    font-inter font-medium"
+                    >
                       {/* {article.category} · */} {article.source}
                     </p>
 
                     {/* Title */}
                     <h2
-                      className="mt-1 text-left text-[18px] text-gray-900 font-black font-inter
+                      className="mt-1 text-left text-[18px] text-gray-900 
+                      font-black font-inter
                       transition-all duration-300 hover:text-red-500 leading-tight
                       line-clamp-2 pr-3"
                       style={{
@@ -224,7 +228,8 @@ function NewsList({ isDarkMode }) {
 
                     {/* Description */}
                     <p
-                      className="text-left text-[14px] mt-1 text-gray-600 font-poppins font-normal
+                      className="text-left text-[14px] mt-1 text-gray-600 
+                      font-poppins font-normal
                     line-clamp-2 leading-5 pr-7"
                       style={{
                         maxWidth: "95ch",
@@ -236,7 +241,10 @@ function NewsList({ isDarkMode }) {
                     </p>
 
                     {/* Published Date */}
-                    <p className="text-left text-[11.5px] mt-2 text-gray-500 font-inter font-medium">
+                    <p
+                      className="text-left text-[11.5px] mt-2 text-gray-500 
+                    font-inter font-medium"
+                    >
                       {/* {formatRelativeTime(article.published_at)} */}
                       {/* {formatUKDate(article.published_at)} */}
                       {/* {formatUKDateTime(article.published_at)} */}
@@ -255,7 +263,7 @@ function NewsList({ isDarkMode }) {
                 {/* Your small news card content */}
                 <div
                   className={`relative py-[80.5px] shadow-md hover:shadow-lg hover:bg-white 
-                  border-[1px] border-[#acacac] rounded-[3px] w-full mb-3 ${
+                  border-[1px] border-[#c6c6c6] rounded-[3px] w-full mb-3 ${
                     isDarkMode ? "bg-[#101010]" : "bg-transparent"
                   }`}
                 >

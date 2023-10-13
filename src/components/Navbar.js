@@ -50,7 +50,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
   /* const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ed042d]"; */
-  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#fafafa]";
+  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ff3557]";
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
@@ -115,8 +115,10 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 loading="lazy"
               /> */}
 
+                {/*  text-[#ed042d] */}
+
                 <text
-                  className="text-3xl text-[#ed042d] font-poppins font-extrabold 
+                  className="text-3xl text-[#ffffff] font-poppins font-extrabold 
                 mx-2 sm:mx-2 md:mx-2 lg:mx-0"
                 >
                   NEWS HUB
@@ -246,7 +248,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
             <div
               className="container mx-auto md:max-w-screen-xl 
               py-1 px-0 
-            text-[14px] text-gray-900 font-inter font-bold"
+            text-[14px] text-gray-900 font-inter font-medium"
             >
               {/* On larger screens, show the full navbar */}
               <ul className="flex flex-wrap">

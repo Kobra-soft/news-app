@@ -45,21 +45,21 @@ function Footer({ isDarkMode }) {
     <footer
       className={`p-6 mt-auto relative shadow-md ${
         isDarkMode
-          ? "bg-[#000000]"
-          : "bg-[#fafafa] border-t-[1px] border-[#c7c7c7]"
+          ? "bg-[#000000] border-t-[1px] border-[#ffffff]"
+          : "bg-[#ff3557] border-t-[1px] border-[#000000]"
       }`}
     >
       <div className="container mx-auto md:max-w-screen-xl">
         <p
-          className={`text-center text-[15px] font-medium p-4 font-inter ${
-            isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
+          className={`text-left text-[15px] font-medium pl-0 pt-4 font-inter ${
+            isDarkMode ? "text-[#ffffff]" : "text-[#ffffff]"
           }`}
         >
-          FOLLOW US
+          FOLLOW US {/* p-4 */}
         </p>
         {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
         <div className="text-center p-0">
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-start pt-4 space-x-4">
             <a
               href="https://www.facebook.com/your-facebook-page"
               target="_blank"
@@ -147,7 +147,7 @@ function Footer({ isDarkMode }) {
           </div>
         </div>
 
-        <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#b5b5b5]">
+        {/* <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#b5b5b5]">
           <a
             href="#aboutUs"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-1 mb-1 rounded-none ${
@@ -228,20 +228,24 @@ function Footer({ isDarkMode }) {
           >
             Contact Us
           </a>
-        </div>
+        </div> */}
 
-        <div className="flex justify-center items-center pb-4 border-t pt-8 border-[#b5b5b5]">
+        <div className="py-4"></div>
+
+        <div className="flex justify-start items-center pb-4 border-t-0 pt-8 border-[#b5b5b5]">
           <img
             src={logoPath}
             alt="Logo"
-            className="h-12 ml-3 rounded-none"
+            className="h-12 ml-0 rounded-none"
             loading="lazy"
           />
         </div>
 
+        {/* ml-3 */}
+
         <p
-          className={`text-center text-[14.4px] py-0 pb-4 w-full font-rubik font-light tracking-normal ${
-            isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
+          className={`text-left text-[14.4px] py-0 pb-4 w-full font-rubik font-light tracking-normal ${
+            isDarkMode ? "text-[#B5B5B5]" : "text-[#ffffff]"
           }`}
         >
           Copyright &copy; {new Date().getFullYear()} - All rights reserved
