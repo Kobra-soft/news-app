@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 // --------------------------------------------------------------------------------
-// TO CLEAN CODE COMMENTS BELOW --- AFTER LAYOUT DONE FOR WEB / MOBILE / TABLET ETC
+// TO CLEAN / DELETE CODE COMMENTS BELOW --- AFTER LAYOUT DONE FOR WEB / MOBILE / TABLET ETC
 // --------------------------------------------------------------------------------
 
 /* import clockIconLight from "../icons/time-outline-light.svg";
@@ -163,7 +163,7 @@ function NewsList({ isDarkMode }) {
 
   return (
     <div
-      className="container mx-auto md:max-w-screen-2xl
+      className="container mx-auto md:max-w-screen-xl
     pb-10 py-10 md:py-10 lg:py-10 xl:py-10 px-0 bg-gray-000"
     >
       <div className="flex flex-col items-center justify-center bg-gray-000">
@@ -199,17 +199,17 @@ function NewsList({ isDarkMode }) {
                   {/* Right side (Content) */}
                   <div className="flex-1 px-4 align-middle">
                     {/* Source */}
-                    <p className="text-left text-xs text-gray-700 font-inter">
+                    <p className="text-left text-[12px] text-gray-700 font-inter font-medium">
                       {/* {article.category} · */} {article.source}
                     </p>
 
                     {/* Title */}
                     <h2
-                      className="mt-1 text-left text-xl font-extrabold font-ptsans 
+                      className="mt-1 text-left text-[18px] font-black font-inter
                       transition-all duration-300 hover:text-red-500 leading-tight
                       line-clamp-2"
                       style={{
-                        maxWidth: "55ch",
+                        maxWidth: "68ch",
                         /* maxHeight: "2.5rem", */
                         overflow: "hidden",
                       }}
@@ -219,10 +219,10 @@ function NewsList({ isDarkMode }) {
 
                     {/* Description */}
                     <p
-                      className="text-left text-sm mt-1 text-gray-800 font-inter 
-                    line-clamp-2"
+                      className="text-left text-[15px] mt-1 text-gray-800 font-poppins font-light
+                    line-clamp-2 leading-5"
                       style={{
-                        maxWidth: "80ch",
+                        maxWidth: "95ch",
                         /* maxHeight: "2.5rem", */
                         overflow: "hidden",
                       }}
@@ -231,11 +231,11 @@ function NewsList({ isDarkMode }) {
                     </p>
 
                     {/* Published Date */}
-                    <p className="text-left text-xs mt-2 text-gray-500 font-inter">
+                    <p className="text-left text-[12px] mt-1 text-red-800 font-inter font-normal">
                       {/* {formatRelativeTime(article.published_at)} */}
                       {/* {formatUKDate(article.published_at)} */}
                       {/* {formatUKDateTime(article.published_at)} */}
-                      Published: {formatCustomDateTime(article.published_at)}
+                      {formatCustomDateTime(article.published_at)}
                     </p>
                   </div>
                 </div>

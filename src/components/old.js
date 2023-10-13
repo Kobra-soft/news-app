@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+// --------------------------------------------------------------------------------
+// TO CLEAN / DELETE CODE COMMENTS BELOW --- AFTER LAYOUT DONE FOR WEB / MOBILE / TABLET ETC
+// --------------------------------------------------------------------------------
+
 /* import ClockIcon from "../icons/time-outline-light.svg"; */ // Adjust the path as needed
 import clockIconLight from "../icons/time-outline-light.svg";
 import clockIconDark from "../icons/time-outline-dark.svg";
@@ -198,7 +202,7 @@ function NewsList({ isDarkMode }) {
             ) : (
               <div
                 className={`relative py-4 shadow-md hover:shadow-xl hover:border
-                rounded-t-xl rounded-b-xl
+                rounded-t-xl rounded-b-xl 
                 max-w-[480px] sm:max-w-[480px] md:max-w-[480px] lg:max-w-[480px] xl:max-w-[480px]
                 ${isDarkMode ? "bg-[#101010]" : "bg-white"}`}
                 /* style={{ maxWidth: "480px", margin: "0 auto" }}  */ // Set maximum width and center the card
