@@ -232,13 +232,28 @@ function Footer({ isDarkMode }) {
 
         <div className="py-4"></div>
 
-        <div className="flex justify-start items-center pb-4 border-t-0 pt-8 border-[#b5b5b5]">
+        {/*         <div className="flex justify-start items-center pb-4 border-t-0 border-[#b5b5b5]">
           <img
             src={logoPath}
             alt="Logo"
             className="h-12 ml-0 rounded-none"
             loading="lazy"
           />
+        </div>
+ */}
+        <div className="flex items-center space-x-[-0px] pb-2">
+          <text
+            className="text-3xl text-[#ffffff] font-poppins font-normal border-[2px] border-black
+                  bg-[#000000] pl-[3px] pr-[1px]"
+          >
+            NEWS
+          </text>
+          <text
+            className="text-3xl font-poppins font-extrabold border-[2px] border-black
+                  bg-[#ffffff] text-[#ff295c] pl-[4px] pr-[4px]"
+          >
+            HUB
+          </text>
         </div>
 
         {/* ml-3 */}

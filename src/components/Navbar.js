@@ -105,23 +105,38 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </Link>
               )}
 
-              <div className="flex items-center space-x-0 mx-0">
-                {/* <img
+              {/* <div className="flex items-center space-x-0 mx-0">
+                <img
                 src={logoPath}
                 alt="Logo"
                 className={`h-10 w-44 ml-0 ${
                   showBackButton ? "2" : "0"
                 } rounded-none`}
                 loading="lazy"
-              /> */}
+              />
 
-                {/*  text-[#ed042d] */}
+                 text-[#ed042d]
 
                 <text
                   className="text-3xl text-[#ffffff] font-poppins font-extrabold 
                 mx-2 sm:mx-2 md:mx-2 lg:mx-0"
                 >
                   NEWS HUB
+                </text>
+              </div> */}
+
+              <div className="flex items-center space-x-[-0px]">
+                <text
+                  className="text-3xl text-[#ffffff] font-poppins font-normal border-[2px] border-black
+                  bg-[#000000] pl-[3px] pr-[1px]"
+                >
+                  NEWS
+                </text>
+                <text
+                  className="text-3xl font-poppins font-extrabold border-[2px] border-black
+                  bg-[#ffffff] text-[#ff295c] pl-[4px] pr-[4px]"
+                >
+                  HUB
                 </text>
               </div>
 
