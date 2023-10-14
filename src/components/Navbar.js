@@ -317,7 +317,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </p>
                 <li>
                   <Link to="/technology" className="nav-link">
-                    Technology
+                    Tech
                   </Link>
                 </li>
               </ul>
