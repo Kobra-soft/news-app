@@ -140,11 +140,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </text>
               </div>
 
-              <div className="relative">
+              <div className="relative flex mx-8">
                 <input
                   type="text"
                   placeholder="Search the web"
-                  className="border border-gray-300 rounded-full ml-5 py-2 px-6 pr-60 focus:outline-none focus:ring focus:border-blue-300"
+                  className="border border-gray-300 rounded-full ml-0 py-1.5 px-6 pr-64 focus:outline-none focus:ring focus:border-blue-300"
                 />
                 <button
                   className="absolute inset-y-0 right-0 px-0 my-[2px] mr-[2px] flex items-center
