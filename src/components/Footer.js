@@ -49,7 +49,7 @@ function Footer({ isDarkMode }) {
           : "bg-[#ff295c] border-t-[1px] border-[#000000]"
       }`}
     >
-      <div className="container mx-auto md:max-w-screen-xl ">
+      <div className="container mx-auto md:max-w-screen-xl">
         {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
         <div className="text-center p-0 py-8">
           <div className="flex justify-between items-center align-middle pt-0 space-x-4">

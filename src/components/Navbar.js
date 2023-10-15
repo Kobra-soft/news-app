@@ -76,8 +76,8 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
       {/* Top Bar Navbar (Logo, Sun/Moon, Menu) */}
       <div className="sticky-top-navbar">
         <nav
-          className={`py-4 sm:py-4 md:py-3 lg:py-3 xl:py-3 
-          mx-auto
+          className={`py-4 sm:py-3 md:py-3
+          mx-auto px-3 md:px-3
           relative ${bgColor}`}
         >
           <div
@@ -140,15 +140,18 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </text>
               </div>
 
-              <div className="relative flex mx-8">
+              {/* Search */}
+              <div className="relative mx-8 hidden sm:flex md:flex">
                 <input
                   type="text"
                   placeholder="Search the web"
-                  className="border border-gray-300 rounded-full ml-0 py-1.5 px-6 pr-64 focus:outline-none focus:ring focus:border-blue-300"
+                  className="border border-gray-300 rounded-full ml-0 py-1.5 px-4 
+                   pr-0 sm:pr-12 md:pr-40
+                   focus:outline-none focus:ring focus:border-blue-300"
                 />
                 <button
                   className="absolute inset-y-0 right-0 px-0 my-[2px] mr-[2px] flex items-center
-                 bg-[#e3e3e3] rounded-e-full rounded-s-full "
+                 bg-[#e3e3e3] rounded-e-full rounded-s-full"
                 >
                   <img
                     src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
