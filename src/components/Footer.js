@@ -43,114 +43,131 @@ function Footer({ isDarkMode }) {
 
   return (
     <footer
-      className={`p-6 mt-auto relative shadow-md ${
+      className={`pt-0 pb-6 mt-auto relative shadow-md ${
         isDarkMode
           ? "bg-[#000000] border-t-[1px] border-[#ffffff]"
-          : "bg-[#ff3557] border-t-[1px] border-[#000000]"
+          : "bg-[#ff295c] border-t-[1px] border-[#000000]"
       }`}
     >
-      <div className="container mx-auto md:max-w-screen-xl">
-        <p
-          className={`text-left text-[15px] font-medium pl-0 pt-4 font-inter ${
-            isDarkMode ? "text-[#ffffff]" : "text-[#ffffff]"
-          }`}
-        >
-          FOLLOW US {/* p-4 */}
-        </p>
+      <div className="container mx-auto md:max-w-screen-xl ">
         {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
-        <div className="text-center p-0">
-          <div className="flex justify-start pt-4 space-x-4">
-            <a
-              href="https://www.facebook.com/your-facebook-page"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
-                isDarkMode
-                  ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
-                  : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
-              }`}
-              title="Facebook"
-            >
-              <img
-                src={isDarkMode ? facebookIconDark : facebookIconLight}
-                alt="Facebook"
-              />
-            </a>
+        <div className="text-center p-0 py-8">
+          <div className="flex justify-between items-center align-middle pt-0 space-x-4">
+            <div className="flex items-center justify-start space-x-[-0px] pb-0">
+              <text
+                className="text-3xl text-[#ffffff] font-poppins font-normal border-[2px] border-black
+                  bg-[#000000] pl-[3px] pr-[1px]"
+              >
+                NEWS
+              </text>
+              <text
+                className="text-3xl font-poppins font-extrabold border-[2px] border-black
+                  bg-[#ffffff] text-[#ff295c] pl-[4px] pr-[4px]"
+              >
+                HUB
+              </text>
+            </div>
 
-            <a
-              href="https://twitter.com/your-twitter-page"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
-                isDarkMode
-                  ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
-                  : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
-              }`}
-              title="Twitter"
-            >
-              <img
-                src={isDarkMode ? twitterIconDark : twitterIconLight}
-                alt="Twitter"
-              />
-            </a>
+            <div className="flex items-center justify-end space-x-3.5">
+              <p
+                className={`text-left text-[15px] font-medium font-inter ${
+                  isDarkMode ? "text-[#ffffff]" : "text-[#ffffff]"
+                }`}
+              >
+                FOLLOW US
+              </p>
+              <a
+                href="https://www.facebook.com/your-facebook-page"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Facebook"
+              >
+                <img
+                  src={isDarkMode ? facebookIconDark : facebookIconLight}
+                  alt="Facebook"
+                />
+              </a>
 
-            <a
-              href="https://www.youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
-                isDarkMode
-                  ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
-                  : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
-              }`}
-              title="Youtube"
-            >
-              <img
-                src={isDarkMode ? youtubeIconDark : youtubeIconLight}
-                alt="Youtube"
-              />
-            </a>
+              <a
+                href="https://twitter.com/your-twitter-page"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Twitter"
+              >
+                <img
+                  src={isDarkMode ? twitterIconDark : twitterIconLight}
+                  alt="Twitter"
+                />
+              </a>
 
-            <a
-              href="https://github.com/Kobra-soft"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
-                isDarkMode
-                  ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
-                  : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
-              }`}
-              title="Github"
-            >
-              <img
-                src={isDarkMode ? githubIconDark : githubIconLight}
-                alt="Github"
-              />
-            </a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Youtube"
+              >
+                <img
+                  src={isDarkMode ? youtubeIconDark : youtubeIconLight}
+                  alt="Youtube"
+                />
+              </a>
 
-            <a
-              href="https://uk.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
-                isDarkMode
-                  ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
-                  : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
-              }`}
-              title="Linkedin"
-            >
-              <img
-                src={isDarkMode ? linkedinIconDark : linkedinIconLight}
-                alt="Linkedin"
-              />
-            </a>
+              <a
+                href="https://github.com/Kobra-soft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Github"
+              >
+                <img
+                  src={isDarkMode ? githubIconDark : githubIconLight}
+                  alt="Github"
+                />
+              </a>
+
+              <a
+                href="https://uk.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Linkedin"
+              >
+                <img
+                  src={isDarkMode ? linkedinIconDark : linkedinIconLight}
+                  alt="Linkedin"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* <div className="flex flex-col items-center mt-8 pt-6 mb-6 border-t border-[#b5b5b5]">
+        <div className="flex justify-start items-center mt-0 py-5 mb-0 border-t-[0.5px] border-[#ffffff]">
           <a
             href="#aboutUs"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-1 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-0 pr-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -160,7 +177,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#A-Z_Index"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -170,7 +187,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#editorialPolicy"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -180,7 +197,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#cookiePreferences"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -190,7 +207,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#privacyPolicy"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -200,7 +217,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#terms&Conditions"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -210,7 +227,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#accessibility"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -220,7 +237,7 @@ function Footer({ isDarkMode }) {
           </a>
           <a
             href="#contactUs"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#797979] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -228,9 +245,7 @@ function Footer({ isDarkMode }) {
           >
             Contact Us
           </a>
-        </div> */}
-
-        <div className="py-4"></div>
+        </div>
 
         {/*         <div className="flex justify-start items-center pb-4 border-t-0 border-[#b5b5b5]">
           <img
@@ -241,29 +256,15 @@ function Footer({ isDarkMode }) {
           />
         </div>
  */}
-        <div className="flex items-center space-x-[-0px] pb-2">
-          <text
-            className="text-3xl text-[#ffffff] font-poppins font-normal border-[2px] border-black
-                  bg-[#000000] pl-[3px] pr-[1px]"
-          >
-            NEWS
-          </text>
-          <text
-            className="text-3xl font-poppins font-extrabold border-[2px] border-black
-                  bg-[#ffffff] text-[#ff295c] pl-[4px] pr-[4px]"
-          >
-            HUB
-          </text>
-        </div>
 
         {/* ml-3 */}
 
         <p
-          className={`text-left text-[14.4px] py-0 pb-4 w-full font-rubik font-light tracking-normal ${
-            isDarkMode ? "text-[#B5B5B5]" : "text-[#ffffff]"
+          className={`text-left text-sm pt-5 pb-0 w-full font-rubik font-light tracking-normal  ${
+            isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
           }`}
         >
-          Copyright &copy; {new Date().getFullYear()} - All rights reserved
+          &copy; {new Date().getFullYear()} News Hub. All Rights Reserved
         </p>
       </div>
     </footer>

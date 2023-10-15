@@ -50,7 +50,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
   /* const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ed042d]"; */
-  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ff3557]";
+  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ff295c]";
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
