@@ -50,10 +50,14 @@ function Footer({ isDarkMode }) {
       }`}
     >
       <div className="container mx-auto md:max-w-screen-xl">
+        {/* LOGO & FOLLOW US SVGS */}
         {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
         <div className="text-center p-0 py-8">
           <div className="flex justify-between items-center align-middle pt-0 space-x-4">
-            <div className="flex items-center justify-start space-x-[-0px] pb-0">
+            <div
+              className="flex items-center justify-start space-x-[-0px] pb-0
+            mx-3 md:mx-0"
+            >
               <text
                 className="text-3xl text-[#ffffff] font-poppins font-normal border-[2px] border-black
                   bg-[#000000] pl-[3px] pr-[1px]"
@@ -68,7 +72,8 @@ function Footer({ isDarkMode }) {
               </text>
             </div>
 
-            <div className="flex items-center justify-end space-x-3.5">
+            {/* FOLLOW US / ICONS 1 */}
+            <div className="hidden md:flex items-center justify-end space-x-3.5">
               <p
                 className={`text-left text-[15px] font-medium font-inter ${
                   isDarkMode ? "text-[#ffffff]" : "text-[#ffffff]"
@@ -161,13 +166,209 @@ function Footer({ isDarkMode }) {
                 />
               </a>
             </div>
+            {/* FOLLOW US / ICONS 1 */}
+            {/* <div className="hidden md:flex items-center justify-end space-x-3.5">
+              <p
+                className={`text-left text-[15px] font-medium font-inter ${
+                  isDarkMode ? "text-[#ffffff]" : "text-[#ffffff]"
+                }`}
+              >
+                FOLLOW US
+              </p>
+              <a
+                href="https://www.facebook.com/your-facebook-page"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Facebook"
+              >
+                <img
+                  src={isDarkMode ? facebookIconDark : facebookIconLight}
+                  alt="Facebook"
+                />
+              </a>
+
+              <a
+                href="https://twitter.com/your-twitter-page"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Twitter"
+              >
+                <img
+                  src={isDarkMode ? twitterIconDark : twitterIconLight}
+                  alt="Twitter"
+                />
+              </a>
+
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Youtube"
+              >
+                <img
+                  src={isDarkMode ? youtubeIconDark : youtubeIconLight}
+                  alt="Youtube"
+                />
+              </a>
+
+              <a
+                href="https://github.com/Kobra-soft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Github"
+              >
+                <img
+                  src={isDarkMode ? githubIconDark : githubIconLight}
+                  alt="Github"
+                />
+              </a>
+
+              <a
+                href="https://uk.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+                  isDarkMode
+                    ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                    : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+                }`}
+                title="Linkedin"
+              >
+                <img
+                  src={isDarkMode ? linkedinIconDark : linkedinIconLight}
+                  alt="Linkedin"
+                />
+              </a>
+            </div> */}
           </div>
         </div>
 
-        <div className="flex justify-start items-center mt-0 py-5 mb-0 border-t-[0.5px] border-[#ffffff]">
+        {/* FOLLOW US / ICONS 2 */}
+        <div className="flex md:hidden items-center justify-center pb-6 mx-3 space-x-3.5 pt-0">
+          <p
+            className={`text-left text-[15px] font-medium font-inter ${
+              isDarkMode ? "text-[#ffffff]" : "text-[#ffffff]"
+            }`}
+          >
+            FOLLOW US:
+          </p>
+          <a
+            href="https://www.facebook.com/your-facebook-page"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+              isDarkMode
+                ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+            }`}
+            title="Facebook"
+          >
+            <img
+              src={isDarkMode ? facebookIconDark : facebookIconLight}
+              alt="Facebook"
+            />
+          </a>
+
+          <a
+            href="https://twitter.com/your-twitter-page"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+              isDarkMode
+                ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+            }`}
+            title="Twitter"
+          >
+            <img
+              src={isDarkMode ? twitterIconDark : twitterIconLight}
+              alt="Twitter"
+            />
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+              isDarkMode
+                ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+            }`}
+            title="Youtube"
+          >
+            <img
+              src={isDarkMode ? youtubeIconDark : youtubeIconLight}
+              alt="Youtube"
+            />
+          </a>
+
+          <a
+            href="https://github.com/Kobra-soft"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+              isDarkMode
+                ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+            }`}
+            title="Github"
+          >
+            <img
+              src={isDarkMode ? githubIconDark : githubIconLight}
+              alt="Github"
+            />
+          </a>
+
+          <a
+            href="https://uk.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`w-11 md:w-[40px] p-2 rounded-3xl border border-[#797979] ${
+              isDarkMode
+                ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#ffffff]"
+                : "bg-[#ffffff] text-[#000] hover:bg-[#ebebeb] hover:border-[#000000]"
+            }`}
+            title="Linkedin"
+          >
+            <img
+              src={isDarkMode ? linkedinIconDark : linkedinIconLight}
+              alt="Linkedin"
+            />
+          </a>
+        </div>
+
+        {/* FOOTER LINKS */}
+        <div
+          className="flex flex-col md:flex-row justify-start items-center mt-0 py-5 mb-0 
+        mx-3 md:mx-0
+        border-t-[0.5px] border-[#ffffff]
+        border-b-[0.5px] md:border-b-[0.0px]
+        "
+        >
           <a
             href="#aboutUs"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-0 pr-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#ffffff] px-4 md:px-0 pr-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
@@ -247,22 +448,14 @@ function Footer({ isDarkMode }) {
           </a>
         </div>
 
-        {/*         <div className="flex justify-start items-center pb-4 border-t-0 border-[#b5b5b5]">
-          <img
-            src={logoPath}
-            alt="Logo"
-            className="h-12 ml-0 rounded-none"
-            loading="lazy"
-          />
-        </div>
- */}
-
-        {/* ml-3 */}
-
+        {/* COPYRIGHT */}
         <p
-          className={`text-left text-sm pt-5 pb-0 w-full font-rubik font-light tracking-normal  ${
-            isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
-          }`}
+          className={`text-left text-sm 
+          pt-6 md:pt-0
+          mx-3 md:mx-0
+           pb-0 w-full font-rubik font-light tracking-normal  ${
+             isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
+           }`}
         >
           &copy; {new Date().getFullYear()} News Hub. All Rights Reserved
         </p>

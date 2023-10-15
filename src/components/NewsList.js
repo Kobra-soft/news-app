@@ -257,7 +257,12 @@ function NewsList({ isDarkMode }) {
           </div>
 
           {/* Right side */}
-          <div className="col-span-1 bg-gray-000 mb-0 w-[420px] ">
+          <div
+            className="col-span-1 bg-gray-000 mb-0 
+          md:w-[420px] w-[412px]
+          px-0 md:px-0
+          "
+          >
             {rightArticles.map((article) => (
               <Link to={`/article/${article.id}`} key={article.id}>
                 {/* Your small news card content */}
