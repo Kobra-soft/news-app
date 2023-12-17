@@ -150,7 +150,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 <text
                   className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
                     isDarkMode
-                      ? "border-r-[#54e8f3] bg-[#54e8f3] border-[#54e8f3] text-[#000000]"
+                      ? "border-r-[#ffffff] bg-[#ffffff] border-[#ffffff] text-[#000000]"
                       : "border-black bg-[#000000] text-[#ffffff]"
                   }`}
                 >
@@ -160,7 +160,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 <text
                   className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
                     isDarkMode
-                      ? "border-l-[#54e8f3] border-[#54e8f3] bg-[#000000] text-[#ffffff]"
+                      ? "border-l-[#ffffff] border-[#ffffff] bg-[#000000] text-[#54e8f3]"
                       : "border-black text-[#54e8f3] bg-[#ffffff]"
                   }`}
                 >
