@@ -54,7 +54,7 @@ function Footer({ isDarkMode }) {
         {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
         <div className="text-center p-0 py-8">
           <div className="flex justify-between items-center align-middle pt-0 space-x-4">
-            <div className="flex items-center space-x-[-0px]">
+            {/* <div className="flex items-center space-x-[-0px]">
               <text
                 className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
                   isDarkMode
@@ -69,6 +69,27 @@ function Footer({ isDarkMode }) {
                 className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
                   isDarkMode
                     ? "border-l-[#54e8f3] border-[#54e8f3] bg-[#000000] text-[#ffffff]"
+                    : "border-black text-[#54e8f3] bg-[#ffffff]"
+                }`}
+              >
+                HUB
+              </text>
+            </div> */}
+            <div className="flex items-center space-x-[-0px]">
+              <text
+                className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
+                  isDarkMode
+                    ? "border-r-[#ffffff] bg-[#ffffff] border-[#ffffff] text-[#000000]"
+                    : "border-black bg-[#000000] text-[#ffffff]"
+                }`}
+              >
+                NEWS
+              </text>
+
+              <text
+                className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
+                  isDarkMode
+                    ? "border-l-[#ffffff] border-[#ffffff] bg-[#000000] text-[#54e8f3]"
                     : "border-black text-[#54e8f3] bg-[#ffffff]"
                 }`}
               >
