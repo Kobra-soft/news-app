@@ -49,8 +49,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   };
 
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
-  /* const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ed042d]"; */
-  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#ff295c]";
+  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#f0f0f0]";
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
@@ -125,23 +124,52 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </text>
               </div> */}
 
-              <div className="flex items-center space-x-[-0px]">
+              {/*               <div className="flex items-center space-x-[-0px]">
                 <text
-                  className="text-3xl text-[#ffffff] font-poppins font-normal border-[2px] border-black
-                  bg-[#000000] pl-[3px] pr-[1px]"
+                  className={`text-3xl text-[#ffffff] font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
+                    isDarkMode
+                      ? "border-r-[#54e8f3] bg-[#54e8f3] border-[#54e8f3]"
+                      : "border-black bg-[#000000]"
+                  }`}
                 >
                   NEWS
                 </text>
+
                 <text
-                  className="text-3xl font-poppins font-extrabold border-[2px] border-black
-                  bg-[#ffffff] text-[#ff295c] pl-[4px] pr-[4px]"
+                  className={`text-3xl font-inter font-extrabold border-[2px] bg-[#ffffff] pl-[4px] pr-[4px] ${
+                    isDarkMode
+                      ? "border-l-[#54e8f3] border-[#54e8f3] bg-[#000000] text-[#000000]"
+                      : "border-black bg-[#000000] text-[#54e8f3]"
+                  }`}
+                >
+                  HUB
+                </text>
+              </div> */}
+
+              <div className="flex items-center space-x-[-0px]">
+                <text
+                  className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
+                    isDarkMode
+                      ? "border-r-[#54e8f3] bg-[#54e8f3] border-[#54e8f3] text-[#000000]"
+                      : "border-black bg-[#000000] text-[#ffffff]"
+                  }`}
+                >
+                  NEWS
+                </text>
+
+                <text
+                  className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
+                    isDarkMode
+                      ? "border-l-[#54e8f3] border-[#54e8f3] bg-[#000000] text-[#ffffff]"
+                      : "border-black text-[#54e8f3] bg-[#ffffff]"
+                  }`}
                 >
                   HUB
                 </text>
               </div>
 
               {/* Search */}
-              <div className="relative mx-8 hidden sm:flex md:flex">
+              {/*               <div className="relative mx-8 hidden sm:flex md:flex">
                 <input
                   type="text"
                   placeholder="Search the web"
@@ -168,10 +196,10 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     style={{ rotate: "180deg" }}
                   />
                 </button>
-              </div>
+              </div> */}
             </div>
             {/* Right SVG ICONS (Sun/Moon and Menu) */}
-            <div className="flex items-center space-x-0 mx-0 ml-0">
+            <div className="flex items-center space-x-1 mx-0 ml-0">
               {/* onClick event listener for (Light/Dark Mode - Toggle) */}
               <label
                 className={`switch mx-0 rounded-full ${
@@ -183,13 +211,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={SunIcon}
                     alt="Sun"
-                    className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
+                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
                           : "" // No hover background for mobile devices!!!
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
                         : "" // No hover background for mobile devices!!!
                     }`}
                     style={{ rotate: "0deg" }}
@@ -198,13 +226,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={MoonIcon}
                     alt="Moon"
-                    className={`w-10 sm:w-10 rounded-full p-[0.50rem] ${
+                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
                           : "" // No hover background for mobile devices!!!
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
                         : "" // No hover background for mobile devices!!!
                     }`}
                     style={{ rotate: "180deg" }}
@@ -223,13 +251,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={isDarkMode ? CloseIcon2 : CloseIcon}
                     alt="Close"
-                    className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
+                    className={`w-10 sm:w-10 rounded-md p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
                           : "" // No hover background for mobile devices!!!
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-0  hover:border-[#54e8f3]" // Hover background for menu icon in light mode
                         : "" // No hover background for mobile devices!!!
                     }`}
                   />
@@ -239,13 +267,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     <img
                       src={isDarkMode ? MenuIcon2 : MenuIcon}
                       alt="Menu"
-                      className={`w-10 sm:w-10 rounded-full p-[0.22rem] sm:p-[0.30rem] ${
+                      className={`w-10 sm:w-10 rounded-md p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
                         isDarkMode
                           ? !("ontouchstart" in window)
-                            ? "hover:bg-[#222222] hover:bg-opacity-75" // Hover background for menu icon in dark mode
+                            ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
                             : "" // No hover background for mobile devices!!!
                           : !("ontouchstart" in window)
-                          ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
+                          ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
                           : "" // No hover background for mobile devices!!!
                       }`}
                     />
