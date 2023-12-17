@@ -126,10 +126,10 @@
 
 /* navigation links container */
 .bottom-navbar {
-  background-color: #fafafa; 
+  /* background-color: #fafafa;  */
   /* background-color: #ff3557;  */
-  border-bottom: 1px solid #ddd; 
-  border-top: 1px solid #000; 
+/*   border-bottom: 1px solid #ddd;  */
+/*   border-top: 1px solid #000;  */
   /* border-top: 1px solid #ddd; */
   padding: 8px 0;
   
@@ -164,8 +164,9 @@
 
 .bottom-navbar a:hover {
   /* background-color: #ddd;  */
-  color: #ed042d;
-  /* text-decoration: underline; */
+  color: #54e8f3;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 /* Media query for screens with a maximum width of 768px (typical mobile devices) */

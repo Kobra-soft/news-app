@@ -299,18 +299,18 @@ function Footer({ isDarkMode }) {
             href="#aboutUs"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 md:px-0 pr-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             About Us
           </a>
           <a
             href="#A-Z_Index"
-            className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] ml-4 px-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             A-Z Index
@@ -319,8 +319,8 @@ function Footer({ isDarkMode }) {
             href="#editorialPolicy"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] first-letter:hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             Editorial Policy
@@ -329,8 +329,8 @@ function Footer({ isDarkMode }) {
             href="#cookiePreferences"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             Cookie Preferences
@@ -339,8 +339,8 @@ function Footer({ isDarkMode }) {
             href="#privacyPolicy"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] first-line:hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             Privacy Policy
@@ -349,8 +349,8 @@ function Footer({ isDarkMode }) {
             href="#terms&Conditions"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             Terms & Conditions
@@ -359,8 +359,8 @@ function Footer({ isDarkMode }) {
             href="#accessibility"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             Accessibility
@@ -369,8 +369,8 @@ function Footer({ isDarkMode }) {
             href="#contactUs"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
               isDarkMode
-                ? "hover:text-black hover:bg-white     hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
-                : "hover:text-[#dcdcdc] hover:bg-black hover:underline underline-[#ffffff] underline-offset-4"
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#dcdcdc] hover:underline underline-[#ffffff] underline-offset-4"
             }`}
           >
             Contact Us
