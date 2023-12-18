@@ -98,7 +98,7 @@ function Footer({ isDarkMode }) {
             </div>
 
             {/* FOLLOW US / ICONS 1 */}
-            <div className="hidden md:flex items-center justify-end space-x-3.5">
+            <div className="md:flex items-center justify-end space-x-3.5">
               <p
                 className={`text-left text-[15px] font-medium font-inter ${
                   isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
