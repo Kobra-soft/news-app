@@ -49,7 +49,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
   };
 
   const textColor = isDarkMode ? "text-[#ff4057]" : "text-black";
-  const bgColor = isDarkMode ? "bg-[#000000]" : "bg-[#f0f0f0]";
+  const bgColor = isDarkMode ? "bg-[#0f0f0f]" : "bg-[#f0f0f0]";
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
@@ -91,7 +91,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={isDarkMode ? BackButtonIcon2 : BackButtonIcon}
                     alt="Back"
-                    className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-0 mr-1 ${
+                    className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-[-6px] mr-1 ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-75" //  in dark mode
@@ -290,10 +290,10 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
         {/* 2nd Navbar (Bottom Bar Nav Links) */}
         <div
-          className={`sticky-bottom-navbar border-t border-b ${
+          className={`sticky-bottom-navbar border-t-0 border-b ${
             isDarkMode
-              ? "bg-black text-white border-[#ffffff]"
-              : " bg-[#f0f0f0] text-gray-900 border-[#000000]"
+              ? "bg-[#0f0f0f] text-white border-[#797979]"
+              : " bg-[#f0f0f0] text-gray-900 border-[#797979]"
           }`}
         >
           <nav className="bottom-navbar">
@@ -305,7 +305,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     General
                   </Link>
                 </li>
-                <p className="flex text-[11px] text-gray-400 items-center ">
+                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -313,7 +313,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Business
                   </Link>
                 </li>
-                <p className="flex text-[11px] text-gray-400 items-center ">
+                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -321,7 +321,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Entertainment
                   </Link>
                 </li>
-                <p className="flex text-[11px] text-gray-400 items-center ">
+                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -329,7 +329,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Health
                   </Link>
                 </li>
-                <p className="flex text-[11px] text-gray-400 items-center ">
+                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -337,7 +337,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Science
                   </Link>
                 </li>
-                <p className="flex text-[11px] text-gray-400 items-center ">
+                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -345,7 +345,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Sports
                   </Link>
                 </li>
-                <p className="flex text-[11px] text-gray-400 items-center ">
+                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>

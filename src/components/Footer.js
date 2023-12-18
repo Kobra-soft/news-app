@@ -45,8 +45,8 @@ function Footer({ isDarkMode }) {
     <footer
       className={`pt-0 pb-0 mt-auto relative shadow-md ${
         isDarkMode
-          ? "bg-[#000000] border-t-[1px] border-[#ffffff]"
-          : "bg-[#f0f0f0] border-t-[1px] border-[#000000]"
+          ? "bg-[#000000] border-t-[1px] border-[#797979]"
+          : "bg-[#f0f0f0] border-t-[1px] border-[#797979]"
       }`}
     >
       <div className="container mx-auto md:max-w-screen-xl">
@@ -294,7 +294,7 @@ function Footer({ isDarkMode }) {
         {/* FOOTER LINKS */}
         <div
           className={`flex flex-col md:flex-row justify-start items-center mt-0 py-5 mb-0 mx-3 md:mx-0 border-t-[0.5px] border-b-[0.5px] md:border-b-[0.0px] ${
-            isDarkMode ? "border-[#ffffff]" : "border-[#000000]"
+            isDarkMode ? "border-[#797979]" : "border-[#797979]"
           }`}
         >
           <a
