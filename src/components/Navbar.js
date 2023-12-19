@@ -28,6 +28,9 @@ import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
 /* import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
 import LightLogo from "../logos_png/news-hub-logo-white-black.webp"; */
 
+import Search from "../icons/search.svg";
+import Search2 from "../icons/search2.svg";
+
 // webp logos NEW REDONE DESIGNS
 import DarkLogo from "../logos_webp&svgs/High-Resolution-Logo-Black-on-Transparent-Background.webp";
 import LightLogo from "../logos_webp&svgs/High-Resolution-Logo-Color-on-Transparent-Background.webp";
@@ -199,8 +202,48 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
               </div> */}
             </div>
             {/* Right SVG ICONS (Sun/Moon and Menu) */}
-            <div className="flex items-center space-x-1 mx-0 ml-0">
+            <div className="flex items-center space-x-1.5 mx-0 ml-0">
               {/* onClick event listener for (Light/Dark Mode - Toggle) */}
+
+              <label
+                className={`switch mx-0 rounded-full ${
+                  sunIconClicked ? "no-hover-background" : ""
+                }`}
+                onClick={handleSunIconClick}
+              >
+                {isDarkMode ? (
+                  <img
+                    src={Search}
+                    alt="Search"
+                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
+                      isDarkMode
+                        ? !("ontouchstart" in window)
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
+                          : "" // No hover background for mobile devices!!!
+                        : !("ontouchstart" in window)
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
+                        : "" // No hover background for mobile devices!!!
+                    }`}
+                    style={{ rotate: "0deg" }}
+                  />
+                ) : (
+                  <img
+                    src={Search2}
+                    alt="Search2"
+                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
+                      isDarkMode
+                        ? !("ontouchstart" in window)
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
+                          : "" // No hover background for mobile devices!!!
+                        : !("ontouchstart" in window)
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
+                        : "" // No hover background for mobile devices!!!
+                    }`}
+                    style={{ rotate: "0deg" }}
+                  />
+                )}
+              </label>
+
               <label
                 className={`switch mx-0 rounded-full ${
                   sunIconClicked ? "no-hover-background" : ""
