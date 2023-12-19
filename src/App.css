@@ -163,10 +163,10 @@
 }
 
 .bottom-navbar a:hover {
-  /* background-color: #ddd;  */
+  /* background-color: #ddd; */
   color: #54e8f3;
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: 4px;
 }
 
 /* Media query for screens with a maximum width of 768px (typical mobile devices) */
