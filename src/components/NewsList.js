@@ -38,14 +38,28 @@ function NewsList({ isDarkMode }) {
     const apiKey = "f6b499e9ef0d7e84bc4b01cd73323fb3";
     const apiUrl = `http://api.mediastack.com/v1/news?access_key=f6b499e9ef0d7e84bc4b01cd73323fb3&languages=en&countries=gb&limit=30`;
 
+    // Fetch data from the MediaStack API for the left side
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        // Extract the relevant data from the API response and setLeftArticles
+        const leftArticlesData = response.data.data.slice(0, 25);
+        setLeftArticles(leftArticlesData);
+      })
+      .catch((error) => {
+        console.error("Error fetching left side news data:", error);
+      });
+
     // Fetch data from data2.json for the left side
-    axios.get("/data3.json").then((response) => {
+    /*   axios.get("/data3.json").then((response) => {
       setLeftArticles(response.data);
-    });
+    }); */
 
     // Fetch data from data3.json for the right side
     axios.get("/data3.json").then((response) => {
-      setRightArticles(response.data);
+      // Adjust the number 25 based on the desired limit
+      const rightArticlesData = response.data.slice(0, 25);
+      setRightArticles(rightArticlesData);
     });
   }, []);
 

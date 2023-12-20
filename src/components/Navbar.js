@@ -201,15 +201,14 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </button>
               </div> */}
             </div>
-            {/* Right SVG ICONS (Sun/Moon and Menu) */}
-            <div className="flex items-center space-x-1.5 mx-0 ml-0">
-              {/* onClick event listener for (Light/Dark Mode - Toggle) */}
 
+            <div className="flex items-center space-x-1.5 mx-0 ml-0">
+              {/* SEARCH LOGO / SVG (Light / Dark mode */}
               <label
                 className={`switch mx-0 rounded-full ${
                   sunIconClicked ? "no-hover-background" : ""
                 }`}
-                onClick={handleSunIconClick}
+                /* onClick={handleSunIconClick} */
               >
                 {isDarkMode ? (
                   <img
@@ -244,6 +243,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 )}
               </label>
 
+              {/* SUN / MOON LOGO / SVG (Light / Dark mode */}
               <label
                 className={`switch mx-0 rounded-full ${
                   sunIconClicked ? "no-hover-background" : ""
@@ -283,7 +283,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 )}
               </label>
 
-              {/* Render the menu icon based on menuOpen state */}
+              {/* MENU LOGO / SVG (Nav Menu / X Icon) */}
               <label
                 className={`switch mx-0 ${
                   menuIconClicked ? "no-hover-background" : ""
