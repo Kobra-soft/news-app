@@ -42,26 +42,39 @@ function NewsList({ isDarkMode }) {
     axios
       .get(apiUrl)
       .then((response) => {
-        // Extract the relevant data from the API response and setLeftArticles
-        const leftArticlesData = response.data.data.slice(0, 25);
+        const filteredArticles = response.data.data.filter(
+          (article, index, self) =>
+            article.image !== null &&
+            self.findIndex((a) => a.image === article.image) === index
+        );
+
+        // Determine the limit for both sides based on the number of articles displayed on the left
+        const leftLimit = Math.min(filteredArticles.length, 18); // Set your desired limit for the left side
+        const rightLimit = leftLimit; // Set the limit for the right side to match the left side
+
+        const leftArticlesData = filteredArticles.slice(0, leftLimit);
+        const rightArticlesData = filteredArticles.slice(0, rightLimit);
+
         setLeftArticles(leftArticlesData);
+        setRightArticles(rightArticlesData);
       })
       .catch((error) => {
-        console.error("Error fetching left side news data:", error);
+        console.error("Error fetching news data:", error);
       });
+  }, []);
 
-    // Fetch data from data2.json for the left side
-    /*   axios.get("/data3.json").then((response) => {
+  // Fetch data from data2.json for the left side
+  /*   axios.get("/data3.json").then((response) => {
       setLeftArticles(response.data);
     }); */
 
-    // Fetch data from data3.json for the right side
-    axios.get("/data3.json").then((response) => {
+  // Fetch data from data3.json for the right side
+  /*     axios.get("/data3.json").then((response) => {
       // Adjust the number 25 based on the desired limit
       const rightArticlesData = response.data.slice(0, 25);
       setRightArticles(rightArticlesData);
     });
-  }, []);
+  }, []); */
 
   /*     axios
       .get(apiUrl)
@@ -281,13 +294,27 @@ function NewsList({ isDarkMode }) {
               <Link to={`/article/${article.id}`} key={article.id}>
                 {/* Your small news card content */}
                 <div
-                  className={`relative py-[80.5px] shadow-md hover:shadow-lg hover:bg-white 
+                  className={`relative py-[56.0px] shadow-md hover:shadow-lg hover:bg-white 
                   border-[1px] border-[#c6c6c6] rounded-[3px] w-full mb-3 ${
                     isDarkMode ? "bg-[#101010]" : "bg-transparent"
                   }`}
                 >
                   {/* Small card content py-[115.5px] */}
                   {/* ... */}
+                  {/* Title */}
+                  <h2
+                    className="mt-1 text-left text-[18px] text-gray-900 
+                      font-black font-inter
+                      transition-all duration-300 hover:text-red-500 leading-tight
+                      line-clamp-2 pr-3"
+                    style={{
+                      maxWidth: "68ch",
+                      /* maxHeight: "2.5rem", */
+                      overflow: "hidden",
+                    }}
+                  >
+                    {article.title}
+                  </h2>
                 </div>
               </Link>
             ))}
