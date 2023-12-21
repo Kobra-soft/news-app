@@ -36,9 +36,53 @@ function NewsList({ isDarkMode }) {
 
   useEffect(() => {
     const apiKey = "f6b499e9ef0d7e84bc4b01cd73323fb3";
-    const apiUrl = `http://api.mediastack.com/v1/news?access_key=f6b499e9ef0d7e84bc4b01cd73323fb3&languages=en&countries=gb&limit=30`;
+    const apiUrl = `http://api.mediastack.com/v1/news?access_key=f6b499e9ef0d7e84bc4b01cd73323fb3&languages=en&countries=gb&limit=60`;
 
-    // Fetch data from the MediaStack API for the left side
+    // Fetch data from data3.json for the left side
+    axios.get("/data3.json").then((response) => {
+      const leftArticlesData = response.data
+        .filter(
+          (article, index, self) =>
+            article.image !== null &&
+            self.findIndex((a) => a.image === article.image) === index
+        )
+        .slice(0, 18); // Set your desired limit for the left side
+
+      setLeftArticles(leftArticlesData);
+
+      // Set the desired limit for the right side to match the left side
+      const rightLimit = leftArticlesData.length;
+
+      // Fetch data from data2.json for the right side
+      axios.get("/data2.json").then((response) => {
+        const rightArticlesData = response.data.slice(0, rightLimit);
+        setRightArticles(rightArticlesData);
+      });
+    });
+  }, []);
+
+  /*     // Fetch data from data3.json for the left side
+    axios.get("/data3.json").then((response) => {
+      // Filter out articles with null images and duplicates
+      const filteredArticles = response.data.filter(
+        (article, index, self) =>
+          article.image !== null &&
+          self.findIndex((a) => a.image === article.image) === index
+      );
+
+      // Determine the limit for both sides based on the number of articles displayed on the left
+      const leftLimit = Math.min(filteredArticles.length, 18); // Set desired limit for the left side
+      const rightLimit = leftLimit; // Set limit for the right side to match the left side
+
+      const leftArticlesData = filteredArticles.slice(0, leftLimit);
+      const rightArticlesData = filteredArticles.slice(0, rightLimit);
+
+      setLeftArticles(leftArticlesData);
+      setRightArticles(rightArticlesData);
+    });
+  }, []); */
+
+  /*     // Fetch data from the MediaStack API for the left side
     axios
       .get(apiUrl)
       .then((response) => {
@@ -49,8 +93,8 @@ function NewsList({ isDarkMode }) {
         );
 
         // Determine the limit for both sides based on the number of articles displayed on the left
-        const leftLimit = Math.min(filteredArticles.length, 18); // Set your desired limit for the left side
-        const rightLimit = leftLimit; // Set the limit for the right side to match the left side
+        const leftLimit = Math.min(filteredArticles.length, 18); // Set desired limit for the left side
+        const rightLimit = leftLimit; // Set limit for the right side to match the left side
 
         const leftArticlesData = filteredArticles.slice(0, leftLimit);
         const rightArticlesData = filteredArticles.slice(0, rightLimit);
@@ -61,7 +105,7 @@ function NewsList({ isDarkMode }) {
       .catch((error) => {
         console.error("Error fetching news data:", error);
       });
-  }, []);
+  }, []); */
 
   // Fetch data from data2.json for the left side
   /*   axios.get("/data3.json").then((response) => {
@@ -199,7 +243,7 @@ function NewsList({ isDarkMode }) {
           <div className="col-span-2">
             {leftArticles.map((article) => (
               <Link to={`/article/${article.id}`} key={article.id}>
-                {/* Your large news card content */}
+                {/* Large news card content */}
                 <div
                   style={{ alignItems: "center" }}
                   className={` mb-3 relative shadow-md hover:shadow-lg hover:bg-white
@@ -292,7 +336,7 @@ function NewsList({ isDarkMode }) {
           >
             {rightArticles.map((article) => (
               <Link to={`/article/${article.id}`} key={article.id}>
-                {/* Your small news card content */}
+                {/* Small news card content */}
                 <div
                   className={`relative py-[56.0px] shadow-md hover:shadow-lg hover:bg-white 
                   border-[1px] border-[#c6c6c6] rounded-[3px] w-full mb-3 ${
@@ -300,7 +344,6 @@ function NewsList({ isDarkMode }) {
                   }`}
                 >
                   {/* Small card content py-[115.5px] */}
-                  {/* ... */}
                   {/* Title */}
                   <h2
                     className="mt-1 text-left text-[18px] text-gray-900 
