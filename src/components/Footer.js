@@ -197,7 +197,7 @@ function Footer({ isDarkMode }) {
         </div>
 
         {/* FOLLOW US / ICONS 2 for small screen phones tablets, hide if above > screen size */}
-        <div className="flex md:hidden items-center justify-center py-6 mx-3 space-x-3.5 pt-0">
+        <div className="flex md:hidden items-center justify-center py-6 mx-3 space-x-3 pt-0">
           <p
             className={`text-left text-[15px] font-medium font-inter ${
               isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
