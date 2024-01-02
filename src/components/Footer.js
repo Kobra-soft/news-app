@@ -226,7 +226,7 @@ function Footer({ isDarkMode }) {
             href="https://twitter.com/your-twitter-page"
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-11 md:w-[40px] p-2 rounded-3xl border-[2px] border-[#797979] ${
+            className={`w-9 p-1.5 rounded-3xl border-[2px] border-[#797979] ${
               isDarkMode
                 ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#54e8f3]"
                 : "bg-[#ffffff] text-[#000] hover:bg-[#f6f6f6] hover:border-[#54e8f3]"
@@ -243,7 +243,7 @@ function Footer({ isDarkMode }) {
             href="https://www.youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-11 md:w-[40px] p-2 rounded-3xl border-[2px] border-[#797979] ${
+            className={`w-9 p-1.5 rounded-3xl border-[2px] border-[#797979] ${
               isDarkMode
                 ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#54e8f3]"
                 : "bg-[#ffffff] text-[#000] hover:bg-[#f6f6f6] hover:border-[#54e8f3]"
@@ -260,7 +260,7 @@ function Footer({ isDarkMode }) {
             href="https://github.com/Kobra-soft"
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-11 md:w-[40px] p-2 rounded-3xl border-[2px] border-[#797979] ${
+            className={`w-9 p-1.5 rounded-3xl border-[2px] border-[#797979] ${
               isDarkMode
                 ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#54e8f3]"
                 : "bg-[#ffffff] text-[#000] hover:bg-[#f6f6f6] hover:border-[#54e8f3]"
@@ -277,7 +277,7 @@ function Footer({ isDarkMode }) {
             href="https://uk.linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-11 md:w-[40px] p-2 rounded-3xl border-[2px] border-[#797979] ${
+            className={`w-9 p-1.5 rounded-3xl border-[2px] border-[#797979] ${
               isDarkMode
                 ? "bg-[#333]   text-[#fff] hover:bg-[#535353]  hover:border-[#54e8f3]"
                 : "bg-[#ffffff] text-[#000] hover:bg-[#f6f6f6] hover:border-[#54e8f3]"
