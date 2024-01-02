@@ -333,14 +333,14 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
         {/* 2nd Navbar (Bottom Bar Nav Links) */}
         <div
-          className={`sticky-bottom-navbar border-t-0 border-b-[1px] ${
+          className={`sticky-bottom-navbar border-t-[1px] border-b-[1px] ${
             isDarkMode
               ? "bg-[#0f0f0f] text-white border-[#797979]"
-              : " bg-[#f0f0f0] text-gray-900 border-[#000000]"
+              : " bg-[#f0f0f0] text-black border-[#000000]"
           }`}
         >
           <nav className="bottom-navbar">
-            <div className="hidden md:flex container mx-auto md:max-w-screen-xl py-2 px-0 text-[16px] font-inter font-medium">
+            <div className="hidden md:flex container mx-auto md:max-w-screen-xl py-2 px-0 text-[16px] font-kanit font-light">
               {/* On larger screens, show the full navbar */}
               <ul className="flex flex-wrap">
                 <li>
