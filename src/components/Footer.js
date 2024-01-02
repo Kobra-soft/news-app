@@ -197,7 +197,7 @@ function Footer({ isDarkMode }) {
         </div>
 
         {/* FOLLOW US / ICONS 2 for small screen phones tablets, hide if above > screen size */}
-        <div className="flex md:hidden items-center justify-center pb-6 mx-3 space-x-3.5 pt-0">
+        <div className="flex md:hidden items-center justify-center py-6 mx-3 space-x-3.5 pt-0">
           <p
             className={`text-left text-[15px] font-medium font-inter ${
               isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
@@ -391,7 +391,7 @@ function Footer({ isDarkMode }) {
 
         {/* LOGO2 display on small screens and hide on medium and larger screens */}
         <div className="flex justify-center">
-          <div className="md:hidden flex items-center space-x-[-0px] pt-6 pb-2">
+          <div className="md:hidden flex items-center space-x-[-0px] pt-8 pb-2">
             <text
               className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
                 isDarkMode
@@ -415,7 +415,7 @@ function Footer({ isDarkMode }) {
         </div>
         {/* COPYRIGHT */}
         <p
-          className={`text-center md:text-left text-sm pt-2 md:pt-0 mx-0 md:mx-0 pb-2 md:pb-4 w-full font-rubik font-light tracking-normal  ${
+          className={`text-center md:text-left text-sm pt-0 md:pt-0 mx-0 md:mx-0 pb-4 md:pb-4 w-full font-rubik font-light tracking-normal  ${
             isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
           }`}
         >
