@@ -131,7 +131,7 @@
 /*   border-bottom: 1px solid #ddd;  */
 /*   border-top: 1px solid #000;  */
   /* border-top: 1px solid #ddd; */
-  padding: 8px 0;
+  padding: 0px 0;
   
   /* Add box shadow to create a shadow at the bottom */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08); /* Adjust the values as needed */
@@ -148,7 +148,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 32px; /* Adjust the gap between navigation links */
+  gap: 24px; /* Adjust the gap between navigation links */
 }
 
 .bottom-navbar li {

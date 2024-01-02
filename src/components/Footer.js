@@ -368,6 +368,16 @@ function Footer({ isDarkMode }) {
             Accessibility
           </a>
           <a
+            href="#feedback"
+            className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
+              isDarkMode
+                ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
+                : "hover:text-[#54e8f3] hover:underline underline-[#ffffff] underline-offset-4"
+            }`}
+          >
+            Feedback
+          </a>
+          <a
             href="#contactUs"
             className={`text-[14px] font-rubik font-normal tracking-wide text-[#000000] px-4 py-2 mb-1 rounded-none ${
               isDarkMode

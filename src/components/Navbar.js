@@ -214,10 +214,10 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={Search}
                     alt="Search"
-                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3] border-[#ffffff]" // Hover background for menu icon in dark mode
                           : "" // No hover background for mobile devices!!!
                         : !("ontouchstart" in window)
                         ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
@@ -229,7 +229,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={Search2}
                     alt="Search2"
-                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#000000] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
@@ -254,10 +254,10 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={SunIcon}
                     alt="Sun"
-                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3] border-[#ffffff]" // Hover background for menu icon in dark mode
                           : "" // No hover background for mobile devices!!!
                         : !("ontouchstart" in window)
                         ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
@@ -269,7 +269,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={MoonIcon}
                     alt="Moon"
-                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#000000] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
@@ -294,13 +294,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={isDarkMode ? CloseIcon2 : CloseIcon}
                     alt="Close"
-                    className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3] border-[#ffffff]" // Hover background for menu icon in dark mode
                           : "" // No hover background for mobile devices!!!
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-0  hover:border-[#54e8f3]" // Hover background for menu icon in light mode
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-0  hover:border-[#54e8f3] border-[#000000]" // Hover background for menu icon in light mode
                         : "" // No hover background for mobile devices!!!
                     }`}
                   />
@@ -310,13 +310,13 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     <img
                       src={isDarkMode ? MenuIcon2 : MenuIcon}
                       alt="Menu"
-                      className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
+                      className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] ${
                         isDarkMode
                           ? !("ontouchstart" in window)
-                            ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
+                            ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3] border-[#ffffff]" // Hover background for menu icon in dark mode
                             : "" // No hover background for mobile devices!!!
                           : !("ontouchstart" in window)
-                          ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
+                          ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3] border-[#000000]" // Hover background for menu icon in light mode
                           : "" // No hover background for mobile devices!!!
                       }`}
                     />
@@ -340,7 +340,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           }`}
         >
           <nav className="bottom-navbar">
-            <div className="container mx-auto md:max-w-screen-xl py-1 px-0 text-[14px] font-inter font-medium">
+            <div className="hidden md:flex container mx-auto md:max-w-screen-xl py-2 px-0 text-[16px] font-inter font-medium">
               {/* On larger screens, show the full navbar */}
               <ul className="flex flex-wrap">
                 <li>
@@ -348,7 +348,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     General
                   </Link>
                 </li>
-                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -356,7 +356,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Business
                   </Link>
                 </li>
-                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -364,7 +364,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Entertainment
                   </Link>
                 </li>
-                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -372,7 +372,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Health
                   </Link>
                 </li>
-                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -380,7 +380,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Science
                   </Link>
                 </li>
-                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -388,7 +388,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Sports
                   </Link>
                 </li>
-                <p className="flex text-[14px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
                   |
                 </p>
                 <li>
