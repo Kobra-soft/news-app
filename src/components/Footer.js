@@ -293,7 +293,7 @@ function Footer({ isDarkMode }) {
 
         {/* FOOTER LINKS */}
         <div
-          className={`flex flex-col md:flex-row justify-start items-center mt-0 py-5 mb-0 mx-11 md:mx-0 border-t-[1px] border-b-[1px] md:border-b-[0.0px] ${
+          className={`flex flex-col md:flex-row justify-start items-center mt-0 py-5 mb-0 mx-9 md:mx-0 border-t-[1px] border-b-[1px] md:border-b-[0.0px] ${
             isDarkMode ? "border-[#797979]" : "border-[#000000]"
           }`}
         >
