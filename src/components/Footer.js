@@ -293,7 +293,7 @@ function Footer({ isDarkMode }) {
 
         {/* FOOTER LINKS */}
         <div
-          className={`flex flex-col md:flex-row justify-start items-center mt-0 py-5 mb-0 mx-5 md:mx-0 border-t-[1px] border-b-[1px] md:border-b-[0.0px] ${
+          className={`flex flex-col md:flex-row justify-start items-center mt-0 py-5 mb-0 mx-11 md:mx-0 border-t-[1px] border-b-[1px] md:border-b-[0.0px] ${
             isDarkMode ? "border-[#797979]" : "border-[#000000]"
           }`}
         >
@@ -415,7 +415,7 @@ function Footer({ isDarkMode }) {
         </div>
         {/* COPYRIGHT */}
         <p
-          className={`text-center md:text-left text-sm pt-0 md:pt-0 mx-0 md:mx-0 pb-4 md:pb-4 w-full font-rubik font-light tracking-normal  ${
+          className={`text-center md:text-left text-sm pt-0 md:pt-0 mx-0 md:mx-0 pb-6 md:pb-4 w-full font-rubik font-light tracking-normal  ${
             isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"
           }`}
         >
