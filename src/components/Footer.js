@@ -81,7 +81,7 @@ function Footer({ isDarkMode }) {
               <text
                 className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
                   isDarkMode
-                    ? "border-r-[#ffffff] bg-[#ffffff] border-[#ffffff] text-[#000000]"
+                    ? " bg-[#ffffff] border-[#ffffff] text-[#000000]"
                     : "border-black bg-[#000000] text-[#ffffff]"
                 }`}
               >
@@ -91,7 +91,7 @@ function Footer({ isDarkMode }) {
               <text
                 className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
                   isDarkMode
-                    ? "border-l-[#ffffff] border-[#ffffff] bg-[#000000] text-[#54e8f3]"
+                    ? "border-l-[#ffffff] bg-[#000000] text-[#54e8f3]"
                     : "border-black text-[#54e8f3] bg-[#ffffff]"
                 }`}
               >
@@ -385,7 +385,7 @@ function Footer({ isDarkMode }) {
             <text
               className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
                 isDarkMode
-                  ? "border-r-[#ffffff] bg-[#ffffff] border-[#ffffff] text-[#000000]"
+                  ? " bg-[#ffffff] border-[#ffffff] text-[#000000]"
                   : "border-black bg-[#000000] text-[#ffffff]"
               }`}
             >
@@ -395,7 +395,7 @@ function Footer({ isDarkMode }) {
             <text
               className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
                 isDarkMode
-                  ? "border-l-[#ffffff] border-[#ffffff] bg-[#000000] text-[#54e8f3]"
+                  ? "border-l-[#ffffff] bg-[#000000] text-[#54e8f3]"
                   : "border-black text-[#54e8f3] bg-[#ffffff]"
               }`}
             >

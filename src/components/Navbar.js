@@ -153,7 +153,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 <text
                   className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
                     isDarkMode
-                      ? "border-r-[#ffffff] bg-[#ffffff] border-[#ffffff] text-[#000000]"
+                      ? " bg-[#ffffff] border-[#ffffff] text-[#000000]"
                       : "border-black bg-[#000000] text-[#ffffff]"
                   }`}
                 >
@@ -163,7 +163,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 <text
                   className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
                     isDarkMode
-                      ? "border-l-[#ffffff] border-[#ffffff] bg-[#000000] text-[#54e8f3]"
+                      ? "border-l-[#ffffff] bg-[#000000] text-[#54e8f3]"
                       : "border-black text-[#54e8f3] bg-[#ffffff]"
                   }`}
                 >
@@ -214,7 +214,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={Search}
                     alt="Search"
-                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
@@ -229,7 +229,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={Search2}
                     alt="Search2"
-                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
@@ -254,7 +254,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={SunIcon}
                     alt="Sun"
-                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
@@ -269,7 +269,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={MoonIcon}
                     alt="Moon"
-                    className={`w-10 sm:w-10 rounded-md p-[0.50rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
@@ -294,7 +294,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                   <img
                     src={isDarkMode ? CloseIcon2 : CloseIcon}
                     alt="Close"
-                    className={`w-10 sm:w-10 rounded-md p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
+                    className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
                           ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
@@ -310,7 +310,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     <img
                       src={isDarkMode ? MenuIcon2 : MenuIcon}
                       alt="Menu"
-                      className={`w-10 sm:w-10 rounded-md p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
+                      className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
                         isDarkMode
                           ? !("ontouchstart" in window)
                             ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
