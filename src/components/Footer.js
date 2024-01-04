@@ -102,7 +102,7 @@ function Footer({ isDarkMode }) {
             {/* FOLLOW US / ICONS 1 for for bigger screens than phones / tablets, hide if below < screen size */}
             <div className="hidden md:flex items-center justify-end space-x-3.5">
               <p
-                className={`text-left text-[15px] font-medium font-kanit tracking-wide ${
+                className={`text-left text-[16px] font-medium font-kanit tracking-wider ${
                   isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
                 }`}
               >
@@ -199,11 +199,11 @@ function Footer({ isDarkMode }) {
         {/* FOLLOW US / ICONS 2 for small screen phones tablets, hide if above > screen size */}
         <div className="flex md:hidden items-center justify-center py-6 mx-3 space-x-3 pt-0">
           <p
-            className={`text-left text-[15px] font-medium font-kanit ${
+            className={`text-left text-[15px] font-medium font-kanit tracking-wider ${
               isDarkMode ? "text-[#ffffff]" : "text-[#000000]"
             }`}
           >
-            FOLLOW US:
+            FOLLOW US
           </p>
           <a
             href="https://www.facebook.com/your-facebook-page"
@@ -293,14 +293,14 @@ function Footer({ isDarkMode }) {
 
         {/* FOOTER LINKS */}
         <div
-          className={`flex flex-col md:flex-row justify-start items-center font-rubik font-normal text-[15px] 
-          mt-0 py-5 mb-0 mx-9 md:mx-0 border-t-[1px] border-b-[1px] md:border-b-[0.0px] ${
+          className={`flex flex-col md:flex-row md:pl-[0] justify-start items-center font-rubik font-normal text-[15px] 
+          mt-0 py-5 mb-0 mx-9 md:mx-0 border-t-[1px] border-b-[1px] md:border-b-[0.0px]  ${
             isDarkMode ? "border-[#797979]" : "border-[#000000]"
           }`}
         >
           <a
             href="#aboutUs"
-            className={` tracking-wide text-[#000000] mx-4 px-4 md:px-0 pr-4 py-2 mb-1 rounded-none ${
+            className={` tracking-wide text-[#000000] pl-4 mx-4 md:px-2 px-2 md:mx-0 pr-4 py-2 mb-1 rounded-none ${
               isDarkMode
                 ? "hover:text-[#54e8f3] hover:underline underline-[#000000] underline-offset-4 text-[#ffffff]"
                 : "hover:text-[#54e8f3] hover:underline underline-[#ffffff] underline-offset-4"

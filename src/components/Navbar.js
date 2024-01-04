@@ -333,7 +333,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
 
         {/* 2nd Navbar (Bottom Bar Nav Links) */}
         <div
-          className={`sticky-bottom-navbar border-t-[1px] border-b-[1px] ${
+          className={`sticky-bottom-navbar border-t-[0px] border-b-[1px] ${
             isDarkMode
               ? "bg-[#0f0f0f] text-white border-[#797979]"
               : " bg-[#f0f0f0] text-black border-[#000000]"
