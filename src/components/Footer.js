@@ -11,17 +11,11 @@ import linkedinIconLight from "../icons/logo-linkedin-light.svg";
 import linkedinIconDark from "../icons/logo-linkedin-dark.svg";
 import shareIconLight from "../icons/share-social-light.svg";
 import shareIconDark from "../icons/share-social-dark.svg";
-
-// png logos (15kb each)
-/* import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
-import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
-
 // webp logos (9kb each)
 import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
 import LightLogo from "../logos_webp&svgs/High-Resolution-Logo-RedWhite-on-Transparent-Background.webp";
 
 function Footer({ isDarkMode }) {
-  // Determine which set of icons to use based on the theme
   const facebookIcon = isDarkMode ? facebookIconDark : facebookIconLight;
   const twitterIcon = isDarkMode ? twitterIconDark : twitterIconLight;
   const youtubeIcon = isDarkMode ? youtubeIconDark : youtubeIconLight;
@@ -29,7 +23,6 @@ function Footer({ isDarkMode }) {
   const linkedinIcon = isDarkMode ? linkedinIconDark : linkedinIconLight;
   const shareIcon = isDarkMode ? shareIconDark : shareIconLight;
 
-  // Define the logo path based on dark or light mode
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
@@ -43,39 +36,15 @@ function Footer({ isDarkMode }) {
 
   return (
     <footer
-      className={`pt-0 pb-0 mt-auto relative shadow-md ${
+      className={`pt-0 pb-0 mt-auto relative shadow-xl ${
         isDarkMode
-          ? "bg-[#0f0f0f] border-t-[1px] border-[#797979]"
-          : "bg-[#f9f9f9] border-t-[1px] border-[#000000]"
+          ? "bg-[#0f0f0f] border-t-[0px] border-[#797979]"
+          : "bg-[#f9f9f9] border-t-[0px] border-[#000000] drop-shadow-2xl"
       }`}
     >
       <div className="container mx-auto">
-        {/* LOGO & FOLLOW US SVGS */}
-        {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
         <div className="text-center p-0 md:py-8 py-4">
           <div className="flex justify-between items-center align-middle pt-0 space-x-4">
-            {/* <div className="flex items-center space-x-[-0px]">
-              <text
-                className={`text-3xl font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
-                  isDarkMode
-                    ? "border-r-[#54e8f3] bg-[#54e8f3] border-[#54e8f3] text-[#000000]"
-                    : "border-black bg-[#000000] text-[#ffffff]"
-                }`}
-              >
-                NEWS
-              </text>
-
-              <text
-                className={`text-3xl font-inter font-extrabold border-[2px] pl-[4px] pr-[4px] ${
-                  isDarkMode
-                    ? "border-l-[#54e8f3] border-[#54e8f3] bg-[#000000] text-[#ffffff]"
-                    : "border-black text-[#54e8f3] bg-[#ffffff]"
-                }`}
-              >
-                HUB
-              </text>
-            </div> */}
-
             {/* LOGO1 hidden if small < display if medium + device / screen */}
             <div className="hidden md:flex items-center space-x-[-0px]">
               <text
@@ -293,7 +262,8 @@ function Footer({ isDarkMode }) {
 
         {/* FOOTER LINKS */}
         <div
-          className={`flex flex-col md:flex-row md:pl-[0] justify-start items-center font-rubik font-normal text-[15px] 
+          className={`flex flex-col md:flex-row md:pl-[0] justify-start items-center 
+          font-rubik font-normal text-[15px] md:text-[14px]
           mt-0 py-5 mb-0 mx-9 md:mx-0 border-t-[1px] border-b-[1px] md:border-b-[0.0px]  ${
             isDarkMode ? "border-[#797979]" : "border-[#000000]"
           }`}
@@ -404,7 +374,7 @@ function Footer({ isDarkMode }) {
             </text>
           </div>
         </div>
-        {/* COPYRIGHT */}
+        {/* COPYRIGHT 2024 All Rights Reserved */}
         <p
           className={`text-center md:text-left text-[14px] pt-0 md:pt-0 mx-0 md:mx-0 pb-6 md:pb-4 w-full font-rubik font-light tracking-wide  ${
             isDarkMode ? "text-[#B5B5B5]" : "text-[#000000]"

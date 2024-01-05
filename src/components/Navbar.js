@@ -1,40 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../App.css";
-/* import "../components/Navbar.css"; */
 import NavigationMenu from "./NavigationMenu.js";
-
-/* import BackButtonIcon from "../icons/chevron-back-outline.svg";
-import BackButtonIcon2 from "../icons/chevron-back-outline-dark.svg"; */
 import BackButtonIcon from "../icons/arrow-back-outline-dark.svg";
 import BackButtonIcon2 from "../icons/arrow-back-outline.svg";
-
-/* import MoonIcon from "../icons/contrast-light2.svg";
-import SunIcon from "../icons/contrast-dark2.svg"; */
-
 import MoonIcon from "../icons/contrast-outline-dark.svg";
 import SunIcon from "../icons/contrast-outline.svg";
-
-/* import MenuIcon from "../icons/menu-sharp-dark.svg";
-import MenuIcon2 from "../icons/menu-sharp-light.svg"; */
 import MenuIcon from "../icons/menu-outline-dark.svg";
 import MenuIcon2 from "../icons/menu-outline.svg";
-
-// png logos (15kb each)
-/* import DarkLogo from "../logos_png/news-hub-logo-black-white.png";
-import LightLogo from "../logos_png/news-hub-logo-white-black.png"; */
-
-// webp logos (9kb each) ORIGINALS
-/* import DarkLogo from "../logos_png/news-hub-logo-black-white.webp";
-import LightLogo from "../logos_png/news-hub-logo-white-black.webp"; */
-
 import Search from "../icons/search.svg";
 import Search2 from "../icons/search2.svg";
-
 // webp logos NEW REDONE DESIGNS
 import DarkLogo from "../logos_webp&svgs/High-Resolution-Logo-Black-on-Transparent-Background.webp";
 import LightLogo from "../logos_webp&svgs/High-Resolution-Logo-Color-on-Transparent-Background.webp";
-
 import CloseIcon from "../icons/close-outline.svg";
 import CloseIcon2 from "../icons/close-outline-darkmode.svg";
 
@@ -97,57 +75,15 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-[-6px] mr-1 ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-75" //  in dark mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#222222] hover:bg-opacity-75"
+                          : "" // No hover background for mobile devices!
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
-                        : "" // No hover background for mobile devices!!!
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75"
+                        : ""
                     }`}
                   />
                 </Link>
               )}
-
-              {/* <div className="flex items-center space-x-0 mx-0">
-                <img
-                src={logoPath}
-                alt="Logo"
-                className={`h-10 w-44 ml-0 ${
-                  showBackButton ? "2" : "0"
-                } rounded-none`}
-                loading="lazy"
-              />
-
-                 text-[#ed042d]
-
-                <text
-                  className="text-3xl text-[#ffffff] font-poppins font-extrabold 
-                mx-2 sm:mx-2 md:mx-2 lg:mx-0"
-                >
-                  NEWS HUB
-                </text>
-              </div> */}
-
-              {/*               <div className="flex items-center space-x-[-0px]">
-                <text
-                  className={`text-3xl text-[#ffffff] font-inter font-normal border-[2px] pl-[3px] pr-[1px] ${
-                    isDarkMode
-                      ? "border-r-[#54e8f3] bg-[#54e8f3] border-[#54e8f3]"
-                      : "border-black bg-[#000000]"
-                  }`}
-                >
-                  NEWS
-                </text>
-
-                <text
-                  className={`text-3xl font-inter font-extrabold border-[2px] bg-[#ffffff] pl-[4px] pr-[4px] ${
-                    isDarkMode
-                      ? "border-l-[#54e8f3] border-[#54e8f3] bg-[#000000] text-[#000000]"
-                      : "border-black bg-[#000000] text-[#54e8f3]"
-                  }`}
-                >
-                  HUB
-                </text>
-              </div> */}
 
               <div className="flex items-center space-x-[-0px]">
                 <text
@@ -171,8 +107,8 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                 </text>
               </div>
 
-              {/* Search */}
-              {/*               <div className="relative mx-8 hidden sm:flex md:flex">
+              {/* Search Bar HIDDEN / Remove, add to navMenu or top of Footer! */}
+              <div className="relative mx-8 hidden sm:hidden md:hidden">
                 <input
                   type="text"
                   placeholder="Search the web"
@@ -190,16 +126,16 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     className={`back-icon w-10 sm:w-10 rounded-full p-[0.50rem] ml-0 mr-0 ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-75" //  in dark mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#222222] hover:bg-opacity-75"
+                          : ""
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75" // Hover background for menu icon in light mode
-                        : "" // No hover background for mobile devices!!!
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75"
+                        : ""
                     }`}
                     style={{ rotate: "180deg" }}
                   />
                 </button>
-              </div> */}
+              </div>
             </div>
 
             <div className="flex items-center space-x-1.5 mx-0 ml-0">
@@ -217,11 +153,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]"
+                          : ""
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
-                        : "" // No hover background for mobile devices!!!
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]"
+                        : ""
                     }`}
                     style={{ rotate: "0deg" }}
                   />
@@ -232,11 +168,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]"
+                          : ""
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
-                        : "" // No hover background for mobile devices!!!
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]"
+                        : ""
                     }`}
                     style={{ rotate: "0deg" }}
                   />
@@ -257,11 +193,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]"
+                          : ""
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
-                        : "" // No hover background for mobile devices!!!
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]"
+                        : ""
                     }`}
                     style={{ rotate: "0deg" }}
                   />
@@ -272,11 +208,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     className={`w-10 sm:w-10 rounded-sm p-[0.50rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]"
+                          : ""
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
-                        : "" // No hover background for mobile devices!!!
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]"
+                        : ""
                     }`}
                     style={{ rotate: "180deg" }}
                   />
@@ -297,11 +233,11 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
                       isDarkMode
                         ? !("ontouchstart" in window)
-                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]"
+                          : ""
                         : !("ontouchstart" in window)
-                        ? "hover:bg-[#ebebeb] hover:bg-opacity-0  hover:border-[#54e8f3]" // Hover background for menu icon in light mode
-                        : "" // No hover background for mobile devices!!!
+                        ? "hover:bg-[#ebebeb] hover:bg-opacity-0  hover:border-[#54e8f3]"
+                        : ""
                     }`}
                   />
                 ) : (
@@ -313,34 +249,33 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                       className={`w-10 sm:w-10 rounded-sm p-[0.22rem] sm:p-[0.30rem] border-[2px] border-[#797979] ${
                         isDarkMode
                           ? !("ontouchstart" in window)
-                            ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]" // Hover background for menu icon in dark mode
-                            : "" // No hover background for mobile devices!!!
+                            ? "hover:bg-[#222222] hover:bg-opacity-100 hover:border-[#54e8f3]"
+                            : ""
                           : !("ontouchstart" in window)
-                          ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]" // Hover background for menu icon in light mode
-                          : "" // No hover background for mobile devices!!!
+                          ? "hover:bg-[#ebebeb] hover:bg-opacity-75 hover:border-[#54e8f3]"
+                          : ""
                       }`}
                     />
                   </>
                 )}
               </label>
             </div>
-            {/*             {menuIconClicked && (
-              <NavigationMenu isOpen={menuIconClicked} closeMenu={toggleMenu} />
-            )} */}
-            {/* Render the menu if menuIconClicked is true */}
           </div>
         </nav>
 
         {/* 2nd Navbar (Bottom Bar Nav Links) */}
         <div
-          className={`sticky-bottom-navbar border-t-[0px] border-b-[1px] ${
+          className={`sticky-bottom-navbar border-t-[0px] border-b-[0px] shadow-xl ${
             isDarkMode
               ? "bg-[#0f0f0f] text-white border-[#797979]"
               : " bg-[#f9f9f9] text-black border-[#000000]"
           }`}
         >
-          <nav className="bottom-navbar">
-            <div className="hidden md:flex container mx-auto xs:px-3 sm:px-3 md:px-0 py-2 text-[16px] font-kanit font-light">
+          <nav className="bottom-navbar ">
+            <div
+              className="hidden md:flex container mx-auto xs:px-3 sm:px-3 md:px-0 py-2 
+            text-[16px] font-kanit font-light"
+            >
               {/* On larger screens, show the full navbar */}
               <ul className="flex flex-wrap">
                 <li>
@@ -348,7 +283,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     General
                   </Link>
                 </li>
-                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[14px] font-normal text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -356,7 +291,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Business
                   </Link>
                 </li>
-                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[14px] font-normal text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -364,7 +299,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Entertainment
                   </Link>
                 </li>
-                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[14px] font-normal text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -372,7 +307,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Health
                   </Link>
                 </li>
-                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[14px] font-normal text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -380,7 +315,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Science
                   </Link>
                 </li>
-                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[14px] font-normal text-[#797979] items-center ">
                   |
                 </p>
                 <li>
@@ -388,7 +323,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
                     Sports
                   </Link>
                 </li>
-                <p className="flex text-[10px] font-semibold text-[#797979] items-center ">
+                <p className="flex text-[14px] font-normal text-[#797979] items-center ">
                   |
                 </p>
                 <li>

@@ -277,18 +277,22 @@ function NewsList({ isDarkMode }) {
                   <div className="flex-1 pl-0.5 pr-4 pt-1 pb-0 align-middle">
                     {/* Source */}
                     <p
-                      className="text-left text-[13px] text-black
-                      font-familjengrotesk font-semibold tracking-tight"
+                      className={`text-left text-[13px]
+                      font-familjengrotesk font-semibold tracking-tight ${
+                        isDarkMode ? " text-gray-400" : " text-black"
+                      }`}
                     >
                       {/* {article.category} · */} {article.source}
                     </p>
 
                     {/* Title */}
                     <h2
-                      className="mt-0 text-left text-[17px] text-gray-800
+                      className={`mt-0 text-left text-[17px] text-gray-800
                       font-normal font-familjengrotesk tracking-tighter 
                       transition-all duration-300 hover:text-[#54e8f3] leading-tight
-                      line-clamp-3 pr-0"
+                      line-clamp-3 pr-0 ${
+                        isDarkMode ? " text-white" : " text-black"
+                      }`}
                       style={{
                         maxWidth: "68ch",
                         /* maxHeight: "2.5rem", */
@@ -347,10 +351,12 @@ function NewsList({ isDarkMode }) {
                   {/* Small card content py-[115.5px] */}
                   {/* Title */}
                   <h2
-                    className="mt-0 text-left text-[17px] text-black 
+                    className={`mt-0 text-left text-[17px]
                 font-extrabold font-familjengrotesk tracking-tighter
                 transition-all duration-300 hover:text-[#54e8f3] leading-tight
-                line-clamp-2 pr-3"
+                line-clamp-2 pr-3 ${
+                  isDarkMode ? " text-white" : " text-black"
+                }`}
                     style={{
                       maxWidth: "68ch",
                       /* maxHeight: "2.5rem", */
