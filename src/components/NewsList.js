@@ -250,13 +250,13 @@ function NewsList({ isDarkMode }) {
                   className={`mb-3 relative shadow hover:shadow-md hover:bg-white hover:border-[#ababab]
                   rounded-[6px] flex 
                   border-[0.5px] border-[#d9d9d9] ${
-                    isDarkMode ? "bg-[#101010]" : "bg-transparent"
+                    isDarkMode ? "bg-[#101010]" : "bg-white"
                   }`}
                 >
                   {/* Left side (Image) */}
                   <div
                     className="rounded-tl-[0.5px] rounded-bl-[0.5px] border-e-[0.0px] border-[#d9d9d9]
-                  overflow-hidden h-[120px] w-[135px] pl-3 pt-3 pb-3 pr-3"
+                  overflow-hidden h-[120px] w-[120px] pl-3 pt-3 pb-3 pr-3"
                   >
                     {article.image ? (
                       <img
@@ -274,21 +274,21 @@ function NewsList({ isDarkMode }) {
                   </div>
 
                   {/* Right side (Content) */}
-                  <div className="flex-1 pl-1 pr-4 pt-0 pb-0 align-middle">
+                  <div className="flex-1 pl-0.5 pr-4 pt-1 pb-0 align-middle">
                     {/* Source */}
                     <p
-                      className="text-left text-[12.5px] text-gray-800
-                      font-familjengrotesk font-medium tracking-tighter"
+                      className="text-left text-[13px] text-black
+                      font-familjengrotesk font-semibold tracking-tight"
                     >
                       {/* {article.category} · */} {article.source}
                     </p>
 
                     {/* Title */}
                     <h2
-                      className="mt-1 text-left text-[18px] text-black 
-                      font-extrabold font-familjengrotesk tracking-tighter 
+                      className="mt-0 text-left text-[17px] text-gray-800
+                      font-normal font-familjengrotesk tracking-tighter 
                       transition-all duration-300 hover:text-[#54e8f3] leading-tight
-                      line-clamp-2 pr-4"
+                      line-clamp-3 pr-0"
                       style={{
                         maxWidth: "68ch",
                         /* maxHeight: "2.5rem", */
@@ -336,7 +336,7 @@ function NewsList({ isDarkMode }) {
                 <div
                   className={`relative py-4 px-4 shadow-sm hover:shadow-md hover:bg-white hover:border-[#ababab]
               border-[0.5px] border-[#d9d9d9] rounded-[6px] w-full mb-3 
-              ${isDarkMode ? "bg-[#101010]" : "bg-transparent"}`}
+              ${isDarkMode ? "bg-[#101010]" : "bg-white"}`}
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -347,7 +347,7 @@ function NewsList({ isDarkMode }) {
                   {/* Small card content py-[115.5px] */}
                   {/* Title */}
                   <h2
-                    className="mt-0 text-left text-[16px] text-black 
+                    className="mt-0 text-left text-[17px] text-black 
                 font-extrabold font-familjengrotesk tracking-tighter
                 transition-all duration-300 hover:text-[#54e8f3] leading-tight
                 line-clamp-2 pr-3"
