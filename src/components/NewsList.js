@@ -234,11 +234,12 @@ function NewsList({ isDarkMode }) {
 
   return (
     <div
-      className="container mx-auto md:max-w-screen-xl
-    pb-10 py-10 md:py-10 lg:py-10 xl:py-10 px-0 bg-gray-000"
+      className="container mx-auto
+    pb-10 py-10 md:py-10 lg:py-10 xl:py-10 
+    px-3 md:px-0 bg-gray-000"
     >
       <div className="flex flex-col items-center justify-center bg-gray-000">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 bg-gray-000">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-0 md:gap-3 bg-gray-000">
           {/* Left side */}
           <div className="col-span-2">
             {leftArticles.map((article) => (
@@ -246,48 +247,48 @@ function NewsList({ isDarkMode }) {
                 {/* Large news card content */}
                 <div
                   style={{ alignItems: "center" }}
-                  className={` mb-3 relative shadow-md hover:shadow-lg hover:bg-white
-                  rounded-[3px] flex
-                  border-[1px] border-[#c6c6c6] ${
+                  className={`mb-3 relative shadow hover:shadow-md hover:bg-white hover:border-[#ababab]
+                  rounded-[6px] flex 
+                  border-[0.5px] border-[#d9d9d9] ${
                     isDarkMode ? "bg-[#101010]" : "bg-transparent"
                   }`}
                 >
                   {/* Left side (Image) */}
                   <div
-                    className="rounded-tl-[1px] rounded-bl-[1px] border-e-[1px] border-[#acacac]
-                  overflow-hidden h-[161px] w-[150px]"
+                    className="rounded-tl-[0.5px] rounded-bl-[0.5px] border-e-[0.0px] border-[#d9d9d9]
+                  overflow-hidden h-[120px] w-[135px] pl-3 pt-3 pb-3 pr-3"
                   >
                     {article.image ? (
                       <img
                         src={article.image}
                         alt=""
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-[6px]"
                       />
                     ) : (
                       <img
                         src={`http://via.placeholder.com/150x225`}
                         alt=""
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-[6px]"
                       />
                     )}
                   </div>
 
                   {/* Right side (Content) */}
-                  <div className="flex-1 pl-5 pr-3 pt-3 pb-3 align-middle">
+                  <div className="flex-1 pl-1 pr-4 pt-0 pb-0 align-middle">
                     {/* Source */}
                     <p
-                      className="text-left text-[12px] text-gray-700
-                    font-inter font-medium"
+                      className="text-left text-[12.5px] text-gray-800
+                      font-familjengrotesk font-medium tracking-tighter"
                     >
                       {/* {article.category} · */} {article.source}
                     </p>
 
                     {/* Title */}
                     <h2
-                      className="mt-1 text-left text-[18px] text-gray-900 
-                      font-black font-inter
-                      transition-all duration-300 hover:text-red-500 leading-tight
-                      line-clamp-2 pr-3"
+                      className="mt-1 text-left text-[18px] text-black 
+                      font-extrabold font-familjengrotesk tracking-tighter 
+                      transition-all duration-300 hover:text-[#54e8f3] leading-tight
+                      line-clamp-2 pr-4"
                       style={{
                         maxWidth: "68ch",
                         /* maxHeight: "2.5rem", */
@@ -299,27 +300,27 @@ function NewsList({ isDarkMode }) {
 
                     {/* Description */}
                     <p
-                      className="text-left text-[14px] mt-1 text-gray-600 
-                      font-poppins font-normal
-                    line-clamp-2 leading-5 pr-7"
+                      className="text-left text-[14px] mt-2 text-gray-600 
+                      font-familjengrotesk font-normal
+                    line-clamp-2 leading-5 pr-4"
                       style={{
                         maxWidth: "95ch",
                         /* maxHeight: "2.5rem", */
                         overflow: "hidden",
                       }}
                     >
-                      {article.description}
+                      {/* {article.description} */}
                     </p>
 
                     {/* Published Date */}
                     <p
-                      className="text-left text-[11.5px] mt-2 text-gray-500 
-                    font-inter font-medium"
+                      className="text-left text-[11.5px] mt-0 text-gray-500 
+                      font-familjengrotesk"
                     >
                       {/* {formatRelativeTime(article.published_at)} */}
                       {/* {formatUKDate(article.published_at)} */}
                       {/* {formatUKDateTime(article.published_at)} */}
-                      {formatCustomDateTime(article.published_at)}
+                      {/* {formatCustomDateTime(article.published_at)} */}
                     </p>
                   </div>
                 </div>
@@ -328,28 +329,28 @@ function NewsList({ isDarkMode }) {
           </div>
 
           {/* Right side */}
-          <div
-            className="col-span-1 bg-gray-000 mb-0 
-          md:w-[420px] w-[412px]
-          px-0 md:px-0
-          "
-          >
+          <div className="col-span-2 md:col-span-1 bg-gray-000 mb-0 px-0 md:px-0">
             {rightArticles.map((article) => (
               <Link to={`/article/${article.id}`} key={article.id}>
                 {/* Small news card content */}
                 <div
-                  className={`relative py-[56.0px] shadow-md hover:shadow-lg hover:bg-white 
-                  border-[1px] border-[#c6c6c6] rounded-[3px] w-full mb-3 ${
-                    isDarkMode ? "bg-[#101010]" : "bg-transparent"
-                  }`}
+                  className={`relative py-4 px-4 shadow-sm hover:shadow-md hover:bg-white hover:border-[#ababab]
+              border-[0.5px] border-[#d9d9d9] rounded-[6px] w-full mb-3 
+              ${isDarkMode ? "bg-[#101010]" : "bg-transparent"}`}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center", // Center vertically
+                    alignItems: "start", // Center horizontally
+                  }}
                 >
                   {/* Small card content py-[115.5px] */}
                   {/* Title */}
                   <h2
-                    className="mt-1 text-left text-[18px] text-gray-900 
-                      font-black font-inter
-                      transition-all duration-300 hover:text-red-500 leading-tight
-                      line-clamp-2 pr-3"
+                    className="mt-0 text-left text-[16px] text-black 
+                font-extrabold font-familjengrotesk tracking-tighter
+                transition-all duration-300 hover:text-[#54e8f3] leading-tight
+                line-clamp-2 pr-3"
                     style={{
                       maxWidth: "68ch",
                       /* maxHeight: "2.5rem", */

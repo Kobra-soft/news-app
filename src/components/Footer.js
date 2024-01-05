@@ -49,7 +49,7 @@ function Footer({ isDarkMode }) {
           : "bg-[#f0f0f0] border-t-[1px] border-[#000000]"
       }`}
     >
-      <div className="container mx-auto md:max-w-screen-xl">
+      <div className="container mx-auto">
         {/* LOGO & FOLLOW US SVGS */}
         {/* Social Media SVG Icons - (Facebook, Twitter, Youtube, Github, LinkedIn) */}
         <div className="text-center p-0 md:py-8 py-4">

@@ -83,7 +83,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           relative ${bgColor}`}
         >
           <div
-            className="container mx-auto md:max-w-screen-xl
+            className="container mx-auto
           flex justify-between items-center"
           >
             {/* Left LOGO */}
@@ -340,7 +340,7 @@ function Navbar({ isDarkMode, toggleDarkMode }) {
           }`}
         >
           <nav className="bottom-navbar">
-            <div className="hidden md:flex container mx-auto md:max-w-screen-xl py-2 px-0 text-[16px] font-kanit font-light">
+            <div className="hidden md:flex container mx-auto xs:px-3 sm:px-3 md:px-0 py-2 text-[16px] font-kanit font-light">
               {/* On larger screens, show the full navbar */}
               <ul className="flex flex-wrap">
                 <li>
