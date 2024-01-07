@@ -6,8 +6,10 @@ import axios from "axios";
 // TO CLEAN / DELETE CODE COMMENTS BELOW --- AFTER LAYOUT DONE FOR WEB / MOBILE / TABLET ETC
 // --------------------------------------------------------------------------------
 
-/* import clockIconLight from "../icons/time-outline-light.svg";
+import clockIconLight from "../icons/time-outline-light.svg";
 import clockIconDark from "../icons/time-outline-dark.svg";
+
+/* 
 import likeIconLight from "../icons/nb-like-dark.svg";
 import likeIconDark from "../icons/nb-like.svg";
 import commentIconLight from "../icons/nb-comment-dark.svg";
@@ -39,7 +41,7 @@ function NewsList({ isDarkMode }) {
     const apiUrl = `http://api.mediastack.com/v1/news?access_key=f6b499e9ef0d7e84bc4b01cd73323fb3&languages=en&countries=gb&limit=60`;
 
     // Fetch data from data3.json for the left side
-    axios.get("/data3.json").then((response) => {
+    axios.get("/data4.json").then((response) => {
       const leftArticlesData = response.data
         .filter(
           (article, index, self) =>
@@ -61,8 +63,8 @@ function NewsList({ isDarkMode }) {
     });
   }, []);
 
-  /*     // Fetch data from data3.json for the left side
-    axios.get("/data3.json").then((response) => {
+  // Fetch data from data3.json for the left side
+  /*     axios.get("/data3.json").then((response) => {
       // Filter out articles with null images and duplicates
       const filteredArticles = response.data.filter(
         (article, index, self) =>
@@ -82,8 +84,8 @@ function NewsList({ isDarkMode }) {
     });
   }, []); */
 
-  /*     // Fetch data from the MediaStack API for the left side
-    axios
+  // Fetch data from the MediaStack API for the left side
+  /*     axios
       .get(apiUrl)
       .then((response) => {
         const filteredArticles = response.data.data.filter(
@@ -93,7 +95,7 @@ function NewsList({ isDarkMode }) {
         );
 
         // Determine the limit for both sides based on the number of articles displayed on the left
-        const leftLimit = Math.min(filteredArticles.length, 18); // Set desired limit for the left side
+        const leftLimit = Math.min(filteredArticles.length, 25); // Set desired limit for the left side
         const rightLimit = leftLimit; // Set limit for the right side to match the left side
 
         const leftArticlesData = filteredArticles.slice(0, leftLimit);
@@ -170,7 +172,7 @@ function NewsList({ isDarkMode }) {
   const filteredArticles = showAll ? bottomArticles : topArticles; */
 
   // Function to format the relative time
-  /*   function formatRelativeTime(publishedAt) {
+  function formatRelativeTime(publishedAt) {
     const now = new Date();
     const diffInMilliseconds = now - new Date(publishedAt);
 
@@ -192,7 +194,7 @@ function NewsList({ isDarkMode }) {
       const days = Math.round(diffInMilliseconds / 86400000);
       return rtf.format(-days, "day");
     }
-  } */
+  }
 
   // Function to format the date in UK format (DD/MM/YY)
   /*   function formatUKDate(publishedAt) {
@@ -202,7 +204,7 @@ function NewsList({ isDarkMode }) {
   } */
 
   // Function to format the date and time in UK format (DD/MM/YY HH:mm)
-  /*   function formatUKDateTime(publishedAt) {
+  /*     function formatUKDateTime(publishedAt) {
     const date = new Date(publishedAt);
     const options = {
       day: "2-digit",
@@ -211,14 +213,14 @@ function NewsList({ isDarkMode }) {
       hour: "2-digit",
       minute: "2-digit",
     };
-    const datePart = date.toLocaleDateString("en-GB", options); */
-  /* const timePart = date.toLocaleTimeString("en-GB", options); */
+    const datePart = date.toLocaleDateString("en-GB", options);
+  const timePart = date.toLocaleTimeString("en-GB", options);
 
-  /* return `${datePart} `; */
-  /* return `${datePart} ${timePart}`; */
-  /*   } */
+  return `${datePart} `; 
+  return `${datePart} ${timePart}`;
+     } */
 
-  function formatCustomDateTime(inputDateTime) {
+  /*   function formatCustomDateTime(inputDateTime) {
     const options = { year: "numeric", month: "long", day: "numeric" };
     const date = new Date(inputDateTime);
     const formattedDate = date.toLocaleDateString("en-US", options);
@@ -230,7 +232,7 @@ function NewsList({ isDarkMode }) {
       .padStart(2, "0")}${ampm}`;
 
     return `${formattedDate}, ${formattedTime}`;
-  }
+  } */
 
   return (
     <div
@@ -274,16 +276,35 @@ function NewsList({ isDarkMode }) {
                   </div>
 
                   {/* Right side (Content) */}
-                  <div className="flex-1 pl-0.5 pr-4 pt-1 pb-0 align-middle">
-                    {/* Source */}
-                    <p
-                      className={`text-left text-[13px]
-                      font-familjengrotesk font-semibold tracking-tight ${
-                        isDarkMode ? " text-gray-400" : " text-black"
-                      }`}
-                    >
-                      {/* {article.category} · */} {article.source}
-                    </p>
+                  <div className="flex-1 pl-0.5 pr-4 pt-0 pb-0 align-middle">
+                    {/* Source and Relative Time */}
+                    <div className="flex items-center">
+                      {/* Source */}
+                      <p
+                        className={`text-left text-[13px]
+                                    font-familjengrotesk font-semibold tracking-tight ${
+                                      isDarkMode
+                                        ? " text-gray-400"
+                                        : " text-black"
+                                    }`}
+                      >
+                        {/* {article.category} · */} {article.source}
+                      </p>
+
+                      {/* Bullet Point */}
+                      <span className="text-[13px] mx-1 text-gray-500">
+                        {"•"}
+                      </span>
+
+                      {/* Relative Time */}
+                      <p
+                        className={`text-left text-[13px] font-another-font italic flex-1 ${
+                          isDarkMode ? " text-white" : " text-black"
+                        }`}
+                      >
+                        {formatRelativeTime(article.published_at)}
+                      </p>
+                    </div>
 
                     {/* Title */}
                     <h2
@@ -304,7 +325,7 @@ function NewsList({ isDarkMode }) {
 
                     {/* Description */}
                     <p
-                      className="text-left text-[14px] mt-2 text-gray-600 
+                      className="text-left text-[14px] mt-0 text-gray-600 
                       font-familjengrotesk font-normal
                     line-clamp-2 leading-5 pr-4"
                       style={{
@@ -338,8 +359,9 @@ function NewsList({ isDarkMode }) {
               <Link to={`/article/${article.id}`} key={article.id}>
                 {/* Small news card content */}
                 <div
-                  className={`relative py-4 px-4 shadow-sm hover:shadow-md hover:bg-white hover:border-[#ababab]
-              border-[0.5px] border-[#d9d9d9] rounded-[6px] w-full mb-3 
+                  className={`relative py-4 px-4 shadow-sm hover:shadow-md 
+                  hover:bg-[#393939] hover:border-[#ababab] border-[0.5px] border-[#d9d9d9] 
+                  rounded-[6px] w-full mb-3 
               ${isDarkMode ? "bg-[#101010]" : "bg-white"}`}
                   style={{
                     display: "flex",

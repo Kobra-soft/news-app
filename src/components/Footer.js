@@ -22,7 +22,6 @@ function Footer({ isDarkMode }) {
   const githubIcon = isDarkMode ? githubIconDark : githubIconLight;
   const linkedinIcon = isDarkMode ? linkedinIconDark : linkedinIconLight;
   const shareIcon = isDarkMode ? shareIconDark : shareIconLight;
-
   const logoPath = isDarkMode ? DarkLogo : LightLogo;
 
   useEffect(() => {
