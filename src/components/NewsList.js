@@ -250,15 +250,17 @@ function NewsList({ isDarkMode }) {
                 <div
                   style={{ alignItems: "center" }}
                   className={`mb-3 relative shadow hover:shadow-md hover:bg-white hover:border-[#ababab]
-                  rounded-[6px] flex 
-                  border-[0.5px] border-[#d9d9d9] ${
-                    isDarkMode ? "bg-[#101010]" : "bg-white"
+                  rounded-[6px] flex py-2
+                  border-[0.5px] ${
+                    isDarkMode
+                      ? "bg-[#101010] border-[#d9d9d9]"
+                      : "bg-white border-[#b3b3b3]"
                   }`}
                 >
                   {/* Left side (Image) */}
                   <div
                     className="rounded-tl-[0.5px] rounded-bl-[0.5px] border-e-[0.0px] border-[#d9d9d9]
-                  overflow-hidden h-[120px] w-[120px] pl-3 pt-3 pb-3 pr-3"
+                  overflow-hidden h-[120px] w-[120px] pl-3 pt-1 pb-1 pr-3"
                   >
                     {article.image ? (
                       <img
@@ -276,30 +278,35 @@ function NewsList({ isDarkMode }) {
                   </div>
 
                   {/* Right side (Content) */}
-                  <div className="flex-1 pl-0.5 pr-4 pt-0 pb-0 align-middle">
+                  <div className="flex-1 pl-0 pr-5 pt-0 pb-0 align-middle">
                     {/* Source and Relative Time */}
                     <div className="flex items-center">
                       {/* Source */}
                       <p
                         className={`text-left text-[13px]
-                                    font-familjengrotesk font-semibold tracking-tight ${
-                                      isDarkMode
-                                        ? " text-gray-400"
-                                        : " text-black"
-                                    }`}
+                        font-rubik font-semibold tracking-tight ${
+                          isDarkMode ? " text-[#54e8f3]" : " text-black"
+                        }`}
                       >
                         {/* {article.category} · */} {article.source}
                       </p>
 
                       {/* Bullet Point */}
-                      <span className="text-[13px] mx-1 text-gray-500">
+                      {/*  <span className="text-[13px] mx-1 text-gray-500">
                         {"•"}
-                      </span>
+                      </span> */}
+
+                      {/* Clock Icon */}
+                      <img
+                        src={isDarkMode ? clockIconDark : clockIconLight}
+                        alt="Clock Icon"
+                        className="w-3.5 h-3.5 ml-1.5 mr-1" // Adjust the size as needed
+                      />
 
                       {/* Relative Time */}
                       <p
-                        className={`text-left text-[13px] font-another-font italic flex-1 ${
-                          isDarkMode ? " text-white" : " text-black"
+                        className={`text-left text-[11px] font-rubik font-light flex-1 ${
+                          isDarkMode ? " text-white" : " text-gray-500"
                         }`}
                       >
                         {formatRelativeTime(article.published_at)}
@@ -308,8 +315,8 @@ function NewsList({ isDarkMode }) {
 
                     {/* Title */}
                     <h2
-                      className={`mt-0 text-left text-[17px] text-gray-800
-                      font-normal font-familjengrotesk tracking-tighter 
+                      className={`mt-0.5 text-left text-sm text-gray-800
+                      font-normal font-rubik tracking-tighter 
                       transition-all duration-300 hover:text-[#54e8f3] leading-tight
                       line-clamp-3 pr-0 ${
                         isDarkMode ? " text-white" : " text-black"
